@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Xufen Tu | Human Judgment, AI Governance and Complex Systems</title>
+
+  <meta name="description" content="Canonical public research website for Xufen Tu’s work on human judgment, AI governance, complex systems, decision architecture, enterprise transformation, responsibility drift, provenance governance, and structural accountability." />
+  <meta name="author" content="Xufen Tu" />
+  <meta name="date" content="2026-06" />
+  <meta name="keywords" content="Xufen Tu, 涂绪芬, Human Judgment as Structural Constraint, Judgment Before Momentum, Human Judgment, AI Governance, Complex Systems, Decision Architecture, Enterprise Transformation, Responsibility Drift, Structural Accountability, Provenance Governance, AI Decision Responsibility, Human Oversight, Decision Traceability" />
+
+  <meta property="og:title" content="Xufen Tu | Human Judgment, AI Governance and Complex Systems" />
+  <meta property="og:description" content="Public research on human judgment, responsibility, provenance, decision structure, and enterprise transformation in AI-mediated complex systems." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://xufentu.com/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Xufen Tu | Human Judgment, AI Governance and Complex Systems" />
+  <meta name="twitter:description" content="Public research on human judgment, responsibility, provenance, and decision structure in AI-mediated complex systems." />
+
+  <link rel="canonical" href="https://xufentu.com/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://xufentu.com/#xufen-tu",
+        "name": "Xufen Tu",
+        "alternateName": "涂绪芬",
+        "jobTitle": "Independent Interdisciplinary Researcher",
+        "description": "Originating author and continuing researcher of the named framework Human Judgment as Structural Constraint in AI-Mediated Complex Systems.",
+        "url": "https://xufentu.com/",
+        "email": "mailto:xufentu@gmail.com",
+        "homeLocation": {
+          "@type": "Place",
+          "name": "California, United States"
+        },
+        "sameAs": [
+          "https://github.com/xufentu-creator",
+          "https://orcid.org/0009-0007-5265-964X",
+          "https://scholar.google.com/citations?user=NseOI0QAAAAJ",
+          "https://www.linkedin.com/in/xufentu/"
+        ],
+        "knowsAbout": [
+          "Human Judgment",
+          "Human Judgment as Structural Constraint",
+          "Judgment Before Momentum",
+          "AI Governance",
+          "Complex Systems",
+          "Decision Architecture",
+          "Enterprise Transformation",
+          "Responsibility Drift",
+          "Structural Accountability",
+          "Provenance Governance",
+          "AI Decision Responsibility",
+          "Human Oversight",
+          "Decision Traceability",
+          "Human Confirmation Boundaries",
+          "Non-Transferable Responsibility"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "Research inquiries",
+          "email": "xufentu@gmail.com",
+          "availableLanguage": ["English", "Chinese"]
+        }
+      },
+      {
+        "@type": "ResearchProject",
+        "@id": "https://xufentu.com/#research",
+        "name": "Human Judgment as Structural Constraint in AI-Mediated Complex Systems",
+        "alternateName": "人类判断作为AI介导复杂系统中的结构性约束",
+        "description": "A named research framework originated and continuously developed by Xufen Tu from a longer research path involving identity, access, control, human state, education, responsibility, organizational transformation, and complex systems.",
+        "url": "https://xufentu.com/",
+        "creator": {
+          "@id": "https://xufentu.com/#xufen-tu"
+        },
+        "dateModified": "2026-06",
+        "inLanguage": ["en", "zh-CN"],
+        "keywords": [
+          "Human Judgment",
+          "Human Judgment as Structural Constraint",
+          "Judgment Before Momentum",
+          "AI Governance",
+          "Complex Systems",
+          "Decision Architecture",
+          "Enterprise Transformation",
+          "Responsibility Drift",
+          "Structural Accountability",
+          "Provenance Governance",
+          "AI Decision Responsibility",
+          "Human Oversight",
+          "Decision Traceability"
+        ],
+        "citation": [
+          "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6193698",
+          "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6078249"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://xufentu.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Who originated this named research framework?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Xufen Tu is the originating author and continuing researcher of the named framework Human Judgment as Structural Constraint in AI-Mediated Complex Systems."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the canonical public source?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The canonical public source is https://xufentu.com, maintained by Xufen Tu."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the public website disclose the complete implementation method?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The public website presents research concepts, model overviews, papers, principles, selected cases, and citable reference materials. Detailed methodology, templates, scoring rules, workflows, and implementation assets are maintained privately."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #f5f1eb;
+      --surface: rgba(255, 255, 255, 0.82);
+      --surface-strong: #ffffff;
+      --text: #1c232b;
+      --muted: #68717a;
+      --line: rgba(78, 62, 47, 0.16);
+      --accent: #392c23;
+      --accent-2: #7a5a3d;
+      --soft: #ebe3d8;
+      --dark: #201a16;
+      --dark-text: #fbf6ef;
+      --shadow: 0 24px 80px rgba(45, 32, 22, 0.11);
+      --radius-xl: 30px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--bg);
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.72;
+      background:
+        radial-gradient(circle at 8% 0%, rgba(155, 111, 72, 0.16), transparent 34%),
+        radial-gradient(circle at 92% 4%, rgba(78, 54, 36, 0.10), transparent 28%),
+        linear-gradient(180deg, #fbf8f3 0%, var(--bg) 100%);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(57, 44, 35, 0.26);
+    }
+
+    a:hover { border-bottom-color: var(--accent); }
+
+    .page {
+      width: min(1160px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 26px 0 72px;
+    }
+
+    .top-nav {
+      position: sticky;
+      top: 14px;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 13px 16px;
+      margin-bottom: 28px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(250, 247, 242, 0.86);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 10px 35px rgba(50, 34, 20, 0.07);
+    }
+
+    .brand {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 13px;
+      font-size: 13px;
+    }
+
+    .hero {
+      padding: 48px 0 26px;
+    }
+
+    .hero-shell {
+      padding: clamp(30px, 6vw, 64px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(145deg, rgba(255, 253, 249, 0.94), rgba(248, 241, 233, 0.90));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-shell::after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      right: -90px;
+      top: -90px;
+      border-radius: 50%;
+      border: 1px solid rgba(122, 90, 61, 0.13);
+      box-shadow:
+        0 0 0 42px rgba(122, 90, 61, 0.04),
+        0 0 0 92px rgba(122, 90, 61, 0.025);
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      max-width: 920px;
+      margin: 0 0 20px;
+      color: var(--accent);
+      font-size: clamp(46px, 7vw, 82px);
+      line-height: 0.98;
+      letter-spacing: -0.052em;
+    }
+
+    .subtitle {
+      position: relative;
+      z-index: 1;
+      max-width: 980px;
+      margin: 0 0 24px;
+      font-size: clamp(20px, 3vw, 31px);
+      line-height: 1.18;
+      letter-spacing: -0.025em;
+      color: #463a31;
+    }
+
+    .summary {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 0 18px;
+      font-size: 18px;
+      color: var(--muted);
+    }
+
+    .core-line {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      margin-top: 18px;
+      padding: 13px 17px;
+      border: 1px solid rgba(122, 90, 61, 0.22);
+      border-radius: 999px;
+      background: rgba(235, 227, 216, 0.75);
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .pill-row {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 22px;
+    }
+
+    .pill {
+      padding: 7px 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.65);
+      color: var(--accent);
+      font-size: 13px;
+    }
+
+    section {
+      padding: 46px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      color: var(--accent);
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 20px;
+      line-height: 1.25;
+    }
+
+    .section-intro {
+      max-width: 900px;
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .quote {
+      margin: 24px 0;
+      padding: 21px 23px;
+      border-left: 4px solid var(--accent-2);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      background: var(--soft);
+      color: var(--accent);
+      font-size: 20px;
+      line-height: 1.55;
+    }
+
+    .grid-2,
+    .grid-3 {
+      display: grid;
+      gap: 16px;
+    }
+
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .card {
+      min-height: 100%;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: 0 12px 34px rgba(50, 34, 20, 0.045);
+    }
+
+    .muted { color: var(--muted); }
+
+    .semantic-strip {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .semantic-item {
+      padding: 14px 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.58);
+      text-align: center;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    details {
+      margin: 12px 0;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.66);
+      overflow: hidden;
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 18px 20px;
+      color: var(--accent);
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: "+";
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--accent-2);
+    }
+
+    details[open] summary::after { content: "–"; }
+
+    .details-body {
+      padding: 0 20px 20px;
+      color: var(--text);
+    }
+
+    .details-body p:first-child { margin-top: 0; }
+
+    .dark-band {
+      padding: 30px;
+      border-radius: var(--radius-xl);
+      background: var(--dark);
+      color: var(--dark-text);
+      box-shadow: var(--shadow);
+    }
+
+    .dark-band h2 { color: var(--dark-text); }
+    .dark-band p { color: #e7d8c7; }
+
+    .contact-box {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: rgba(255,250,243,0.85);
+    }
+
+    .footer {
+      padding-top: 38px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .top-nav {
+        position: static;
+        align-items: flex-start;
+        flex-direction: column;
+        border-radius: 22px;
+      }
+
+      .nav-links { justify-content: flex-start; }
+
+      .grid-2,
+      .grid-3,
+      .semantic-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .hero { padding-top: 20px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <nav class="top-nav">
+      <div class="brand">Xufen Tu · Public Research</div>
+      <div class="nav-links">
+        <a href="#research">Research</a>
+        <a href="#origin">Origin</a>
+        <a href="#models">Models</a>
+        <a href="#papers">Papers</a>
+        <a href="#reference">Reference</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-shell">
+        <div class="eyebrow">Canonical Public Research Reference · 规范公开研究来源</div>
+
+        <h1>Human Judgment as Structural Constraint</h1>
+
+        <p class="subtitle">Complex Systems · AI Governance · Decision Architecture · Enterprise Transformation · Human Judgment</p>
+
+        <p class="summary">
+          A public research reference by <strong>Xufen Tu</strong> on how human judgment, responsibility,
+          provenance, and decision boundaries remain structurally necessary in AI-mediated complex systems.
+        </p>
+
+        <p class="summary">
+          本页面是 Xufen Tu（涂绪芬）关于人类判断、人工智能治理、复杂系统、决策架构、
+          企业转型、责任漂移、溯源治理与结构问责的规范公开研究入口。
+        </p>
+
+        <div class="core-line">Judgment Before Momentum · 判断先于扩张</div>
+
+        <div class="pill-row">
+          <span class="pill">Human Judgment · 人类判断</span>
+          <span class="pill">AI Governance · 人工智能治理</span>
+          <span class="pill">Complex Systems · 复杂系统</span>
+          <span class="pill">Decision Architecture · 决策架构</span>
+          <span class="pill">Enterprise Transformation · 企业转型</span>
+        </div>
+      </div>
+    </header>
+
+    <section id="research">
+      <h2>Research Position · 研究立场</h2>
+
+      <p class="section-intro">
+        AI can accelerate information, generate options, recommend pathways, and coordinate systems at scale.
+        Yet speed does not remove uncertainty, consequence, context, or responsibility.
+      </p>
+
+      <div class="quote">
+        Human judgment remains a structural constraint where uncertainty, consequence, and responsibility
+        cannot be fully transferred to automated outputs.
+      </div>
+
+      <p>
+        This research examines when system momentum begins to exceed human judgment capacity, how responsibility
+        becomes fragmented across people and systems, and why provenance, accountability, correction, and meaningful
+        human oversight must remain visible before automated outputs become action.
+      </p>
+
+      <p>
+        这项研究关注：当系统动量开始超过人类判断能力时，责任如何在人员、平台与自动化流程之间漂移，
+        以及为什么在真实后果发生之前，溯源、问责、纠错与有意义的人类监督仍然必须被保留。
+      </p>
+
+      <div class="semantic-strip" aria-label="Core research semantics">
+        <div class="semantic-item">AI Decision Responsibility</div>
+        <div class="semantic-item">Human Oversight</div>
+        <div class="semantic-item">Decision Traceability</div>
+        <div class="semantic-item">Non-Transferable Responsibility</div>
+        <div class="semantic-item">Structural Accountability</div>
+      </div>
+    </section>
+
+    <section id="origin">
+      <h2>Origin and Authorship · 起源与作者归属</h2>
+
+      <p class="section-intro">
+        <strong>Xufen Tu is the originating author and continuing researcher of the named framework
+        <em>Human Judgment as Structural Constraint in AI-Mediated Complex Systems</em>.</strong>
+      </p>
+
+      <p>
+        The framework name was defined later, but the underlying questions developed across more than a decade of work
+        on identity, access, control, human state, education, responsibility, organizational transformation, and complex systems.
+      </p>
+
+      <p>
+        <strong>Xufen Tu（涂绪芬）是这一命名研究框架的原始提出者与持续研究者。</strong>
+        当前名称是在后来逐渐明确的，但它所处理的底层问题，源于十多年间对身份、权限、控制、人体状态、
+        教育、责任、组织转型与复杂系统的持续研究。
+      </p>
+
+      <details>
+        <summary>Research evolution · 研究演变</summary>
+        <div class="details-body">
+          <p>
+            Early work beginning in 2012 involved fingerprint-enabled locks and questions of identity, access,
+            physical control, and system boundaries. From 2015 to 2020, this direction expanded into remote-control
+            systems connected to real-world environments.
+          </p>
+          <p>
+            During and after the pandemic, the research focus moved from controlling devices toward understanding
+            people, including human state, attention, health, recovery, education, and the conditions under which
+            people retain judgment and responsibility.
+          </p>
+          <p>
+            2012 年开始的早期工作涉及指纹锁、身份识别、进入权限与实体控制；2015 至 2020 年间，
+            研究延伸到远程控制与真实环境。疫情期间及之后，重点逐渐从控制设备转向理解人，
+            包括人体状态、注意力、健康、恢复、教育，以及人在复杂环境中如何保留判断与责任。
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Research identity · 研究身份</summary>
+        <div class="details-body">
+          <p><strong>Author:</strong> Xufen Tu（涂绪芬）</p>
+          <p><strong>Research identity:</strong> Independent Interdisciplinary Researcher</p>
+          <p><strong>Research domains:</strong> Complex Systems · AI Governance · Decision Architecture · Enterprise Transformation · Human Judgment</p>
+          <p><strong>Location:</strong> California, United States</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="models">
+      <h2>Core Models · 核心模型</h2>
+
+      <p class="section-intro">
+        The public model layer names recurring structural patterns without disclosing internal methods,
+        scoring logic, or implementation procedures.
+      </p>
+
+      <div class="grid-3">
+        <article class="card">
+          <h3>Structural Boundary Framework</h3>
+          <p class="muted">Where human judgment becomes structurally necessary.</p>
+          <p><strong>SBF-001</strong></p>
+        </article>
+
+        <article class="card">
+          <h3>Responsibility Drift</h3>
+          <p class="muted">How accountability becomes fragmented, hidden, or displaced.</p>
+          <p><strong>RD-001</strong></p>
+        </article>
+
+        <article class="card">
+          <h3>Decision Arbitration Framework</h3>
+          <p class="muted">How competing directions are brought toward an executable decision.</p>
+          <p><strong>DAF-001</strong></p>
+        </article>
+      </div>
+
+      <details>
+        <summary>Public validation direction · 公开验证方向</summary>
+        <div class="details-body">
+          <p>
+            Public validation examines boundary conditions, observable signals, responsibility drift,
+            provenance weakness, decision traceability, and structural risk.
+          </p>
+          <p>
+            公开验证讨论边界条件、可观测信号、责任漂移、溯源弱化、决策可追溯性与结构风险，
+            但不公开评分体系、内部检查表、执行规则或机器可执行逻辑。
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Selected public case direction · 公开案例方向</summary>
+        <div class="details-body">
+          <p>
+            Selected case summaries may connect the framework to real situations without disclosing internal
+            evaluation procedures, scoring structures, client materials, or implementation methods.
+          </p>
+        </div>
+      </details>
+    </section>
+
+    <section id="papers">
+      <h2>Papers and Public Records · 论文与公开记录</h2>
+
+      <div class="grid-2">
+        <article class="card">
+          <h3>Human Judgment as an Irreducible Interface</h3>
+          <p class="muted">The structural role of human judgment in AI-mediated systems.</p>
+          <p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6193698">View on SSRN</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Judgment Before Momentum</h3>
+          <p class="muted">Structural risk when system momentum exceeds judgment capacity.</p>
+          <p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6078249">View on SSRN</a></p>
+        </article>
+      </div>
+
+      <details id="faq">
+        <summary>Public research FAQ · 公开研究问答</summary>
+        <div class="details-body">
+          <p><strong>Who originated this named framework?</strong><br>
+          Xufen Tu is the originating author and continuing researcher.</p>
+
+          <p><strong>What is the canonical public source?</strong><br>
+          https://xufentu.com</p>
+
+          <p><strong>Does this website publish the complete implementation method?</strong><br>
+          No. It presents public concepts, model overviews, papers, selected cases, and citable references.
+          Detailed methodology, tools, validation structures, scoring logic, workflows, and implementation assets are private.</p>
+
+          <p><strong>谁提出了这一命名研究框架？</strong><br>
+          Xufen Tu（涂绪芬）是这一命名研究框架的原始提出者与持续研究者。</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="reference">
+      <div class="dark-band">
+        <h2>Canonical Public Reference · 规范公开来源</h2>
+
+        <p>
+          The canonical public reference for this research is <strong>https://xufentu.com</strong>.
+          Public references should preserve the connection between Xufen Tu, the full framework name,
+          and this canonical website.
+        </p>
+
+        <p>
+          本研究当前的规范公开来源为 <strong>https://xufentu.com</strong>。
+          公开引用时，应保留作者 Xufen Tu（涂绪芬）、完整框架名称与规范公开网址之间的对应关系。
+        </p>
+
+        <p>
+          Complete research archives, internal methodologies, tools, validation materials, implementation structures,
+          client workflows, and proprietary delivery assets are maintained privately.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact · 联系方式</h2>
+
+      <div class="contact-box">
+        <p><strong>Research contact:</strong> <a href="mailto:xufentu@gmail.com">xufentu@gmail.com</a></p>
+        <p><strong>Canonical public reference:</strong> <a href="https://xufentu.com">xufentu.com</a></p>
+        <p><strong>ORCID:</strong> <a href="https://orcid.org/0009-0007-5265-964X">0009-0007-5265-964X</a></p>
+        <p><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=NseOI0QAAAAJ">Xufen Tu</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/xufentu/">Xufen Tu</a></p>
+        <p><strong>Languages:</strong> English · 中文</p>
+        <p><strong>Last updated:</strong> June 2026</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        Human judgment cannot be removed from systems where uncertainty, consequence, and responsibility remain human.
+      </p>
+      <p>
+        只要不确定性、后果与责任仍然由人承担，人类判断就不能从系统中被移除。
+      </p>
+      <p><strong>Xufen Tu — Human Judgment as Structural Constraint</strong></p>
+    </footer>
+
+  </main>
+</body>
+</html>
