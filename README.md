@@ -12,3 +12,10 @@ This repository contains public website materials only. Complete research archiv
 **Xufen Tu**
 Independent Interdisciplinary Researcher
 Complex Systems · AI Governance · Decision Architecture · Enterprise Transformation · Human Judgment
+
+---
+## Public Tool
+
+[Provenance Tool v0.1](https://xufentu.com/provenance-tool/)
+
+A small web prototype for generating basic provenance records before publication.
