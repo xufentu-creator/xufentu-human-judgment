@@ -1,0 +1,30 @@
+{
+  "tool": "Provenance Tool v0.1",
+  "generated_at": "2026-06-26T00:00:00Z",
+  "release_type": "Research Paper",
+  "title": "Human Judgment as Structural Constraint",
+  "author": "Xufen Tu",
+  "version": "1.0",
+  "release_date": "2026-06-26",
+  "canonical_source": "https://github.com/xufentu-creator/judgment-as-structural-constraint",
+  "summary": "Research on human judgment, decision structure, and provenance in AI-mediated complex systems.",
+  "citation": "Xufen Tu. (2026-06-26). Human Judgment as Structural Constraint. Version 1.0. Canonical source: https://github.com/xufentu-creator/judgment-as-structural-constraint",
+  "language_note": "Bilingual metadata may support cross-language provenance recognition.",
+  "boundary": {
+    "does": [
+      "record authorship",
+      "record version information",
+      "record canonical source",
+      "generate citation text",
+      "support provenance packaging"
+    ],
+    "does_not": [
+      "determine originality",
+      "judge legal ownership",
+      "verify truth",
+      "replace human judgment",
+      "resolve authorship disputes"
+    ]
+  },
+  "principle": "Automation can support structure, but responsibility remains visible."
+}
