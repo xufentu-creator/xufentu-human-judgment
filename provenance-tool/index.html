@@ -5,57 +5,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Provenance Tool | Create Basic Publication Records</title>
+  <title>Provenance Tool | Create a Publication Record</title>
 
 <meta
  name="description"
- content="A multilingual browser-based provenance tool for creating basic authorship, version, citation, canonical source, release date, and related-file records before publication."
+ content="Create a portable authorship, version, citation, canonical source, and publication metadata record for your work."
 />
 
 <meta
  name="keywords"
- content="provenance tool, publication record, authorship record, canonical source, citation generator, metadata generator, version record, research provenance, digital provenance, content traceability"
+ content="provenance tool, publication metadata, authorship record, canonical source, citation generator, research provenance, content traceability"
 />
 
   <meta name="author" content="Xufen Tu" />
   <meta name="version" content="0.1" />
   <meta name="robots" content="index, follow" />
 
-  <link
-    rel="canonical"
-    href="https://xufentu.com/provenance-tool/"
-  />
+  <link rel="canonical" href="https://xufentu.com/provenance-tool/" />
 
-<meta
- property="og:title"
- content="Provenance Tool | Create Basic Publication Records"
-/>
-
-<meta
- property="og:description"
- content="Create a basic authorship, version, citation, canonical source, and related-file record before publishing a work."
-/>
-
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Provenance Tool" />
   <meta
-    property="og:url"
-    content="https://xufentu.com/provenance-tool/"
+    property="og:description"
+    content="Create a portable publication record for your work."
   />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://xufentu.com/provenance-tool/" />
 
-<meta
- name="twitter:card"
- content="summary"
-/>
-
-<meta
- name="twitter:title"
- content="Provenance Tool"
-/>
-
-<meta
- name="twitter:description"
- content="A multilingual browser-based tool for creating basic publication provenance records."
-/>
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Provenance Tool" />
+  <meta
+    name="twitter:description"
+    content="Create a basic authorship, version, citation, and canonical-source record before publication."
+  />
 
   <script type="application/ld+json">
   {
@@ -67,14 +48,15 @@
     "url": "https://xufentu.com/provenance-tool/",
     "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "Any",
-    "browserRequirements": "Requires a modern web browser with JavaScript enabled.",
     "softwareVersion": "0.1",
+    "isAccessibleForFree": true,
+    "browserRequirements": "Requires a modern browser with JavaScript enabled.",
     "creator": {
       "@type": "Person",
       "name": "Xufen Tu",
       "url": "https://xufentu.com/"
     },
-    "description": "A multilingual browser-based web tool for creating basic authorship, version, release date, citation, canonical source, summary, and related-file records before publication.",
+    "description": "A multilingual browser-based tool for creating basic authorship, title, version, release date, citation, canonical public source, and related-file records before publication.",
     "inLanguage": [
       "en",
       "zh-CN",
@@ -86,32 +68,34 @@
       "ko"
     ],
     "featureList": [
-      "Create a basic publication metadata record",
-      "Generate a suggested citation for a work",
+      "Create publication metadata",
+      "Generate a suggested citation",
       "Record a canonical public source",
       "Record related filenames",
-      "Copy or download metadata as JSON",
-      "Process entered information in the browser"
-    ],
-    "isAccessibleForFree": true
+      "Copy or download JSON",
+      "Process information in the browser"
+    ]
   }
   </script>
 
   <style>
     :root {
-      --background: #f5f2ec;
+      --page: #fafafa;
       --surface: #ffffff;
-      --surface-soft: #faf8f4;
-      --text: #1d2835;
-      --muted: #66717d;
-      --line: #d8d5ce;
-      --accent: #1d2838;
-      --accent-soft: #ebe7df;
-      --success: #355f48;
-      --error: #8a3d3d;
-      --shadow: 0 18px 48px rgba(31, 41, 55, 0.07);
-      --radius-large: 24px;
-      --radius-medium: 14px;
+      --surface-soft: #f7f7f7;
+      --text: #171717;
+      --muted: #737373;
+      --muted-light: #a3a3a3;
+      --border: #e7e7e7;
+      --border-strong: #d4d4d4;
+      --button: #171717;
+      --button-hover: #2b2b2b;
+      --focus: rgba(23, 23, 23, 0.11);
+      --success: #237a4b;
+      --error: #b42318;
+      --radius: 14px;
+      --radius-large: 22px;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
     }
 
     * {
@@ -120,185 +104,176 @@
 
     html {
       scroll-behavior: smooth;
+      background: var(--page);
     }
 
     body {
       margin: 0;
-      background:
-        radial-gradient(
-          circle at 10% 0%,
-          rgba(130, 100, 70, 0.08),
-          transparent 32%
-        ),
-        linear-gradient(
-          180deg,
-          #fbfaf7 0%,
-          var(--background) 100%
-        );
+      background: var(--page);
       color: var(--text);
       font-family:
         Inter,
+        ui-sans-serif,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
         Arial,
-        "Helvetica Neue",
         sans-serif;
-      line-height: 1.65;
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
     button,
     input,
-    textarea,
-    select {
+    select,
+    textarea {
       font: inherit;
+    }
+
+    button,
+    select {
+      cursor: pointer;
     }
 
     a {
       color: inherit;
+      text-decoration: none;
     }
 
     .page {
-      width: min(100% - 32px, 980px);
+      width: min(100% - 32px, 860px);
       margin: 0 auto;
-      padding: 24px 0 70px;
+      padding: 20px 0 72px;
     }
 
     .topbar {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 18px;
-      margin-bottom: 34px;
-      padding: 12px 14px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.88);
-      box-shadow: 0 8px 30px rgba(31, 41, 55, 0.05);
-      backdrop-filter: blur(12px);
+      gap: 20px;
+      min-height: 52px;
+      margin-bottom: 70px;
     }
 
     .brand {
-      color: var(--accent);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .language-control {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 650;
+      letter-spacing: -0.01em;
     }
 
-    .language-label {
-      color: var(--muted);
-      font-size: 13px;
+    .brand-mark {
+      display: grid;
+      width: 28px;
+      height: 28px;
+      place-items: center;
+      border-radius: 8px;
+      background: var(--text);
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 750;
     }
 
     .language-select {
       width: auto;
-      min-width: 150px;
+      min-width: 145px;
+      height: 40px;
       margin: 0;
-      padding: 9px 36px 9px 12px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background-color: #ffffff;
+      padding: 0 36px 0 13px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background-color: var(--surface);
       color: var(--text);
-      cursor: pointer;
-    }
-
-    .hero {
-      margin-bottom: 26px;
-      padding: clamp(28px, 6vw, 58px);
-      border: 1px solid var(--line);
-      border-radius: 30px;
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255, 255, 255, 0.98),
-          rgba(246, 241, 234, 0.94)
-        );
+      font-size: 14px;
       box-shadow: var(--shadow);
     }
 
+    .hero {
+      max-width: 760px;
+      margin: 0 auto 52px;
+      text-align: center;
+    }
+
     .eyebrow {
-      margin: 0 0 14px;
+      margin: 0 0 16px;
       color: var(--muted);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.12em;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
     }
 
     h1 {
-      max-width: 850px;
-      margin: 0 0 18px;
-      color: var(--accent);
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-      font-size: clamp(42px, 8vw, 72px);
-      font-weight: 500;
-      letter-spacing: -0.045em;
-      line-height: 1;
+      margin: 0;
+      color: var(--text);
+      font-size: clamp(42px, 8vw, 68px);
+      font-weight: 650;
+      letter-spacing: -0.055em;
+      line-height: 1.02;
     }
 
     .hero-description {
-      max-width: 790px;
-      margin: 0;
-      color: #495563;
+      max-width: 650px;
+      margin: 22px auto 0;
+      color: var(--muted);
       font-size: clamp(17px, 2.5vw, 20px);
+      line-height: 1.55;
     }
 
-    .hero-note {
-      max-width: 790px;
-      margin: 20px 0 0;
-      padding: 15px 17px;
-      border-left: 4px solid #8a6a4d;
-      border-radius: 0 12px 12px 0;
-      background: rgba(235, 231, 223, 0.7);
-      color: var(--accent);
-      font-size: 15px;
+    .privacy-line {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 13px;
     }
 
-    .card {
-      margin-top: 22px;
-      padding: clamp(22px, 4vw, 34px);
-      border: 1px solid var(--line);
+    .privacy-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #34a36f;
+    }
+
+    .workspace {
+      overflow: hidden;
+      border: 1px solid var(--border);
       border-radius: var(--radius-large);
       background: var(--surface);
-      box-shadow: 0 12px 36px rgba(31, 41, 55, 0.045);
+      box-shadow: var(--shadow);
     }
 
-    .card.soft {
-      background: var(--surface-soft);
+    .workspace-header {
+      padding: 26px 28px 22px;
+      border-bottom: 1px solid var(--border);
     }
 
-    h2 {
-      margin: 0 0 10px;
-      color: var(--accent);
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-      font-size: clamp(28px, 5vw, 38px);
-      font-weight: 500;
-      letter-spacing: -0.025em;
-      line-height: 1.15;
-    }
-
-    .section-description {
-      max-width: 760px;
+    .workspace-title {
       margin: 0;
+      font-size: 19px;
+      font-weight: 650;
+      letter-spacing: -0.02em;
+    }
+
+    .workspace-description {
+      margin: 7px 0 0;
       color: var(--muted);
-      font-size: 15px;
+      font-size: 14px;
+    }
+
+    .form {
+      padding: 28px;
     }
 
     .form-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 22px;
-      margin-top: 28px;
     }
 
     .field {
@@ -311,107 +286,159 @@
 
     label {
       display: block;
-      margin-bottom: 7px;
-      color: var(--accent);
-      font-size: 16px;
-      font-weight: 750;
+      margin-bottom: 8px;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
     }
 
-    .field-help {
-      min-height: 40px;
-      margin: 0 0 9px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.45;
+    .required {
+      color: var(--muted-light);
+      font-weight: 500;
     }
 
     input,
-    textarea,
-    select {
+    select,
+    textarea {
       width: 100%;
-      padding: 13px 14px;
-      border: 1px solid #cfd3d8;
-      border-radius: var(--radius-medium);
-      background: #ffffff;
+      border: 1px solid var(--border-strong);
+      border-radius: 11px;
+      background: var(--surface);
       color: var(--text);
-      font-size: 15px;
       transition:
         border-color 0.15s ease,
-        box-shadow 0.15s ease;
+        box-shadow 0.15s ease,
+        background 0.15s ease;
     }
 
-    input:focus,
-    textarea:focus,
-    select:focus {
-      outline: none;
-      border-color: #697586;
-      box-shadow: 0 0 0 4px rgba(105, 117, 134, 0.12);
+    input,
+    select {
+      height: 46px;
+      padding: 0 13px;
     }
 
     textarea {
-      min-height: 118px;
+      min-height: 116px;
+      padding: 12px 13px;
+      line-height: 1.55;
       resize: vertical;
     }
 
-    .actions {
+    input::placeholder,
+    textarea::placeholder {
+      color: var(--muted-light);
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--text);
+      box-shadow: 0 0 0 4px var(--focus);
+    }
+
+    .field-note {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .optional {
+      margin-top: 26px;
+      border-top: 1px solid var(--border);
+      padding-top: 4px;
+    }
+
+    .optional summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0 14px;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
+      list-style: none;
+      cursor: pointer;
+    }
+
+    .optional summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .optional summary::after {
+      content: "+";
+      color: var(--muted);
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    .optional[open] summary::after {
+      content: "−";
+    }
+
+    .optional-grid {
+      display: grid;
+      gap: 20px;
+      padding: 4px 0 6px;
+    }
+
+    .form-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .action-group {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 26px;
     }
 
     button {
-      padding: 12px 20px;
+      min-height: 44px;
+      padding: 0 18px;
       border: 0;
-      border-radius: 999px;
-      background: var(--accent);
-      color: #ffffff;
+      border-radius: 10px;
       font-size: 14px;
-      font-weight: 700;
-      cursor: pointer;
+      font-weight: 600;
       transition:
-        transform 0.15s ease,
-        opacity 0.15s ease;
+        background 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.15s ease;
     }
 
     button:hover {
-      opacity: 0.92;
       transform: translateY(-1px);
     }
 
-    button.secondary {
-      background: #596575;
+    .primary-button {
+      background: var(--button);
+      color: #ffffff;
     }
 
-    button.light {
-      border: 1px solid var(--line);
-      background: var(--accent-soft);
-      color: var(--accent);
+    .primary-button:hover {
+      background: var(--button-hover);
     }
 
-    pre {
-      min-height: 112px;
-      margin: 20px 0 0;
-      padding: 20px;
-      overflow-x: auto;
-      white-space: pre-wrap;
-      overflow-wrap: anywhere;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: #fafbfc;
-      color: #273240;
-      font-family:
-        "SFMono-Regular",
-        Consolas,
-        "Liberation Mono",
-        monospace;
-      font-size: 13px;
-      line-height: 1.65;
+    .secondary-button {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+    }
+
+    .secondary-button:hover {
+      border-color: var(--border-strong);
+      background: var(--surface-soft);
     }
 
     .status {
-      min-height: 22px;
-      margin-top: 12px;
+      min-height: 20px;
+      margin-top: 14px;
       color: var(--success);
       font-size: 13px;
     }
@@ -420,20 +447,115 @@
       color: var(--error);
     }
 
+    .results {
+      display: none;
+      margin-top: 28px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-large);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .results.visible {
+      display: block;
+    }
+
+    .result-tabs {
+      display: flex;
+      gap: 6px;
+      padding: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .tab-button {
+      min-height: 38px;
+      padding: 0 14px;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--muted);
+    }
+
+    .tab-button:hover {
+      transform: none;
+      background: var(--surface-soft);
+    }
+
+    .tab-button.active {
+      background: var(--surface-soft);
+      color: var(--text);
+    }
+
+    .result-panel {
+      display: none;
+      padding: 28px;
+    }
+
+    .result-panel.active {
+      display: block;
+    }
+
+    .result-heading {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 650;
+      letter-spacing: -0.02em;
+    }
+
+    .result-description {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    pre {
+      min-height: 130px;
+      margin: 20px 0 0;
+      padding: 18px;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fbfbfb;
+      color: #282828;
+      font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+      font-size: 13px;
+      line-height: 1.65;
+      overflow-wrap: anywhere;
+      white-space: pre-wrap;
+    }
+
+    .result-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
     .boundary {
-      color: #4f5b67;
+      max-width: 760px;
+      margin: 40px auto 0;
+      padding: 0 6px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+      text-align: center;
     }
 
     .boundary strong {
-      color: var(--accent);
+      color: var(--text);
+      font-weight: 600;
     }
 
     .footer {
-      margin-top: 44px;
-      padding: 24px 4px 0;
-      border-top: 1px solid var(--line);
+      margin-top: 52px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
       color: var(--muted);
-      font-size: 13px;
+      font-size: 12px;
+      text-align: center;
     }
 
     .footer p {
@@ -441,23 +563,44 @@
     }
 
     .footer a {
-      border-bottom: 1px solid rgba(29, 40, 53, 0.25);
-      text-decoration: none;
+      color: var(--text);
+      text-decoration: underline;
+      text-decoration-color: var(--border-strong);
+      text-underline-offset: 3px;
     }
 
-    @media (max-width: 760px) {
-      .topbar {
-        align-items: flex-start;
-        flex-direction: column;
-        border-radius: 20px;
+    @media (max-width: 720px) {
+      .page {
+        width: min(100% - 20px, 860px);
+        padding-top: 12px;
       }
 
-      .language-control {
-        width: 100%;
+      .topbar {
+        margin-bottom: 52px;
+      }
+
+      .brand-text {
+        display: none;
       }
 
       .language-select {
-        width: 100%;
+        min-width: 132px;
+      }
+
+      .hero {
+        margin-bottom: 36px;
+      }
+
+      .workspace,
+      .results {
+        border-radius: 16px;
+      }
+
+      .workspace-header,
+      .form,
+      .result-panel {
+        padding-left: 20px;
+        padding-right: 20px;
       }
 
       .form-grid {
@@ -467,25 +610,36 @@
       .field.full {
         grid-column: auto;
       }
-    }
 
-    @media (max-width: 520px) {
-      .page {
-        width: min(100% - 20px, 980px);
-        padding-top: 12px;
-      }
-
-      .hero,
-      .card {
-        border-radius: 18px;
-      }
-
-      .actions {
+      .form-actions {
+        align-items: stretch;
         flex-direction: column;
       }
 
-      button {
+      .action-group {
         width: 100%;
+      }
+
+      .action-group button {
+        flex: 1;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .action-group {
+        flex-direction: column;
+      }
+
+      .action-group button {
+        width: 100%;
+      }
+
+      .result-tabs {
+        overflow-x: auto;
+      }
+
+      .tab-button {
+        flex: 0 0 auto;
       }
     }
   </style>
@@ -494,494 +648,375 @@
 
 <body>
   <main class="page">
-    <nav class="topbar">
-      <div class="brand">Provenance Tool v0.1</div>
+    <nav class="topbar" aria-label="Tool navigation">
+      <a class="brand" href="https://xufentu.com/provenance-tool/">
+        <span class="brand-mark">P</span>
+        <span class="brand-text">Provenance Tool</span>
+      </a>
 
-```
-  <div class="language-control">
-    <label
-      class="language-label"
-      for="interface-language"
-      data-i18n="languageLabel"
-    >
-      🌐 Language
-    </label>
-
-    <select
-      id="interface-language"
-      class="language-select"
-      aria-label="Interface language"
-    >
-      <option value="en">English</option>
-      <option value="zh-CN">简体中文</option>
-      <option value="es">Español</option>
-      <option value="fr">Français</option>
-      <option value="de">Deutsch</option>
-      <option value="pt">Português</option>
-      <option value="ja">日本語</option>
-      <option value="ko">한국어</option>
-    </select>
-  </div>
+  <select
+    id="interface-language"
+    class="language-select"
+    aria-label="Interface language"
+  >
+    <option value="en">English</option>
+    <option value="zh-CN">简体中文</option>
+    <option value="es">Español</option>
+    <option value="fr">Français</option>
+    <option value="de">Deutsch</option>
+    <option value="pt">Português</option>
+    <option value="ja">日本語</option>
+    <option value="ko">한국어</option>
+  </select>
 </nav>
 
 <header class="hero">
-  <p
-    class="eyebrow"
-    data-i18n="eyebrow"
-  >
-    Basic Publication Record
+  <p class="eyebrow" data-i18n="eyebrow">
+    Publication metadata
   </p>
 
   <h1 data-i18n="heroTitle">
-    Create a record that stays connected to your work.
+    Create a portable record for your work.
   </h1>
 
-  <p
-    class="hero-description"
-    data-i18n="heroDescription"
-  >
-    Generate a basic record containing the declared author, title,
-    version, release date, citation, canonical public source, and
-    related filenames for a work.
+  <p class="hero-description" data-i18n="heroDescription">
+    Generate a basic authorship, version, citation, and canonical-source
+    record before publication.
   </p>
 
-  <p
-    class="hero-note"
-    data-i18n="heroNote"
-  >
-    The suggested citation refers to the work entered by the user.
-    It does not automatically cite the creator of this tool.
-  </p>
+  <div class="privacy-line">
+    <span class="privacy-dot" aria-hidden="true"></span>
+    <span data-i18n="privacyLine">
+      Processed in your browser. Nothing is automatically stored.
+    </span>
+  </div>
 </header>
 
-<section class="card soft">
-  <h2 data-i18n="beforeTitle">
-    Before you begin
-  </h2>
+<section class="workspace" aria-labelledby="form-title">
+  <div class="workspace-header">
+    <h2 id="form-title" class="workspace-title" data-i18n="formTitle">
+      Work details
+    </h2>
 
-  <p
-    class="section-description"
-    data-i18n="beforeDescription"
-  >
-    Enter the public information for your work, generate the record,
-    and then copy or download it. The information is processed in your
-    browser and is not automatically stored by this website.
-  </p>
-</section>
-
-<section class="card">
-  <h2 data-i18n="formTitle">
-    Work information
-  </h2>
-
-  <p
-    class="section-description"
-    data-i18n="formDescription"
-  >
-    Use the official information associated with the version you are
-    preparing to publish.
-  </p>
-
-  <div class="form-grid">
-    <div class="field">
-      <label
-        for="release-type"
-        data-i18n="releaseTypeLabel"
-      >
-        Release Type
-      </label>
-
-      <p
-        class="field-help"
-        data-i18n="releaseTypeHelp"
-      >
-        Select the category that best describes the work.
-      </p>
-
-      <select id="release-type">
-        <option
-          value="Research Paper"
-          data-i18n="typeResearchPaper"
-        >
-          Research Paper
-        </option>
-
-        <option
-          value="GitHub Repository"
-          data-i18n="typeRepository"
-        >
-          GitHub Repository
-        </option>
-
-        <option
-          value="Website"
-          data-i18n="typeWebsite"
-        >
-          Website
-        </option>
-
-        <option
-          value="Dataset"
-          data-i18n="typeDataset"
-        >
-          Dataset
-        </option>
-
-        <option
-          value="Software Prototype"
-          data-i18n="typeSoftware"
-        >
-          Software Prototype
-        </option>
-
-        <option
-          value="Article"
-          data-i18n="typeArticle"
-        >
-          Article
-        </option>
-
-        <option
-          value="Visual Work"
-          data-i18n="typeVisual"
-        >
-          Visual Work
-        </option>
-
-        <option
-          value="Book"
-          data-i18n="typeBook"
-        >
-          Book
-        </option>
-
-        <option
-          value="Presentation"
-          data-i18n="typePresentation"
-        >
-          Presentation
-        </option>
-
-        <option
-          value="Other"
-          data-i18n="typeOther"
-        >
-          Other
-        </option>
-      </select>
-    </div>
-
-    <div class="field">
-      <label
-        for="work-language"
-        data-i18n="workLanguageLabel"
-      >
-        Work Language
-      </label>
-
-      <p
-        class="field-help"
-        data-i18n="workLanguageHelp"
-      >
-        Select the main language used in the work.
-      </p>
-
-      <select id="work-language">
-        <option value="en">English</option>
-        <option value="zh-CN">简体中文</option>
-        <option value="zh-TW">繁體中文</option>
-        <option value="es">Español</option>
-        <option value="fr">Français</option>
-        <option value="de">Deutsch</option>
-        <option value="pt">Português</option>
-        <option value="ja">日本語</option>
-        <option value="ko">한국어</option>
-        <option value="other">Other</option>
-      </select>
-    </div>
-
-    <div class="field full">
-      <label
-        for="title"
-        data-i18n="titleLabel"
-      >
-        Title
-      </label>
-
-      <p
-        class="field-help"
-        data-i18n="titleHelp"
-      >
-        Enter the official title used for this release.
-      </p>
-
-      <input
-        id="title"
-        type="text"
-        autocomplete="off"
-        placeholder="Work title"
-        data-i18n-placeholder="titlePlaceholder"
-      />
-    </div>
-
-    <div class="field">
-      <label
-        for="author"
-        data-i18n="authorLabel"
-      >
-        Author or Responsible Entity
-      </label>
-
-      <p
-        class="field-help"
-        data-i18n="authorHelp"
-      >
-        Enter the author, creator, organization, or responsible
-        project maintainer.
-      </p>
-
-      <input
-        id="author"
-        type="text"
-        autocomplete="name"
-        placeholder="Author or organization name"
-        data-i18n-placeholder="authorPlaceholder"
-      />
-    </div>
-
-    <div class="field">
-      <label
-        for="version"
-        data-i18n="versionLabel"
-      >
-        Work Version
-      </label>
-
-      <p
-        class="field-help"
-        data-i18n="versionHelp"
-      >
-        Enter the version of the work, not the version of this tool.
-      </p>
-
-      <input
-        id="version"
-        type="text"
-        autocomplete="off"
-        placeholder="Example: 1.0"
-        data-i18n-placeholder="versionPlaceholder"
-      />
-    </div>
-
-    <div class="field">
-      <label
-        for="release-date"
-        data-i18n="releaseDateLabel"
-      >
-        Release Date
-      </label>
-
-      <p
-        class="field-help"
-        data-i18n="releaseDateHelp"
-      >
-        Enter the date this version is officially released or made
-        public.
-      </p>
-
-      <input
-        id="release-date"
-        type="date"
-      />
-    </div>
-
-    <div class="field">
-      <label
-        for="canonical-source"
-        data-i18n="canonicalSourceLabel"
-      >
-        Canonical Source
-      </label>
-
-      <p
-        class="field-help"
-        data-i18n="canonicalSourceHelp"
-      >
-        Enter the permanent public URL where this specific work is
-        officially published, maintained, or expected to be cited.
-      </p>
-
-      <input
-        id="canonical-source"
-        type="url"
-        autocomplete="url"
-        placeholder="https://example.com/work/"
-        data-i18n-placeholder="canonicalSourcePlaceholder"
-      />
-    </div>
-
-    <div class="field full">
-      <label
-        for="summary"
-        data-i18n="summaryLabel"
-      >
-        Summary
-      </label>
-
-      <p
-        class="field-help"
-        data-i18n="summaryHelp"
-      >
-        Enter a short factual description of the work.
-      </p>
-
-      <textarea
-        id="summary"
-        placeholder="Short description of the work"
-        data-i18n-placeholder="summaryPlaceholder"
-      ></textarea>
-    </div>
-
-    <div class="field full">
-      <label
-        for="related-files"
-        data-i18n="relatedFilesLabel"
-      >
-        Related Files
-      </label>
-
-      <p
-        class="field-help"
-        data-i18n="relatedFilesHelp"
-      >
-        Enter one filename per line. Leave this field empty when there
-        are no related files to record.
-      </p>
-
-      <textarea
-        id="related-files"
-        placeholder="paper-v1.0.pdf&#10;README.md&#10;citation.txt"
-      ></textarea>
-    </div>
+    <p class="workspace-description" data-i18n="formDescription">
+      Enter the official information for the version you are publishing.
+    </p>
   </div>
 
-  <div class="actions">
+  <div class="form">
+    <div class="form-grid">
+      <div class="field">
+        <label for="release-type" data-i18n="releaseTypeLabel">
+          Release type
+        </label>
+
+        <select id="release-type">
+          <option value="Research Paper" data-i18n="typeResearchPaper">
+            Research paper
+          </option>
+          <option value="GitHub Repository" data-i18n="typeRepository">
+            GitHub repository
+          </option>
+          <option value="Website" data-i18n="typeWebsite">
+            Website
+          </option>
+          <option value="Dataset" data-i18n="typeDataset">
+            Dataset
+          </option>
+          <option value="Software Prototype" data-i18n="typeSoftware">
+            Software prototype
+          </option>
+          <option value="Article" data-i18n="typeArticle">
+            Article
+          </option>
+          <option value="Visual Work" data-i18n="typeVisual">
+            Visual work
+          </option>
+          <option value="Book" data-i18n="typeBook">
+            Book
+          </option>
+          <option value="Presentation" data-i18n="typePresentation">
+            Presentation
+          </option>
+          <option value="Other" data-i18n="typeOther">
+            Other
+          </option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="work-language" data-i18n="workLanguageLabel">
+          Work language
+        </label>
+
+        <select id="work-language">
+          <option value="en">English</option>
+          <option value="zh-CN">简体中文</option>
+          <option value="zh-TW">繁體中文</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="pt">Português</option>
+          <option value="ja">日本語</option>
+          <option value="ko">한국어</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="field full">
+        <label for="title">
+          <span data-i18n="titleLabel">Title</span>
+          <span class="required" data-i18n="requiredLabel">Required</span>
+        </label>
+
+        <input
+          id="title"
+          type="text"
+          autocomplete="off"
+          placeholder="Official title of the work"
+          data-i18n-placeholder="titlePlaceholder"
+        />
+      </div>
+
+      <div class="field">
+        <label for="author">
+          <span data-i18n="authorLabel">
+            Author or responsible entity
+          </span>
+          <span class="required" data-i18n="requiredLabel">Required</span>
+        </label>
+
+        <input
+          id="author"
+          type="text"
+          autocomplete="name"
+          placeholder="Name or organization"
+          data-i18n-placeholder="authorPlaceholder"
+        />
+      </div>
+
+      <div class="field">
+        <label for="version" data-i18n="versionLabel">
+          Work version
+        </label>
+
+        <input
+          id="version"
+          type="text"
+          autocomplete="off"
+          placeholder="Example: 1.0"
+          data-i18n-placeholder="versionPlaceholder"
+        />
+      </div>
+
+      <div class="field">
+        <label for="release-date" data-i18n="releaseDateLabel">
+          Release date
+        </label>
+
+        <input id="release-date" type="date" />
+      </div>
+
+      <div class="field">
+        <label for="canonical-source" data-i18n="canonicalSourceLabel">
+          Canonical source
+        </label>
+
+        <input
+          id="canonical-source"
+          type="url"
+          autocomplete="url"
+          placeholder="https://example.com/work/"
+        />
+
+        <p class="field-note" data-i18n="canonicalSourceNote">
+          The permanent public URL where this work is officially maintained.
+        </p>
+      </div>
+    </div>
+
+    <details class="optional">
+      <summary data-i18n="optionalTitle">
+        Optional details
+      </summary>
+
+      <div class="optional-grid">
+        <div class="field">
+          <label for="summary" data-i18n="summaryLabel">
+            Summary
+          </label>
+
+          <textarea
+            id="summary"
+            placeholder="A short factual description"
+            data-i18n-placeholder="summaryPlaceholder"
+          ></textarea>
+        </div>
+
+        <div class="field">
+          <label for="related-files" data-i18n="relatedFilesLabel">
+            Related files
+          </label>
+
+          <textarea
+            id="related-files"
+            placeholder="paper-v1.0.pdf&#10;README.md&#10;citation.txt"
+          ></textarea>
+
+          <p class="field-note" data-i18n="relatedFilesNote">
+            Enter one filename per line.
+          </p>
+        </div>
+      </div>
+    </details>
+
+    <div class="form-actions">
+      <div class="action-group">
+        <button
+          id="generate-button"
+          class="primary-button"
+          type="button"
+          data-i18n="generateButton"
+        >
+          Generate record
+        </button>
+
+        <button
+          id="clear-button"
+          class="secondary-button"
+          type="button"
+          data-i18n="clearButton"
+        >
+          Clear
+        </button>
+      </div>
+    </div>
+
+    <div
+      id="form-status"
+      class="status"
+      aria-live="polite"
+    ></div>
+  </div>
+</section>
+
+<section
+  id="results"
+  class="results"
+  aria-labelledby="results-title"
+>
+  <div class="result-tabs" role="tablist">
     <button
+      id="citation-tab"
+      class="tab-button active"
       type="button"
-      id="generate-button"
-      data-i18n="generateButton"
+      role="tab"
+      aria-selected="true"
+      aria-controls="citation-panel"
+      data-panel="citation-panel"
+      data-i18n="citationTab"
     >
-      Generate Record
+      Citation
     </button>
 
     <button
+      id="json-tab"
+      class="tab-button"
       type="button"
-      id="clear-button"
-      class="light"
-      data-i18n="clearButton"
+      role="tab"
+      aria-selected="false"
+      aria-controls="json-panel"
+      data-panel="json-panel"
     >
-      Clear Form
+      JSON
     </button>
   </div>
 
   <div
-    id="form-status"
-    class="status"
-    aria-live="polite"
-  ></div>
-</section>
-
-<section class="card">
-  <h2 data-i18n="citationTitle">
-    Citation for This Work
-  </h2>
-
-  <p
-    class="section-description"
-    data-i18n="citationDescription"
+    id="citation-panel"
+    class="result-panel active"
+    role="tabpanel"
+    aria-labelledby="citation-tab"
   >
-    A suggested citation created from the information entered above.
-  </p>
+    <h2 id="results-title" class="result-heading" data-i18n="citationTitle">
+      Citation for this work
+    </h2>
 
-  <pre id="citation-output">The suggested citation will appear here after generation.</pre>
+    <p class="result-description" data-i18n="citationDescription">
+      A suggested citation based on the information you entered.
+    </p>
 
-  <div class="actions">
-    <button
-      type="button"
-      id="copy-citation-button"
-      data-i18n="copyCitationButton"
-    >
-      Copy Citation
-    </button>
+    <pre id="citation-output"></pre>
+
+    <div class="result-actions">
+      <button
+        id="copy-citation-button"
+        class="secondary-button"
+        type="button"
+        data-i18n="copyCitationButton"
+      >
+        Copy citation
+      </button>
+    </div>
+
+    <div
+      id="citation-status"
+      class="status"
+      aria-live="polite"
+    ></div>
   </div>
 
   <div
-    id="citation-status"
-    class="status"
-    aria-live="polite"
-  ></div>
-</section>
-
-<section class="card">
-  <h2>metadata.json</h2>
-
-  <p
-    class="section-description"
-    data-i18n="metadataDescription"
+    id="json-panel"
+    class="result-panel"
+    role="tabpanel"
+    aria-labelledby="json-tab"
   >
-    A structured record that can be copied, downloaded, and kept with
-    the corresponding work.
-  </p>
+    <h2 class="result-heading">metadata.json</h2>
 
-  <pre id="metadata-output">The JSON record will appear here after generation.</pre>
+    <p class="result-description" data-i18n="jsonDescription">
+      A structured record that can be stored with the corresponding work.
+    </p>
 
-  <div class="actions">
-    <button
-      type="button"
-      id="copy-json-button"
-      data-i18n="copyJsonButton"
-    >
-      Copy JSON
-    </button>
+    <pre id="metadata-output"></pre>
 
-    <button
-      type="button"
-      id="download-json-button"
-      class="secondary"
-      data-i18n="downloadJsonButton"
-    >
-      Download JSON
-    </button>
+    <div class="result-actions">
+      <button
+        id="copy-json-button"
+        class="secondary-button"
+        type="button"
+        data-i18n="copyJsonButton"
+      >
+        Copy JSON
+      </button>
+
+      <button
+        id="download-json-button"
+        class="primary-button"
+        type="button"
+        data-i18n="downloadJsonButton"
+      >
+        Download JSON
+      </button>
+    </div>
+
+    <div
+      id="metadata-status"
+      class="status"
+      aria-live="polite"
+    ></div>
   </div>
-
-  <div
-    id="metadata-status"
-    class="status"
-    aria-live="polite"
-  ></div>
 </section>
 
-<section class="card soft boundary">
-  <h2 data-i18n="boundaryTitle">
-    Public Boundary
-  </h2>
-
-  <p data-i18n="boundaryDescription">
-    This tool supports basic documentation and traceability. It does
-    not prove originality, determine legal ownership, verify truth,
-    resolve authorship disputes, create copyright registration, or
-    replace human judgment.
-  </p>
-
+<section class="boundary">
   <p>
-    <strong data-i18n="privacyTitle">
-      Browser processing
-    </strong>
-  </p>
-
-  <p data-i18n="privacyDescription">
-    Information entered in this form is processed in the user’s
-    browser and is not automatically stored by this website.
+    <strong data-i18n="boundaryTitle">Public boundary.</strong>
+    <span data-i18n="boundaryText">
+      This tool supports basic documentation and traceability. It does not
+      prove originality, determine legal ownership, verify truth, resolve
+      authorship disputes, create copyright registration, or replace human
+      judgment.
+    </span>
   </p>
 </section>
 
@@ -992,143 +1027,110 @@
   </p>
 
   <p>
-    <span data-i18n="publicAccessLabel">
-      Public access:
-    </span>
-
     <a href="https://xufentu.com/provenance-tool/">
-      https://xufentu.com/provenance-tool/
+      xufentu.com/provenance-tool
     </a>
   </p>
 
   <p data-i18n="principle">
-    Automation can support structure, but responsibility remains
-    visible.
+    Automation can support structure, but responsibility remains visible.
   </p>
 </footer>
-```
 
   </main>
 
   <script>
     const translations = {
       "en": {
-        languageLabel: "🌐 Language",
-        eyebrow: "Basic Publication Record",
-        heroTitle: "Create a record that stays connected to your work.",
-        heroDescription: "Generate a basic record containing the declared author, title, version, release date, citation, canonical public source, and related filenames for a work.",
-        heroNote: "The suggested citation refers to the work entered by the user. It does not automatically cite the creator of this tool.",
-        beforeTitle: "Before you begin",
-        beforeDescription: "Enter the public information for your work, generate the record, and then copy or download it. The information is processed in your browser and is not automatically stored by this website.",
-        formTitle: "Work information",
-        formDescription: "Use the official information associated with the version you are preparing to publish.",
-        releaseTypeLabel: "Release Type",
-        releaseTypeHelp: "Select the category that best describes the work.",
-        workLanguageLabel: "Work Language",
-        workLanguageHelp: "Select the main language used in the work.",
+        eyebrow: "Publication metadata",
+        heroTitle: "Create a portable record for your work.",
+        heroDescription: "Generate a basic authorship, version, citation, and canonical-source record before publication.",
+        privacyLine: "Processed in your browser. Nothing is automatically stored.",
+        formTitle: "Work details",
+        formDescription: "Enter the official information for the version you are publishing.",
+        releaseTypeLabel: "Release type",
+        workLanguageLabel: "Work language",
         titleLabel: "Title",
-        titleHelp: "Enter the official title used for this release.",
-        titlePlaceholder: "Work title",
-        authorLabel: "Author or Responsible Entity",
-        authorHelp: "Enter the author, creator, organization, or responsible project maintainer.",
-        authorPlaceholder: "Author or organization name",
-        versionLabel: "Work Version",
-        versionHelp: "Enter the version of the work, not the version of this tool.",
+        authorLabel: "Author or responsible entity",
+        versionLabel: "Work version",
+        releaseDateLabel: "Release date",
+        canonicalSourceLabel: "Canonical source",
+        canonicalSourceNote: "The permanent public URL where this work is officially maintained.",
+        requiredLabel: "Required",
+        titlePlaceholder: "Official title of the work",
+        authorPlaceholder: "Name or organization",
         versionPlaceholder: "Example: 1.0",
-        releaseDateLabel: "Release Date",
-        releaseDateHelp: "Enter the date this version is officially released or made public.",
-        canonicalSourceLabel: "Canonical Source",
-        canonicalSourceHelp: "Enter the permanent public URL where this specific work is officially published, maintained, or expected to be cited.",
-        canonicalSourcePlaceholder: "https://example.com/work/",
+        optionalTitle: "Optional details",
         summaryLabel: "Summary",
-        summaryHelp: "Enter a short factual description of the work.",
-        summaryPlaceholder: "Short description of the work",
-        relatedFilesLabel: "Related Files",
-        relatedFilesHelp: "Enter one filename per line. Leave this field empty when there are no related files to record.",
-        generateButton: "Generate Record",
-        clearButton: "Clear Form",
-        citationTitle: "Citation for This Work",
-        citationDescription: "A suggested citation created from the information entered above.",
-        citationEmpty: "The suggested citation will appear here after generation.",
-        copyCitationButton: "Copy Citation",
-        metadataDescription: "A structured record that can be copied, downloaded, and kept with the corresponding work.",
-        metadataEmpty: "The JSON record will appear here after generation.",
+        summaryPlaceholder: "A short factual description",
+        relatedFilesLabel: "Related files",
+        relatedFilesNote: "Enter one filename per line.",
+        generateButton: "Generate record",
+        clearButton: "Clear",
+        citationTab: "Citation",
+        citationTitle: "Citation for this work",
+        citationDescription: "A suggested citation based on the information you entered.",
+        copyCitationButton: "Copy citation",
+        jsonDescription: "A structured record that can be stored with the corresponding work.",
         copyJsonButton: "Copy JSON",
         downloadJsonButton: "Download JSON",
-        boundaryTitle: "Public Boundary",
-        boundaryDescription: "This tool supports basic documentation and traceability. It does not prove originality, determine legal ownership, verify truth, resolve authorship disputes, create copyright registration, or replace human judgment.",
-        privacyTitle: "Browser processing",
-        privacyDescription: "Information entered in this form is processed in the user’s browser and is not automatically stored by this website.",
-        publicAccessLabel: "Public access:",
+        boundaryTitle: "Public boundary.",
+        boundaryText: "This tool supports basic documentation and traceability. It does not prove originality, determine legal ownership, verify truth, resolve authorship disputes, create copyright registration, or replace human judgment.",
         principle: "Automation can support structure, but responsibility remains visible.",
-        typeResearchPaper: "Research Paper",
-        typeRepository: "GitHub Repository",
+        typeResearchPaper: "Research paper",
+        typeRepository: "GitHub repository",
         typeWebsite: "Website",
         typeDataset: "Dataset",
-        typeSoftware: "Software Prototype",
+        typeSoftware: "Software prototype",
         typeArticle: "Article",
-        typeVisual: "Visual Work",
+        typeVisual: "Visual work",
         typeBook: "Book",
         typePresentation: "Presentation",
         typeOther: "Other",
-        requiredError: "Please enter at least a title and an author or responsible entity.",
-        urlError: "Canonical Source must begin with http:// or https://.",
-        generatedStatus: "Record generated. Review the information before copying or downloading.",
-        generateFirst: "Generate a record first.",
+        requiredError: "Enter a title and an author or responsible entity.",
+        urlError: "Canonical source must begin with http:// or https://.",
+        generatedStatus: "Record generated. Review the result before downloading.",
         citationCopied: "Citation copied.",
         jsonCopied: "JSON copied.",
         jsonDownloaded: "JSON downloaded.",
-        copyFailed: "Copy failed. Please select and copy the text manually."
+        copyFailed: "Copy failed. Select and copy the text manually."
       },
 
       "zh-CN": {
-        languageLabel: "🌐 语言",
-        eyebrow: "基础作品发布记录",
-        heroTitle: "为作品建立一份能够持续随行的公开记录。",
-        heroDescription: "为作品生成包含声明作者、标题、版本、发布日期、建议引用、规范公开来源和相关文件名的基础记录。",
-        heroNote: "这里生成的引用文本用于引用使用者填写的作品，不会自动把本工具创作者写入作品引用。",
-        beforeTitle: "开始之前",
-        beforeDescription: "填写作品的公开信息并生成记录，然后复制或下载。所有填写内容仅在您的浏览器中处理，本网站不会自动保存。",
+        eyebrow: "作品发布元数据",
+        heroTitle: "为作品创建一份可随行的公开记录。",
+        heroDescription: "在作品发布前生成基础作者、版本、建议引用和规范公开来源记录。",
+        privacyLine: "内容仅在浏览器中处理，本网站不会自动保存。",
         formTitle: "作品信息",
-        formDescription: "请填写与本次准备发布版本一致的正式信息。",
+        formDescription: "填写与本次准备发布版本一致的正式信息。",
         releaseTypeLabel: "作品类型",
-        releaseTypeHelp: "选择最符合该作品的类别。",
         workLanguageLabel: "作品语言",
-        workLanguageHelp: "选择作品正文主要使用的语言。",
         titleLabel: "作品标题",
-        titleHelp: "填写本次发布所使用的正式标题。",
-        titlePlaceholder: "作品正式标题",
         authorLabel: "作者或责任主体",
-        authorHelp: "填写作者、创作者、机构或负责维护该项目的主体。",
-        authorPlaceholder: "作者或机构名称",
         versionLabel: "作品版本",
-        versionHelp: "填写作品本身的版本，不是本工具的版本。",
-        versionPlaceholder: "例如：1.0",
         releaseDateLabel: "发布日期",
-        releaseDateHelp: "填写这一版本正式发布或公开的日期。",
         canonicalSourceLabel: "规范公开来源",
-        canonicalSourceHelp: "填写该具体作品正式发布、长期维护或应被引用的永久公开网址。",
-        canonicalSourcePlaceholder: "https://example.com/work/",
+        canonicalSourceNote: "该作品正式发布或长期维护的永久公开网址。",
+        requiredLabel: "必填",
+        titlePlaceholder: "作品正式标题",
+        authorPlaceholder: "姓名或机构名称",
+        versionPlaceholder: "例如：1.0",
+        optionalTitle: "选填信息",
         summaryLabel: "作品说明",
-        summaryHelp: "填写对作品内容和用途的简短、客观说明。",
-        summaryPlaceholder: "作品的简短说明",
+        summaryPlaceholder: "简短、客观的作品说明",
         relatedFilesLabel: "相关文件",
-        relatedFilesHelp: "每行填写一个文件名。没有相关文件时可以留空。",
+        relatedFilesNote: "每行填写一个文件名。",
         generateButton: "生成记录",
-        clearButton: "清空表单",
+        clearButton: "清空",
+        citationTab: "建议引用",
         citationTitle: "本作品的建议引用",
-        citationDescription: "根据上方填写的信息生成建议引用文本。",
-        citationEmpty: "生成后，本作品的建议引用将显示在这里。",
+        citationDescription: "根据您填写的信息生成的建议引用文本。",
         copyCitationButton: "复制引用",
-        metadataDescription: "可复制、下载并与对应作品一起保存的结构化记录。",
-        metadataEmpty: "生成后，JSON 记录将显示在这里。",
+        jsonDescription: "可与对应作品一起保存的结构化记录。",
         copyJsonButton: "复制 JSON",
         downloadJsonButton: "下载 JSON",
-        boundaryTitle: "公开边界",
-        boundaryDescription: "该工具用于支持基础记录和可追踪性，但不能证明原创性、判断法律所有权、验证真实性、解决作者争议、完成版权登记或代替人类判断。",
-        privacyTitle: "浏览器本地处理",
-        privacyDescription: "您在表单中填写的信息仅在当前浏览器中处理，本网站不会自动保存。",
-        publicAccessLabel: "公开地址：",
+        boundaryTitle: "公开边界。",
+        boundaryText: "该工具用于支持基础记录和可追踪性，但不能证明原创性、判断法律所有权、验证真实性、解决作者争议、完成版权登记或代替人类判断。",
         principle: "自动化可以支持结构，但责任必须保持可见。",
         typeResearchPaper: "研究论文",
         typeRepository: "GitHub 仓库",
@@ -1140,10 +1142,9 @@
         typeBook: "书籍",
         typePresentation: "演示文稿",
         typeOther: "其他",
-        requiredError: "请至少填写作品标题和作者或责任主体。",
+        requiredError: "请填写作品标题和作者或责任主体。",
         urlError: "规范公开来源必须以 http:// 或 https:// 开头。",
-        generatedStatus: "记录已生成，请在复制或下载前核对信息。",
-        generateFirst: "请先生成记录。",
+        generatedStatus: "记录已生成，请在下载前核对内容。",
         citationCopied: "引用文本已复制。",
         jsonCopied: "JSON 已复制。",
         jsonDownloaded: "JSON 已下载。",
@@ -1151,53 +1152,40 @@
       },
 
       "es": {
-        languageLabel: "🌐 Idioma",
-        eyebrow: "Registro básico de publicación",
-        heroTitle: "Cree un registro que permanezca conectado con su obra.",
-        heroDescription: "Genere un registro básico con el autor declarado, el título, la versión, la fecha de publicación, la cita, la fuente pública canónica y los archivos relacionados.",
-        heroNote: "La cita sugerida corresponde a la obra introducida por el usuario. No cita automáticamente al creador de esta herramienta.",
-        beforeTitle: "Antes de comenzar",
-        beforeDescription: "Introduzca la información pública de la obra, genere el registro y después cópielo o descárguelo. La información se procesa en su navegador y no se almacena automáticamente.",
-        formTitle: "Información de la obra",
-        formDescription: "Utilice la información oficial de la versión que está preparando para publicar.",
+        eyebrow: "Metadatos de publicación",
+        heroTitle: "Cree un registro portátil para su obra.",
+        heroDescription: "Genere un registro básico de autoría, versión, cita y fuente canónica antes de publicar.",
+        privacyLine: "Procesado en su navegador. Nada se almacena automáticamente.",
+        formTitle: "Datos de la obra",
+        formDescription: "Introduzca la información oficial de la versión que va a publicar.",
         releaseTypeLabel: "Tipo de publicación",
-        releaseTypeHelp: "Seleccione la categoría que mejor describa la obra.",
         workLanguageLabel: "Idioma de la obra",
-        workLanguageHelp: "Seleccione el idioma principal de la obra.",
         titleLabel: "Título",
-        titleHelp: "Introduzca el título oficial de esta versión.",
-        titlePlaceholder: "Título de la obra",
         authorLabel: "Autor o entidad responsable",
-        authorHelp: "Introduzca el autor, creador, organización o responsable del proyecto.",
-        authorPlaceholder: "Nombre del autor o de la organización",
         versionLabel: "Versión de la obra",
-        versionHelp: "Introduzca la versión de la obra, no la versión de esta herramienta.",
-        versionPlaceholder: "Ejemplo: 1.0",
         releaseDateLabel: "Fecha de publicación",
-        releaseDateHelp: "Introduzca la fecha en que esta versión se publica oficialmente.",
         canonicalSourceLabel: "Fuente canónica",
-        canonicalSourceHelp: "Introduzca la URL pública permanente donde esta obra se publica, mantiene o debe citarse oficialmente.",
-        canonicalSourcePlaceholder: "https://example.com/work/",
+        canonicalSourceNote: "La URL pública permanente donde se mantiene oficialmente esta obra.",
+        requiredLabel: "Obligatorio",
+        titlePlaceholder: "Título oficial de la obra",
+        authorPlaceholder: "Nombre u organización",
+        versionPlaceholder: "Ejemplo: 1.0",
+        optionalTitle: "Información opcional",
         summaryLabel: "Resumen",
-        summaryHelp: "Introduzca una descripción breve y objetiva de la obra.",
-        summaryPlaceholder: "Descripción breve de la obra",
+        summaryPlaceholder: "Descripción breve y objetiva",
         relatedFilesLabel: "Archivos relacionados",
-        relatedFilesHelp: "Introduzca un nombre de archivo por línea. Déjelo vacío si no hay archivos relacionados.",
+        relatedFilesNote: "Introduzca un archivo por línea.",
         generateButton: "Generar registro",
-        clearButton: "Borrar formulario",
+        clearButton: "Borrar",
+        citationTab: "Cita",
         citationTitle: "Cita de esta obra",
-        citationDescription: "Una cita sugerida creada a partir de la información introducida.",
-        citationEmpty: "La cita sugerida aparecerá aquí después de generarla.",
+        citationDescription: "Una cita sugerida basada en la información introducida.",
         copyCitationButton: "Copiar cita",
-        metadataDescription: "Un registro estructurado que puede copiarse, descargarse y conservarse con la obra.",
-        metadataEmpty: "El registro JSON aparecerá aquí después de generarlo.",
+        jsonDescription: "Un registro estructurado que puede conservarse con la obra.",
         copyJsonButton: "Copiar JSON",
         downloadJsonButton: "Descargar JSON",
-        boundaryTitle: "Límites públicos",
-        boundaryDescription: "Esta herramienta ayuda a documentar y rastrear información básica. No prueba originalidad, determina propiedad legal, verifica la verdad, resuelve disputas de autoría, registra derechos de autor ni sustituye el juicio humano.",
-        privacyTitle: "Procesamiento en el navegador",
-        privacyDescription: "La información introducida se procesa en el navegador del usuario y no se almacena automáticamente en este sitio.",
-        publicAccessLabel: "Acceso público:",
+        boundaryTitle: "Límite público.",
+        boundaryText: "Esta herramienta ayuda con la documentación y la trazabilidad básicas. No prueba originalidad, determina propiedad legal, verifica la verdad, resuelve disputas de autoría, registra derechos de autor ni sustituye el juicio humano.",
         principle: "La automatización puede apoyar la estructura, pero la responsabilidad debe seguir siendo visible.",
         typeResearchPaper: "Artículo de investigación",
         typeRepository: "Repositorio de GitHub",
@@ -1209,10 +1197,9 @@
         typeBook: "Libro",
         typePresentation: "Presentación",
         typeOther: "Otro",
-        requiredError: "Introduzca al menos un título y un autor o entidad responsable.",
+        requiredError: "Introduzca un título y un autor o entidad responsable.",
         urlError: "La fuente canónica debe comenzar con http:// o https://.",
-        generatedStatus: "Registro generado. Revise la información antes de copiarla o descargarla.",
-        generateFirst: "Genere primero un registro.",
+        generatedStatus: "Registro generado. Revise el resultado antes de descargarlo.",
         citationCopied: "Cita copiada.",
         jsonCopied: "JSON copiado.",
         jsonDownloaded: "JSON descargado.",
@@ -1220,53 +1207,40 @@
       },
 
       "fr": {
-        languageLabel: "🌐 Langue",
-        eyebrow: "Enregistrement de publication",
-        heroTitle: "Créez un enregistrement qui reste associé à votre œuvre.",
-        heroDescription: "Générez un enregistrement de base comprenant l’auteur déclaré, le titre, la version, la date de publication, la citation, la source publique canonique et les fichiers associés.",
-        heroNote: "La citation suggérée concerne l’œuvre renseignée par l’utilisateur. Elle ne cite pas automatiquement le créateur de cet outil.",
-        beforeTitle: "Avant de commencer",
-        beforeDescription: "Saisissez les informations publiques de votre œuvre, générez l’enregistrement, puis copiez-le ou téléchargez-le. Les informations sont traitées dans votre navigateur et ne sont pas automatiquement stockées.",
+        eyebrow: "Métadonnées de publication",
+        heroTitle: "Créez un enregistrement portable pour votre œuvre.",
+        heroDescription: "Générez un enregistrement de base d’auteur, de version, de citation et de source canonique avant publication.",
+        privacyLine: "Traitement dans votre navigateur. Rien n’est automatiquement stocké.",
         formTitle: "Informations sur l’œuvre",
-        formDescription: "Utilisez les informations officielles correspondant à la version que vous préparez à publier.",
+        formDescription: "Saisissez les informations officielles de la version que vous publiez.",
         releaseTypeLabel: "Type de publication",
-        releaseTypeHelp: "Sélectionnez la catégorie qui décrit le mieux l’œuvre.",
         workLanguageLabel: "Langue de l’œuvre",
-        workLanguageHelp: "Sélectionnez la langue principale utilisée dans l’œuvre.",
         titleLabel: "Titre",
-        titleHelp: "Saisissez le titre officiel utilisé pour cette publication.",
-        titlePlaceholder: "Titre de l’œuvre",
         authorLabel: "Auteur ou entité responsable",
-        authorHelp: "Saisissez l’auteur, le créateur, l’organisation ou le responsable du projet.",
-        authorPlaceholder: "Nom de l’auteur ou de l’organisation",
         versionLabel: "Version de l’œuvre",
-        versionHelp: "Saisissez la version de l’œuvre, et non celle de cet outil.",
-        versionPlaceholder: "Exemple : 1.0",
         releaseDateLabel: "Date de publication",
-        releaseDateHelp: "Saisissez la date à laquelle cette version est officiellement publiée.",
         canonicalSourceLabel: "Source canonique",
-        canonicalSourceHelp: "Saisissez l’URL publique permanente où cette œuvre est officiellement publiée, maintenue ou destinée à être citée.",
-        canonicalSourcePlaceholder: "https://example.com/work/",
+        canonicalSourceNote: "L’URL publique permanente où cette œuvre est officiellement maintenue.",
+        requiredLabel: "Obligatoire",
+        titlePlaceholder: "Titre officiel de l’œuvre",
+        authorPlaceholder: "Nom ou organisation",
+        versionPlaceholder: "Exemple : 1.0",
+        optionalTitle: "Informations facultatives",
         summaryLabel: "Résumé",
-        summaryHelp: "Saisissez une description courte et factuelle de l’œuvre.",
-        summaryPlaceholder: "Brève description de l’œuvre",
+        summaryPlaceholder: "Description courte et factuelle",
         relatedFilesLabel: "Fichiers associés",
-        relatedFilesHelp: "Saisissez un nom de fichier par ligne. Laissez vide s’il n’y a aucun fichier associé.",
-        generateButton: "Générer l’enregistrement",
-        clearButton: "Effacer le formulaire",
+        relatedFilesNote: "Saisissez un fichier par ligne.",
+        generateButton: "Générer",
+        clearButton: "Effacer",
+        citationTab: "Citation",
         citationTitle: "Citation de cette œuvre",
-        citationDescription: "Une citation suggérée créée à partir des informations saisies.",
-        citationEmpty: "La citation suggérée apparaîtra ici après génération.",
+        citationDescription: "Une citation suggérée à partir des informations saisies.",
         copyCitationButton: "Copier la citation",
-        metadataDescription: "Un enregistrement structuré pouvant être copié, téléchargé et conservé avec l’œuvre.",
-        metadataEmpty: "L’enregistrement JSON apparaîtra ici après génération.",
+        jsonDescription: "Un enregistrement structuré pouvant être conservé avec l’œuvre.",
         copyJsonButton: "Copier le JSON",
         downloadJsonButton: "Télécharger le JSON",
-        boundaryTitle: "Limites publiques",
-        boundaryDescription: "Cet outil prend en charge la documentation et la traçabilité de base. Il ne prouve pas l’originalité, ne détermine pas la propriété juridique, ne vérifie pas la vérité, ne résout pas les litiges d’auteur, n’enregistre pas les droits d’auteur et ne remplace pas le jugement humain.",
-        privacyTitle: "Traitement dans le navigateur",
-        privacyDescription: "Les informations saisies sont traitées dans le navigateur de l’utilisateur et ne sont pas automatiquement stockées par ce site.",
-        publicAccessLabel: "Accès public :",
+        boundaryTitle: "Limite publique.",
+        boundaryText: "Cet outil prend en charge la documentation et la traçabilité de base. Il ne prouve pas l’originalité, ne détermine pas la propriété juridique, ne vérifie pas la vérité, ne résout pas les litiges d’auteur, n’enregistre pas les droits d’auteur et ne remplace pas le jugement humain.",
         principle: "L’automatisation peut soutenir la structure, mais la responsabilité doit rester visible.",
         typeResearchPaper: "Article de recherche",
         typeRepository: "Dépôt GitHub",
@@ -1278,10 +1252,9 @@
         typeBook: "Livre",
         typePresentation: "Présentation",
         typeOther: "Autre",
-        requiredError: "Veuillez saisir au moins un titre et un auteur ou une entité responsable.",
+        requiredError: "Saisissez un titre et un auteur ou une entité responsable.",
         urlError: "La source canonique doit commencer par http:// ou https://.",
-        generatedStatus: "Enregistrement généré. Vérifiez les informations avant de les copier ou de les télécharger.",
-        generateFirst: "Générez d’abord un enregistrement.",
+        generatedStatus: "Enregistrement généré. Vérifiez le résultat avant le téléchargement.",
         citationCopied: "Citation copiée.",
         jsonCopied: "JSON copié.",
         jsonDownloaded: "JSON téléchargé.",
@@ -1289,53 +1262,40 @@
       },
 
       "de": {
-        languageLabel: "🌐 Sprache",
-        eyebrow: "Grundlegender Veröffentlichungsnachweis",
-        heroTitle: "Erstellen Sie einen Nachweis, der mit Ihrem Werk verbunden bleibt.",
-        heroDescription: "Erstellen Sie einen grundlegenden Nachweis mit angegebenem Autor, Titel, Version, Veröffentlichungsdatum, Zitierhinweis, kanonischer öffentlicher Quelle und zugehörigen Dateinamen.",
-        heroNote: "Der vorgeschlagene Zitierhinweis bezieht sich auf das vom Nutzer eingegebene Werk. Der Ersteller dieses Tools wird nicht automatisch zitiert.",
-        beforeTitle: "Bevor Sie beginnen",
-        beforeDescription: "Geben Sie die öffentlichen Informationen zum Werk ein, erstellen Sie den Nachweis und kopieren oder laden Sie ihn anschließend herunter. Die Daten werden im Browser verarbeitet und nicht automatisch gespeichert.",
-        formTitle: "Informationen zum Werk",
-        formDescription: "Verwenden Sie die offiziellen Angaben der Version, die Sie veröffentlichen möchten.",
+        eyebrow: "Veröffentlichungsmetadaten",
+        heroTitle: "Erstellen Sie einen portablen Nachweis für Ihr Werk.",
+        heroDescription: "Erstellen Sie vor der Veröffentlichung einen grundlegenden Autoren-, Versions-, Zitier- und Quellennachweis.",
+        privacyLine: "Verarbeitung im Browser. Es wird nichts automatisch gespeichert.",
+        formTitle: "Werkangaben",
+        formDescription: "Geben Sie die offiziellen Angaben der zu veröffentlichenden Version ein.",
         releaseTypeLabel: "Veröffentlichungstyp",
-        releaseTypeHelp: "Wählen Sie die Kategorie, die das Werk am besten beschreibt.",
         workLanguageLabel: "Sprache des Werks",
-        workLanguageHelp: "Wählen Sie die Hauptsprache des Werks.",
         titleLabel: "Titel",
-        titleHelp: "Geben Sie den offiziellen Titel dieser Veröffentlichung ein.",
-        titlePlaceholder: "Titel des Werks",
         authorLabel: "Autor oder verantwortliche Stelle",
-        authorHelp: "Geben Sie Autor, Ersteller, Organisation oder verantwortliche Projektpflege an.",
-        authorPlaceholder: "Name des Autors oder der Organisation",
-        versionLabel: "Version des Werks",
-        versionHelp: "Geben Sie die Version des Werks ein, nicht die Version dieses Tools.",
-        versionPlaceholder: "Beispiel: 1.0",
+        versionLabel: "Werkversion",
         releaseDateLabel: "Veröffentlichungsdatum",
-        releaseDateHelp: "Geben Sie das Datum ein, an dem diese Version offiziell veröffentlicht wird.",
         canonicalSourceLabel: "Kanonische Quelle",
-        canonicalSourceHelp: "Geben Sie die dauerhafte öffentliche URL ein, unter der dieses Werk offiziell veröffentlicht, gepflegt oder zitiert werden soll.",
-        canonicalSourcePlaceholder: "https://example.com/work/",
+        canonicalSourceNote: "Die dauerhafte öffentliche URL, unter der dieses Werk offiziell gepflegt wird.",
+        requiredLabel: "Erforderlich",
+        titlePlaceholder: "Offizieller Titel des Werks",
+        authorPlaceholder: "Name oder Organisation",
+        versionPlaceholder: "Beispiel: 1.0",
+        optionalTitle: "Optionale Angaben",
         summaryLabel: "Zusammenfassung",
-        summaryHelp: "Geben Sie eine kurze sachliche Beschreibung des Werks ein.",
-        summaryPlaceholder: "Kurze Beschreibung des Werks",
+        summaryPlaceholder: "Kurze sachliche Beschreibung",
         relatedFilesLabel: "Zugehörige Dateien",
-        relatedFilesHelp: "Geben Sie pro Zeile einen Dateinamen ein. Lassen Sie das Feld leer, wenn keine Dateien erfasst werden sollen.",
+        relatedFilesNote: "Eine Datei pro Zeile eingeben.",
         generateButton: "Nachweis erstellen",
-        clearButton: "Formular leeren",
+        clearButton: "Leeren",
+        citationTab: "Zitierhinweis",
         citationTitle: "Zitierhinweis für dieses Werk",
-        citationDescription: "Ein vorgeschlagener Zitierhinweis auf Grundlage der oben eingegebenen Informationen.",
-        citationEmpty: "Der vorgeschlagene Zitierhinweis erscheint nach der Erstellung hier.",
+        citationDescription: "Ein vorgeschlagener Zitierhinweis auf Grundlage Ihrer Angaben.",
         copyCitationButton: "Zitierhinweis kopieren",
-        metadataDescription: "Ein strukturierter Nachweis, der kopiert, heruntergeladen und zusammen mit dem Werk gespeichert werden kann.",
-        metadataEmpty: "Der JSON-Nachweis erscheint nach der Erstellung hier.",
+        jsonDescription: "Ein strukturierter Nachweis, der zusammen mit dem Werk gespeichert werden kann.",
         copyJsonButton: "JSON kopieren",
         downloadJsonButton: "JSON herunterladen",
-        boundaryTitle: "Öffentliche Grenzen",
-        boundaryDescription: "Dieses Tool unterstützt grundlegende Dokumentation und Nachverfolgbarkeit. Es beweist keine Originalität, bestimmt kein rechtliches Eigentum, überprüft keine Wahrheit, löst keine Urheberstreitigkeiten, registriert keine Urheberrechte und ersetzt kein menschliches Urteil.",
-        privacyTitle: "Verarbeitung im Browser",
-        privacyDescription: "Die eingegebenen Informationen werden im Browser verarbeitet und von dieser Website nicht automatisch gespeichert.",
-        publicAccessLabel: "Öffentlicher Zugang:",
+        boundaryTitle: "Öffentliche Grenze.",
+        boundaryText: "Dieses Tool unterstützt grundlegende Dokumentation und Nachverfolgbarkeit. Es beweist keine Originalität, bestimmt kein rechtliches Eigentum, überprüft keine Wahrheit, löst keine Urheberstreitigkeiten, registriert keine Urheberrechte und ersetzt kein menschliches Urteil.",
         principle: "Automatisierung kann Strukturen unterstützen, aber Verantwortung muss sichtbar bleiben.",
         typeResearchPaper: "Forschungsarbeit",
         typeRepository: "GitHub-Repository",
@@ -1347,64 +1307,50 @@
         typeBook: "Buch",
         typePresentation: "Präsentation",
         typeOther: "Andere",
-        requiredError: "Bitte geben Sie mindestens einen Titel und einen Autor oder eine verantwortliche Stelle ein.",
+        requiredError: "Geben Sie einen Titel und einen Autor oder eine verantwortliche Stelle ein.",
         urlError: "Die kanonische Quelle muss mit http:// oder https:// beginnen.",
-        generatedStatus: "Nachweis erstellt. Prüfen Sie die Angaben vor dem Kopieren oder Herunterladen.",
-        generateFirst: "Erstellen Sie zuerst einen Nachweis.",
+        generatedStatus: "Nachweis erstellt. Prüfen Sie das Ergebnis vor dem Herunterladen.",
         citationCopied: "Zitierhinweis kopiert.",
         jsonCopied: "JSON kopiert.",
         jsonDownloaded: "JSON heruntergeladen.",
-        copyFailed: "Kopieren fehlgeschlagen. Bitte wählen und kopieren Sie den Text manuell."
+        copyFailed: "Kopieren fehlgeschlagen. Wählen und kopieren Sie den Text manuell."
       },
 
       "pt": {
-        languageLabel: "🌐 Idioma",
-        eyebrow: "Registro básico de publicação",
-        heroTitle: "Crie um registro que permaneça ligado à sua obra.",
-        heroDescription: "Gere um registro básico com autor declarado, título, versão, data de publicação, citação, fonte pública canônica e nomes de arquivos relacionados.",
-        heroNote: "A citação sugerida refere-se à obra informada pelo usuário. Ela não cita automaticamente o criador desta ferramenta.",
-        beforeTitle: "Antes de começar",
-        beforeDescription: "Informe os dados públicos da obra, gere o registro e depois copie ou baixe o resultado. As informações são processadas no navegador e não são armazenadas automaticamente.",
-        formTitle: "Informações da obra",
-        formDescription: "Use os dados oficiais correspondentes à versão que será publicada.",
+        eyebrow: "Metadados de publicação",
+        heroTitle: "Crie um registro portátil para sua obra.",
+        heroDescription: "Gere um registro básico de autoria, versão, citação e fonte canônica antes da publicação.",
+        privacyLine: "Processado no navegador. Nada é armazenado automaticamente.",
+        formTitle: "Dados da obra",
+        formDescription: "Informe os dados oficiais da versão que será publicada.",
         releaseTypeLabel: "Tipo de publicação",
-        releaseTypeHelp: "Selecione a categoria que melhor descreve a obra.",
         workLanguageLabel: "Idioma da obra",
-        workLanguageHelp: "Selecione o idioma principal usado na obra.",
         titleLabel: "Título",
-        titleHelp: "Informe o título oficial usado nesta publicação.",
-        titlePlaceholder: "Título da obra",
         authorLabel: "Autor ou entidade responsável",
-        authorHelp: "Informe o autor, criador, organização ou responsável pelo projeto.",
-        authorPlaceholder: "Nome do autor ou da organização",
         versionLabel: "Versão da obra",
-        versionHelp: "Informe a versão da obra, não a versão desta ferramenta.",
-        versionPlaceholder: "Exemplo: 1.0",
         releaseDateLabel: "Data de publicação",
-        releaseDateHelp: "Informe a data em que esta versão é oficialmente publicada.",
         canonicalSourceLabel: "Fonte canônica",
-        canonicalSourceHelp: "Informe a URL pública permanente onde esta obra é oficialmente publicada, mantida ou deve ser citada.",
-        canonicalSourcePlaceholder: "https://example.com/work/",
+        canonicalSourceNote: "A URL pública permanente onde esta obra é oficialmente mantida.",
+        requiredLabel: "Obrigatório",
+        titlePlaceholder: "Título oficial da obra",
+        authorPlaceholder: "Nome ou organização",
+        versionPlaceholder: "Exemplo: 1.0",
+        optionalTitle: "Informações opcionais",
         summaryLabel: "Resumo",
-        summaryHelp: "Informe uma descrição curta e objetiva da obra.",
-        summaryPlaceholder: "Descrição breve da obra",
+        summaryPlaceholder: "Descrição curta e objetiva",
         relatedFilesLabel: "Arquivos relacionados",
-        relatedFilesHelp: "Informe um nome de arquivo por linha. Deixe em branco se não houver arquivos relacionados.",
+        relatedFilesNote: "Informe um arquivo por linha.",
         generateButton: "Gerar registro",
-        clearButton: "Limpar formulário",
+        clearButton: "Limpar",
+        citationTab: "Citação",
         citationTitle: "Citação desta obra",
-        citationDescription: "Uma citação sugerida criada com base nas informações fornecidas.",
-        citationEmpty: "A citação sugerida aparecerá aqui depois da geração.",
+        citationDescription: "Uma citação sugerida com base nas informações fornecidas.",
         copyCitationButton: "Copiar citação",
-        metadataDescription: "Um registro estruturado que pode ser copiado, baixado e mantido com a obra.",
-        metadataEmpty: "O registro JSON aparecerá aqui depois da geração.",
+        jsonDescription: "Um registro estruturado que pode ser mantido com a obra.",
         copyJsonButton: "Copiar JSON",
         downloadJsonButton: "Baixar JSON",
-        boundaryTitle: "Limites públicos",
-        boundaryDescription: "Esta ferramenta apoia documentação e rastreabilidade básicas. Ela não prova originalidade, determina propriedade legal, verifica a verdade, resolve disputas de autoria, registra direitos autorais ou substitui o julgamento humano.",
-        privacyTitle: "Processamento no navegador",
-        privacyDescription: "As informações inseridas são processadas no navegador do usuário e não são armazenadas automaticamente por este site.",
-        publicAccessLabel: "Acesso público:",
+        boundaryTitle: "Limite público.",
+        boundaryText: "Esta ferramenta apoia documentação e rastreabilidade básicas. Ela não prova originalidade, determina propriedade legal, verifica a verdade, resolve disputas de autoria, registra direitos autorais ou substitui o julgamento humano.",
         principle: "A automação pode apoiar a estrutura, mas a responsabilidade deve permanecer visível.",
         typeResearchPaper: "Artigo de pesquisa",
         typeRepository: "Repositório GitHub",
@@ -1416,10 +1362,9 @@
         typeBook: "Livro",
         typePresentation: "Apresentação",
         typeOther: "Outro",
-        requiredError: "Informe pelo menos um título e um autor ou entidade responsável.",
+        requiredError: "Informe um título e um autor ou entidade responsável.",
         urlError: "A fonte canônica deve começar com http:// ou https://.",
-        generatedStatus: "Registro gerado. Revise as informações antes de copiar ou baixar.",
-        generateFirst: "Gere primeiro um registro.",
+        generatedStatus: "Registro gerado. Revise o resultado antes de baixar.",
         citationCopied: "Citação copiada.",
         jsonCopied: "JSON copiado.",
         jsonDownloaded: "JSON baixado.",
@@ -1427,53 +1372,40 @@
       },
 
       "ja": {
-        languageLabel: "🌐 言語",
-        eyebrow: "基本公開記録",
-        heroTitle: "作品とともに残る基本記録を作成します。",
-        heroDescription: "申告された著者、タイトル、バージョン、公開日、引用情報、正規公開元、関連ファイル名を含む基本記録を生成します。",
-        heroNote: "生成される引用は、利用者が入力した作品を対象とします。このツールの作成者が自動的に引用されることはありません。",
-        beforeTitle: "はじめに",
-        beforeDescription: "作品の公開情報を入力して記録を生成し、コピーまたはダウンロードしてください。入力内容はブラウザ内で処理され、このウェブサイトには自動保存されません。",
+        eyebrow: "公開メタデータ",
+        heroTitle: "作品とともに残せる記録を作成します。",
+        heroDescription: "公開前に、著者、バージョン、引用、正規公開元の基本記録を生成します。",
+        privacyLine: "ブラウザ内で処理され、自動保存されません。",
         formTitle: "作品情報",
-        formDescription: "公開予定のバージョンに対応する正式な情報を入力してください。",
+        formDescription: "公開するバージョンの正式な情報を入力してください。",
         releaseTypeLabel: "公開形式",
-        releaseTypeHelp: "作品に最も適したカテゴリーを選択してください。",
         workLanguageLabel: "作品の言語",
-        workLanguageHelp: "作品で主に使用されている言語を選択してください。",
         titleLabel: "タイトル",
-        titleHelp: "今回の公開で使用する正式なタイトルを入力してください。",
-        titlePlaceholder: "作品タイトル",
         authorLabel: "著者または責任主体",
-        authorHelp: "著者、制作者、組織、または責任を持つ管理者を入力してください。",
-        authorPlaceholder: "著者名または組織名",
         versionLabel: "作品バージョン",
-        versionHelp: "このツールではなく、作品自体のバージョンを入力してください。",
-        versionPlaceholder: "例：1.0",
         releaseDateLabel: "公開日",
-        releaseDateHelp: "このバージョンが正式に公開された日付を入力してください。",
         canonicalSourceLabel: "正規公開元",
-        canonicalSourceHelp: "この作品が正式に公開、維持、または引用される恒久的な公開URLを入力してください。",
-        canonicalSourcePlaceholder: "https://example.com/work/",
+        canonicalSourceNote: "この作品が正式に維持される恒久的な公開URLです。",
+        requiredLabel: "必須",
+        titlePlaceholder: "作品の正式タイトル",
+        authorPlaceholder: "氏名または組織名",
+        versionPlaceholder: "例：1.0",
+        optionalTitle: "任意項目",
         summaryLabel: "概要",
-        summaryHelp: "作品についての短く客観的な説明を入力してください。",
-        summaryPlaceholder: "作品の短い説明",
+        summaryPlaceholder: "短く客観的な説明",
         relatedFilesLabel: "関連ファイル",
-        relatedFilesHelp: "1行につき1つのファイル名を入力してください。関連ファイルがない場合は空欄でも構いません。",
+        relatedFilesNote: "1行に1つのファイル名を入力してください。",
         generateButton: "記録を生成",
-        clearButton: "フォームを消去",
+        clearButton: "消去",
+        citationTab: "引用",
         citationTitle: "この作品の引用情報",
-        citationDescription: "上記の入力情報をもとに生成される推奨引用形式です。",
-        citationEmpty: "生成後、推奨引用情報がここに表示されます。",
+        citationDescription: "入力内容をもとに生成された推奨引用形式です。",
         copyCitationButton: "引用をコピー",
-        metadataDescription: "作品とともに保存できる、コピーおよびダウンロード可能な構造化記録です。",
-        metadataEmpty: "生成後、JSON記録がここに表示されます。",
+        jsonDescription: "作品とともに保存できる構造化記録です。",
         copyJsonButton: "JSONをコピー",
         downloadJsonButton: "JSONをダウンロード",
-        boundaryTitle: "公開上の限界",
-        boundaryDescription: "このツールは基本的な記録と追跡可能性を支援しますが、独創性の証明、法的所有権の判断、真実性の検証、著者間の紛争解決、著作権登録、人間の判断の代替は行いません。",
-        privacyTitle: "ブラウザ内処理",
-        privacyDescription: "入力された情報は利用者のブラウザ内で処理され、このウェブサイトには自動保存されません。",
-        publicAccessLabel: "公開URL：",
+        boundaryTitle: "公開上の限界。",
+        boundaryText: "このツールは基本的な記録と追跡可能性を支援しますが、独創性の証明、法的所有権の判断、真実性の検証、著者間の紛争解決、著作権登録、人間の判断の代替は行いません。",
         principle: "自動化は構造を支援できますが、責任は常に可視でなければなりません。",
         typeResearchPaper: "研究論文",
         typeRepository: "GitHubリポジトリ",
@@ -1485,64 +1417,50 @@
         typeBook: "書籍",
         typePresentation: "プレゼンテーション",
         typeOther: "その他",
-        requiredError: "少なくともタイトルと著者または責任主体を入力してください。",
+        requiredError: "タイトルと著者または責任主体を入力してください。",
         urlError: "正規公開元は http:// または https:// で始めてください。",
-        generatedStatus: "記録を生成しました。コピーまたはダウンロードする前に内容を確認してください。",
-        generateFirst: "先に記録を生成してください。",
-        citationCopied: "引用情報をコピーしました。",
+        generatedStatus: "記録を生成しました。ダウンロード前に内容を確認してください。",
+        citationCopied: "引用をコピーしました。",
         jsonCopied: "JSONをコピーしました。",
         jsonDownloaded: "JSONをダウンロードしました。",
         copyFailed: "コピーできませんでした。手動で選択してコピーしてください。"
       },
 
       "ko": {
-        languageLabel: "🌐 언어",
-        eyebrow: "기본 공개 기록",
-        heroTitle: "작품과 함께 유지되는 기본 기록을 만드세요.",
-        heroDescription: "신고된 저자, 제목, 버전, 공개일, 인용문, 공식 공개 출처와 관련 파일명을 포함한 기본 기록을 생성합니다.",
-        heroNote: "생성되는 인용문은 사용자가 입력한 작품을 인용합니다. 이 도구의 제작자가 자동으로 인용되는 것은 아닙니다.",
-        beforeTitle: "시작하기 전에",
-        beforeDescription: "작품의 공개 정보를 입력하고 기록을 생성한 다음 복사하거나 다운로드하세요. 입력 정보는 브라우저에서 처리되며 이 웹사이트에 자동 저장되지 않습니다.",
+        eyebrow: "공개 메타데이터",
+        heroTitle: "작품과 함께 유지되는 기록을 만드세요.",
+        heroDescription: "공개 전에 저자, 버전, 인용문과 공식 공개 출처 기록을 생성합니다.",
+        privacyLine: "브라우저에서 처리되며 자동 저장되지 않습니다.",
         formTitle: "작품 정보",
-        formDescription: "공개하려는 버전에 해당하는 공식 정보를 입력하세요.",
+        formDescription: "공개할 버전의 공식 정보를 입력하세요.",
         releaseTypeLabel: "공개 유형",
-        releaseTypeHelp: "작품을 가장 잘 설명하는 유형을 선택하세요.",
         workLanguageLabel: "작품 언어",
-        workLanguageHelp: "작품에서 주로 사용된 언어를 선택하세요.",
         titleLabel: "제목",
-        titleHelp: "이번 공개에 사용되는 공식 제목을 입력하세요.",
-        titlePlaceholder: "작품 제목",
         authorLabel: "저자 또는 책임 주체",
-        authorHelp: "저자, 제작자, 기관 또는 책임 있는 프로젝트 관리자를 입력하세요.",
-        authorPlaceholder: "저자 또는 기관 이름",
         versionLabel: "작품 버전",
-        versionHelp: "이 도구가 아니라 작품 자체의 버전을 입력하세요.",
-        versionPlaceholder: "예: 1.0",
         releaseDateLabel: "공개일",
-        releaseDateHelp: "이 버전이 공식적으로 공개된 날짜를 입력하세요.",
         canonicalSourceLabel: "공식 공개 출처",
-        canonicalSourceHelp: "이 작품이 공식적으로 공개, 유지 또는 인용되는 영구적인 공개 URL을 입력하세요.",
-        canonicalSourcePlaceholder: "https://example.com/work/",
+        canonicalSourceNote: "이 작품이 공식적으로 유지되는 영구 공개 URL입니다.",
+        requiredLabel: "필수",
+        titlePlaceholder: "작품의 공식 제목",
+        authorPlaceholder: "이름 또는 기관",
+        versionPlaceholder: "예: 1.0",
+        optionalTitle: "선택 정보",
         summaryLabel: "요약",
-        summaryHelp: "작품에 대한 짧고 사실적인 설명을 입력하세요.",
-        summaryPlaceholder: "작품에 대한 짧은 설명",
+        summaryPlaceholder: "짧고 객관적인 설명",
         relatedFilesLabel: "관련 파일",
-        relatedFilesHelp: "한 줄에 하나의 파일명을 입력하세요. 관련 파일이 없으면 비워둘 수 있습니다.",
+        relatedFilesNote: "한 줄에 하나의 파일명을 입력하세요.",
         generateButton: "기록 생성",
-        clearButton: "양식 지우기",
+        clearButton: "지우기",
+        citationTab: "인용문",
         citationTitle: "이 작품의 인용문",
-        citationDescription: "위에 입력한 정보를 기반으로 만든 권장 인용문입니다.",
-        citationEmpty: "생성 후 권장 인용문이 여기에 표시됩니다.",
+        citationDescription: "입력한 정보를 바탕으로 생성된 권장 인용문입니다.",
         copyCitationButton: "인용문 복사",
-        metadataDescription: "작품과 함께 보관할 수 있는 복사 및 다운로드 가능한 구조화 기록입니다.",
-        metadataEmpty: "생성 후 JSON 기록이 여기에 표시됩니다.",
+        jsonDescription: "작품과 함께 보관할 수 있는 구조화 기록입니다.",
         copyJsonButton: "JSON 복사",
         downloadJsonButton: "JSON 다운로드",
-        boundaryTitle: "공개 범위",
-        boundaryDescription: "이 도구는 기본 문서화와 추적 가능성을 지원하지만 독창성 증명, 법적 소유권 판단, 진실 검증, 저자 분쟁 해결, 저작권 등록 또는 인간 판단을 대신하지 않습니다.",
-        privacyTitle: "브라우저 내 처리",
-        privacyDescription: "입력한 정보는 사용자의 브라우저에서 처리되며 이 웹사이트에 자동 저장되지 않습니다.",
-        publicAccessLabel: "공개 주소:",
+        boundaryTitle: "공개 범위.",
+        boundaryText: "이 도구는 기본 기록과 추적 가능성을 지원하지만 독창성 증명, 법적 소유권 판단, 진실 검증, 저자 분쟁 해결, 저작권 등록 또는 인간 판단을 대신하지 않습니다.",
         principle: "자동화는 구조를 지원할 수 있지만 책임은 계속 보이는 상태로 남아야 합니다.",
         typeResearchPaper: "연구 논문",
         typeRepository: "GitHub 저장소",
@@ -1554,14 +1472,13 @@
         typeBook: "도서",
         typePresentation: "프레젠테이션",
         typeOther: "기타",
-        requiredError: "최소한 제목과 저자 또는 책임 주체를 입력하세요.",
+        requiredError: "제목과 저자 또는 책임 주체를 입력하세요.",
         urlError: "공식 공개 출처는 http:// 또는 https:// 로 시작해야 합니다.",
-        generatedStatus: "기록이 생성되었습니다. 복사하거나 다운로드하기 전에 내용을 확인하세요.",
-        generateFirst: "먼저 기록을 생성하세요.",
+        generatedStatus: "기록이 생성되었습니다. 다운로드 전에 내용을 확인하세요.",
         citationCopied: "인용문을 복사했습니다.",
         jsonCopied: "JSON을 복사했습니다.",
         jsonDownloaded: "JSON을 다운로드했습니다.",
-        copyFailed: "복사하지 못했습니다. 텍스트를 직접 선택하여 복사하세요."
+        copyFailed: "복사하지 못했습니다. 직접 선택하여 복사하세요."
       }
     };
 
@@ -1578,14 +1495,17 @@
       relatedFiles: document.getElementById("related-files"),
       generateButton: document.getElementById("generate-button"),
       clearButton: document.getElementById("clear-button"),
+      results: document.getElementById("results"),
+      citationOutput: document.getElementById("citation-output"),
+      metadataOutput: document.getElementById("metadata-output"),
       copyCitationButton: document.getElementById("copy-citation-button"),
       copyJsonButton: document.getElementById("copy-json-button"),
       downloadJsonButton: document.getElementById("download-json-button"),
-      citationOutput: document.getElementById("citation-output"),
-      metadataOutput: document.getElementById("metadata-output"),
       formStatus: document.getElementById("form-status"),
       citationStatus: document.getElementById("citation-status"),
-      metadataStatus: document.getElementById("metadata-status")
+      metadataStatus: document.getElementById("metadata-status"),
+      tabButtons: document.querySelectorAll(".tab-button"),
+      resultPanels: document.querySelectorAll(".result-panel")
     };
 
     let currentLanguage = "en";
@@ -1605,6 +1525,12 @@
     elements.copyJsonButton.addEventListener("click", copyJSON);
     elements.downloadJsonButton.addEventListener("click", downloadJSON);
 
+    elements.tabButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        openResultPanel(button.dataset.panel);
+      });
+    });
+
     function applyLanguage(language) {
       currentLanguage = translations[language] ? language : "en";
       document.documentElement.lang = currentLanguage;
@@ -1619,30 +1545,24 @@
         }
       });
 
-      document.querySelectorAll("[data-i18n-placeholder]").forEach(function (node) {
-        const key = node.getAttribute("data-i18n-placeholder");
+      document
+        .querySelectorAll("[data-i18n-placeholder]")
+        .forEach(function (node) {
+          const key = node.getAttribute("data-i18n-placeholder");
 
-        if (dictionary[key]) {
-          node.setAttribute("placeholder", dictionary[key]);
-        }
-      });
-
-      if (!currentCitation) {
-        elements.citationOutput.textContent = dictionary.citationEmpty;
-      }
-
-      if (!currentJSON) {
-        elements.metadataOutput.textContent = dictionary.metadataEmpty;
-      }
+          if (dictionary[key]) {
+            node.setAttribute("placeholder", dictionary[key]);
+          }
+        });
 
       clearStatusMessages();
     }
 
     function setTodayAsDefault() {
-      const today = new Date();
+      const now = new Date();
 
       const localDate = new Date(
-        today.getTime() - today.getTimezoneOffset() * 60000
+        now.getTime() - now.getTimezoneOffset() * 60000
       )
         .toISOString()
         .slice(0, 10);
@@ -1690,9 +1610,7 @@
         .map(function (filename) {
           return filename.trim();
         })
-        .filter(function (filename) {
-          return Boolean(filename);
-        });
+        .filter(Boolean);
 
       currentCitation = createCitation({
         author: author,
@@ -1728,7 +1646,8 @@
             "replace human judgment"
           ]
         },
-        principle: "Automation can support structure, but responsibility remains visible."
+        principle:
+          "Automation can support structure, but responsibility remains visible."
       };
 
       elements.citationOutput.textContent = currentCitation;
@@ -1738,11 +1657,19 @@
         2
       );
 
+      elements.results.classList.add("visible");
+      openResultPanel("citation-panel");
+
       showStatus(
         elements.formStatus,
         dictionary.generatedStatus,
         false
       );
+
+      elements.results.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
     }
 
     function createCitation(data) {
@@ -1769,18 +1696,31 @@
       return citation;
     }
 
+    function openResultPanel(panelId) {
+      elements.tabButtons.forEach(function (button) {
+        const isActive = button.dataset.panel === panelId;
+
+        button.classList.toggle("active", isActive);
+        button.setAttribute(
+          "aria-selected",
+          isActive ? "true" : "false"
+        );
+      });
+
+      elements.resultPanels.forEach(function (panel) {
+        panel.classList.toggle(
+          "active",
+          panel.id === panelId
+        );
+      });
+    }
+
     async function copyCitation() {
       const dictionary = translations[currentLanguage];
 
       clearStatusMessages();
 
       if (!currentCitation) {
-        showStatus(
-          elements.citationStatus,
-          dictionary.generateFirst,
-          true
-        );
-
         return;
       }
 
@@ -1801,17 +1741,12 @@
       clearStatusMessages();
 
       if (!currentJSON) {
-        showStatus(
-          elements.metadataStatus,
-          dictionary.generateFirst,
-          true
-        );
-
         return;
       }
 
-      const text = JSON.stringify(currentJSON, null, 2);
-      const copied = await copyText(text);
+      const copied = await copyText(
+        JSON.stringify(currentJSON, null, 2)
+      );
 
       showStatus(
         elements.metadataStatus,
@@ -1837,12 +1772,6 @@
       clearStatusMessages();
 
       if (!currentJSON) {
-        showStatus(
-          elements.metadataStatus,
-          dictionary.generateFirst,
-          true
-        );
-
         return;
       }
 
@@ -1906,13 +1835,9 @@
       currentCitation = "";
       currentJSON = null;
 
-      const dictionary = translations[currentLanguage];
-
-      elements.citationOutput.textContent =
-        dictionary.citationEmpty;
-
-      elements.metadataOutput.textContent =
-        dictionary.metadataEmpty;
+      elements.citationOutput.textContent = "";
+      elements.metadataOutput.textContent = "";
+      elements.results.classList.remove("visible");
 
       clearStatusMessages();
       elements.title.focus();
@@ -1920,12 +1845,7 @@
 
     function showStatus(element, message, isError) {
       element.textContent = message;
-
-      if (isError) {
-        element.classList.add("error");
-      } else {
-        element.classList.remove("error");
-      }
+      element.classList.toggle("error", Boolean(isError));
     }
 
     function clearStatusMessages() {
