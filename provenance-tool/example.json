@@ -1,10 +1,13 @@
 {
 "tool_name": "Provenance Tool",
 "tool_version": "0.1",
+"tool_url": "https://xufentu.com/provenance-tool/",
 "generated_at": "2026-06-28T00:00:00Z",
+"interface_language": "en",
 "release_type": "Research Paper",
+"work_language": "en",
 "title": "Human Judgment as Structural Constraint",
-"author": "Xufen Tu",
+"author_or_responsible_entity": "Xufen Tu",
 "version": "1.0",
 "release_date": "2026-06-28",
 "canonical_source": "https://github.com/xufentu-creator/judgment-as-structural-constraint",
@@ -14,7 +17,7 @@
 "metadata.json",
 "citation.txt"
 ],
-"citation": "Tu, X. (2026). Human Judgment as Structural Constraint. Version 1.0. Canonical source: https://github.com/xufentu-creator/judgment-as-structural-constraint",
+"suggested_citation": "Tu, X. (2026). Human Judgment as Structural Constraint. Version 1.0. Canonical source: https://github.com/xufentu-creator/judgment-as-structural-constraint",
 "boundary": {
 "does_not": [
 "prove originality",
