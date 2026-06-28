@@ -1,66 +1,43 @@
 # Provenance Tool v0.1
 
-A small web prototype for generating basic provenance records before a work is published.
+Provenance Tool is a small public web prototype for creating basic publication records before a work is released.
 
-This tool is designed for independent authors, researchers, creators, and small project maintainers who want to keep a clear record of authorship, version, citation, and canonical source information.
+It is intended for independent authors, researchers, creators, and small project maintainers who want to keep authorship, version, release date, citation, canonical source, and related-file information together in a consistent record.
 
-It does not prove originality.
-It does not decide ownership.
-It does not replace human judgment.
+The public interface may provide English and Chinese guidance, while generated metadata fields remain in English for broader technical compatibility and cross-platform readability.
 
-It helps produce a simple record that can travel with a work.
+The canonical source should be the permanent public location where the specific work is officially published, maintained, or expected to be cited. This may be a paper page, repository, project website, publication page, or another stable public address.
 
----
+Generated records are processed in the user’s browser and are not automatically stored by this website. Users remain responsible for downloading, preserving, and publishing their own records together with the related work.
 
-## What it generates
+This tool supports documentation and traceability. It does not prove originality, determine legal ownership, verify truth, resolve authorship disputes, create copyright registration, or replace human judgment.
 
-The tool allows a user to enter basic information about a work, including title, author, version, release date, summary, release type, and canonical source.
+**Tool version:** 0.1
+**Status:** Public web prototype
+**Concept and authorship:** Xufen Tu
+**Public access:** https://xufentu.com/provenance-tool/
 
-It then generates a basic metadata record and citation text that can be copied or downloaded.
-
-The current version supports:
-
-`metadata.json`
-citation text
-canonical source record
-basic release metadata
+**Automation can support structure, but responsibility remains visible.**
 
 ---
 
-## How to use
+# 溯源工具 v0.1
 
-Open `index.html` in a browser.
+Provenance Tool 是一个用于作品公开发布前生成基础记录的小型网页原型。
 
-Fill in the work information.
+它面向独立作者、研究人员、创作者和小型项目维护者，用于把作者、版本、发布日期、引用方式、规范来源和相关文件信息保存在同一份记录中。
 
-Click **Generate**.
+公开界面可以提供中英文说明，生成的元数据字段继续使用英文，以保持更广泛的技术兼容性和跨平台读取的一致性。
 
-Copy the citation text or download the generated JSON file.
+规范来源应填写该具体作品正式发布、长期维护或应被引用的稳定公开地址，例如论文页面、项目仓库、作品网站、正式发布页面或其他长期公开位置。
 
-The generated record can be placed next to the work being published, such as a paper, repository, image, dataset, book, or presentation.
+生成内容只在使用者的浏览器中处理，本网站不会自动保存。使用者需要自行下载、保存，并将记录与对应作品一起发布。
 
----
+该工具用于支持记录与可追踪性，但不能证明原创性、判断法律所有权、验证真实性、解决作者争议、完成版权登记或代替人类判断。
 
-## Boundary
+**工具版本：** 0.1
+**状态：** 公开网页原型
+**概念与作者：** Xufen Tu
+**公开地址：** https://xufentu.com/provenance-tool/
 
-This tool only helps organize provenance information.
-
-It does not verify truth, authorship disputes, legal rights, originality, or intellectual value.
-
-A provenance record can support traceability, but responsibility still belongs to the author, publisher, or institution using it.
-
----
-
-## Current status
-
-Version: 0.1
-Status: web prototype
-Concept: Xufen Tu
-
-This prototype is part of an ongoing research direction on human judgment, decision structure, and provenance in AI-mediated complex systems.
-
----
-
-## Principle
-
-Automation can support structure, but responsibility remains visible.
+**自动化可以支持结构，但责任必须保持可见。**
