@@ -1,257 +1,717 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Provenance Tool v0.1</title>
+
+  <title>Provenance Tool v0.1 | Basic Publication Records</title>
+
+<meta
+ name="description"
+ content="A bilingual public web prototype for generating basic authorship, version, citation, canonical source, and related-file records before publication."
+/>
+
+  <meta name="author" content="Xufen Tu" />
+  <meta name="version" content="0.1" />
+  <link rel="canonical" href="https://xufentu.com/provenance-tool/" />
 
   <style>
+    :root {
+      --background: #f7f6f2;
+      --surface: #ffffff;
+      --text: #1f2933;
+      --muted: #667085;
+      --line: #d8d8d2;
+      --button: #1f2937;
+      --button-secondary: #4b5563;
+      --soft: #f3f1ec;
+      --notice: #f8f5ee;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Georgia, "Times New Roman", serif;
-      background: #f7f6f2;
-      color: #1f2933;
-      line-height: 1.6;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.65;
     }
 
     main {
-      max-width: 960px;
+      width: min(960px, calc(100% - 36px));
       margin: 0 auto;
-      padding: 60px 22px;
+      padding: 54px 0 70px;
     }
 
     h1 {
-      font-size: 42px;
+      margin: 0 0 12px;
+      font-size: clamp(38px, 7vw, 58px);
+      line-height: 1.05;
       font-weight: 500;
-      margin-bottom: 10px;
+      letter-spacing: -0.035em;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 27px;
+      font-weight: 500;
+    }
+
+    p {
+      margin-top: 0;
     }
 
     .intro {
-      max-width: 760px;
+      max-width: 790px;
+      margin-bottom: 30px;
       color: #4b5563;
-      margin-bottom: 36px;
+      font-size: 18px;
     }
 
     .zh {
+      display: block;
+      margin-top: 5px;
       color: #6b7280;
-      font-size: 15px;
+      font-size: 14px;
+      line-height: 1.6;
     }
 
     .box {
-      background: #fff;
-      border: 1px solid #d8d8d2;
-      border-radius: 18px;
-      padding: 24px;
-      margin-top: 24px;
+      margin-top: 22px;
+      padding: clamp(20px, 4vw, 30px);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--surface);
+    }
+
+    .notice {
+      background: var(--notice);
+    }
+
+    .field {
+      margin-top: 22px;
+    }
+
+    .field:first-child {
+      margin-top: 0;
     }
 
     label {
       display: block;
-      margin-top: 18px;
+      margin-bottom: 6px;
+      font-size: 18px;
       font-weight: 600;
     }
 
-    input, textarea, select {
+    .help {
+      margin: 0 0 9px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    input,
+    textarea,
+    select {
       width: 100%;
-      padding: 12px;
-      margin-top: 6px;
-      border: 1px solid #d1d5db;
-      border-radius: 10px;
-      font-size: 15px;
-      box-sizing: border-box;
-      background: white;
+      padding: 13px 14px;
+      border: 1px solid #cfd4dc;
+      border-radius: 11px;
+      background: #ffffff;
+      color: var(--text);
+      font: inherit;
+      font-size: 16px;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: 2px solid rgba(31, 41, 55, 0.16);
+      border-color: #6b7280;
     }
 
     textarea {
-      min-height: 90px;
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
     }
 
     button {
-      margin-top: 18px;
-      margin-right: 8px;
-      padding: 11px 18px;
-      border: none;
+      padding: 11px 19px;
+      border: 0;
       border-radius: 999px;
-      background: #1f2937;
-      color: white;
+      background: var(--button);
+      color: #ffffff;
+      font-family: Arial, sans-serif;
       font-size: 14px;
       cursor: pointer;
     }
 
+    button:hover {
+      opacity: 0.9;
+    }
+
     button.secondary {
-      background: #4b5563;
+      background: var(--button-secondary);
+    }
+
+    button.light {
+      border: 1px solid var(--line);
+      background: var(--soft);
+      color: var(--text);
     }
 
     pre {
-      white-space: pre-wrap;
-      background: #f9fafb;
-      border: 1px solid #d8d8d2;
-      border-radius: 14px;
+      min-height: 70px;
+      margin: 16px 0 0;
       padding: 18px;
-      margin-top: 16px;
-      font-size: 14px;
       overflow-x: auto;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #f9fafb;
+      color: #26313d;
+      font-family: "Courier New", monospace;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .status {
+      min-height: 24px;
+      margin-top: 12px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 13px;
     }
 
     footer {
-      margin-top: 48px;
-      font-size: 13px;
+      margin-top: 44px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
       color: #6b7280;
-      border-top: 1px solid #d8d8d2;
-      padding-top: 20px;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: inherit;
+    }
+
+    @media (max-width: 640px) {
+      main {
+        width: min(100% - 24px, 960px);
+        padding-top: 34px;
+      }
+
+      .box {
+        border-radius: 16px;
+      }
+
+      button {
+        width: 100%;
+      }
     }
   </style>
+
 </head>
 
 <body>
   <main>
-    <h1>Provenance Tool v0.1</h1>
+    <header>
+      <h1>Provenance Tool v0.1</h1>
 
-    <p class="intro">
-      Generate a basic provenance record before publishing a work.
-      This tool helps record authorship, version, citation, canonical source, and release metadata.
-      <br />
-      <span class="zh">在作品发布前生成基础溯源记录。</span>
+  <p class="intro">
+    Generate a basic publication record containing declared authorship,
+    version, release date, citation, canonical source, and related-file
+    information.
+    <span class="zh">
+      在作品公开发布前，生成包含作者、版本、发布日期、引用方式、
+      规范来源和相关文件信息的基础记录。
+    </span>
+  </p>
+</header>
+
+<section class="box notice" aria-labelledby="usage-title">
+  <h2 id="usage-title">Before You Begin · 使用说明</h2>
+
+  <p>
+    Complete the form, review the information, and generate the record.
+    Download or copy the result and keep it with the corresponding work.
+    <span class="zh">
+      填写并核对作品信息后生成记录，再将结果下载或复制，
+      与对应作品一起保存或发布。
+    </span>
+  </p>
+
+  <p>
+    Information entered here is processed in your browser and is not
+    automatically stored by this website.
+    <span class="zh">
+      您填写的内容仅在当前浏览器中处理，本网站不会自动保存这些信息。
+    </span>
+  </p>
+</section>
+
+<section class="box" aria-label="Provenance record form">
+  <div class="field">
+    <label for="type">Release Type · 作品类型</label>
+    <p class="help">
+      Select the type that best describes the work.
+      选择最符合本次作品的类型。
     </p>
 
-    <div class="box">
-      <p><strong>How to use</strong></p>
-      <p>
-        Fill in the basic information, click Generate, then copy or download the provenance record.
-        <br />
-        <span class="zh">填写基本信息，点击生成，然后复制或下载溯源记录。</span>
-      </p>
-    </div>
+    <select id="type">
+      <option value="Research Paper">Research Paper · 研究论文</option>
+      <option value="GitHub Repository">GitHub Repository · GitHub 仓库</option>
+      <option value="Website">Website · 网站</option>
+      <option value="Dataset">Dataset · 数据集</option>
+      <option value="Software Prototype">Software Prototype · 软件原型</option>
+      <option value="Article">Article · 文章</option>
+      <option value="Image or Visual Work">Image or Visual Work · 图片或视觉作品</option>
+      <option value="Book">Book · 书籍</option>
+      <option value="Presentation">Presentation · 演示文稿</option>
+      <option value="Other">Other · 其他</option>
+    </select>
+  </div>
 
-    <div class="box">
-      <label>Release Type</label>
-      <select id="type">
-        <option>Research Paper</option>
-        <option>GitHub Repository</option>
-        <option>Dataset</option>
-        <option>Software</option>
-        <option>Image</option>
-        <option>Book</option>
-        <option>Presentation</option>
-        <option>Other</option>
-      </select>
+  <div class="field">
+    <label for="title">Title · 作品标题</label>
+    <p class="help">
+      Enter the official title used for this release.
+      填写本次发布所使用的正式标题。
+    </p>
 
-      <label>Title</label>
-      <input id="title" placeholder="Work title" />
+    <input
+      id="title"
+      type="text"
+      autocomplete="off"
+      placeholder="Work title"
+    />
+  </div>
 
-      <label>Author</label>
-      <input id="author" placeholder="Author name" />
+  <div class="field">
+    <label for="author">Author · 作者</label>
+    <p class="help">
+      Enter the author, creator, organization, or responsible maintainer.
+      填写作者、创作者、机构或负责维护该作品的主体。
+    </p>
 
-      <label>Version</label>
-      <input id="version" placeholder="1.0" />
+    <input
+      id="author"
+      type="text"
+      autocomplete="name"
+      placeholder="Author or organization name"
+    />
+  </div>
 
-      <label>Release Date</label>
-      <input id="date" type="date" />
+  <div class="field">
+    <label for="version">Version · 作品版本</label>
+    <p class="help">
+      Enter the version of the work, not the version of this tool.
+      填写作品本身的版本，不是本工具的版本。
+    </p>
 
-      <label>Canonical Source</label>
-      <input id="source" placeholder="https://..." />
+    <input
+      id="version"
+      type="text"
+      autocomplete="off"
+      placeholder="Example: 1.0"
+    />
+  </div>
 
-      <label>Summary</label>
-      <textarea id="summary" placeholder="Short description of the work"></textarea>
+  <div class="field">
+    <label for="date">Release Date · 发布日期</label>
+    <p class="help">
+      Enter the date this version is officially released or made public.
+      填写这一版本正式发布或公开的日期。
+    </p>
 
-      <button onclick="generate()">Generate</button>
-    </div>
+    <input id="date" type="date" />
+  </div>
 
-    <div class="box">
-      <h2>Citation</h2>
-      <pre id="citation">Citation will appear here.</pre>
-      <button onclick="copyCitation()">Copy Citation</button>
-    </div>
+  <div class="field">
+    <label for="source">Canonical Source · 规范公开来源</label>
+    <p class="help">
+      Enter the permanent public URL where this specific work is officially
+      published, maintained, or expected to be cited.
+      填写该具体作品正式发布、长期维护或应被引用的永久公开网址。
+    </p>
 
-    <div class="box">
-      <h2>metadata.json</h2>
-      <pre id="metadata">metadata.json will appear here.</pre>
-      <button onclick="copyJSON()">Copy JSON</button>
-      <button class="secondary" onclick="downloadJSON()">Download JSON</button>
-    </div>
+    <input
+      id="source"
+      type="url"
+      autocomplete="url"
+      placeholder="https://example.com/work/"
+    />
+  </div>
 
-    <footer>
-      Provenance Tool v0.1 · Concept by Xufen Tu
-      <br />
-      Automation can support structure, but responsibility remains visible.
-      <br />
-      自动化可以帮助建立结构，责任仍然需要由人承担。
-    </footer>
+  <div class="field">
+    <label for="summary">Summary · 作品说明</label>
+    <p class="help">
+      Enter a short factual description of the work.
+      填写对作品内容和用途的简短、客观说明。
+    </p>
+
+    <textarea
+      id="summary"
+      placeholder="Short description of the work"
+    ></textarea>
+  </div>
+
+  <div class="field">
+    <label for="files">Related Files · 相关文件</label>
+    <p class="help">
+      Enter one filename per line.
+      每行填写一个文件名，没有相关文件时可以留空。
+    </p>
+
+    <textarea
+      id="files"
+      placeholder="paper-v1.0.pdf&#10;README.md&#10;citation.txt"
+    ></textarea>
+  </div>
+
+  <div class="actions">
+    <button type="button" onclick="generateRecord()">Generate · 生成</button>
+    <button type="button" class="light" onclick="clearForm()">Clear · 清空</button>
+  </div>
+
+  <div id="form-status" class="status" aria-live="polite"></div>
+</section>
+
+<section class="box" aria-labelledby="citation-title">
+  <h2 id="citation-title">Citation · 引用文本</h2>
+
+  <pre id="citation">Citation will appear here after generation.
+
+
+生成后，引用文本将显示在这里。</pre>
+
+  <div class="actions">
+    <button type="button" onclick="copyCitation()">
+      Copy Citation · 复制引用
+    </button>
+  </div>
+
+  <div id="citation-status" class="status" aria-live="polite"></div>
+</section>
+
+<section class="box" aria-labelledby="metadata-title">
+  <h2 id="metadata-title">metadata.json</h2>
+
+  <pre id="metadata">metadata.json will appear here after generation.
+
+生成后，JSON 记录将显示在这里。</pre>
+
+  <div class="actions">
+    <button type="button" onclick="copyJSON()">
+      Copy JSON · 复制 JSON
+    </button>
+
+    <button type="button" class="secondary" onclick="downloadJSON()">
+      Download JSON · 下载 JSON
+    </button>
+  </div>
+
+  <div id="metadata-status" class="status" aria-live="polite"></div>
+</section>
+
+<section class="box notice" aria-labelledby="boundary-title">
+  <h2 id="boundary-title">Public Boundary · 公开边界</h2>
+
+  <p>
+    This tool supports documentation and traceability. It does not prove
+    originality, determine legal ownership, verify truth, resolve
+    authorship disputes, create copyright registration, or replace human
+    judgment.
+    <span class="zh">
+      该工具用于支持记录与可追踪性，但不能证明原创性、判断法律所有权、
+      验证真实性、解决作者争议、完成版权登记或代替人类判断。
+    </span>
+  </p>
+</section>
+
+<footer>
+  <p>
+    Provenance Tool v0.1 · Concept and authorship: Xufen Tu
+  </p>
+
+  <p>
+    Public access:
+    <a href="https://xufentu.com/provenance-tool/">
+      https://xufentu.com/provenance-tool/
+    </a>
+  </p>
+
+  <p>
+    Automation can support structure, but responsibility remains visible.
+    <span class="zh">
+      自动化可以支持结构，但责任必须保持可见。
+    </span>
+  </p>
+</footer>
+```
+
   </main>
 
   <script>
-    let currentJSON = {};
+    let currentJSON = null;
+    let currentCitation = "";
 
-    function generate() {
-      const type = document.getElementById("type").value.trim();
-      const title = document.getElementById("title").value.trim();
-      const author = document.getElementById("author").value.trim();
-      const version = document.getElementById("version").value.trim();
-      const date = document.getElementById("date").value.trim();
-      const source = document.getElementById("source").value.trim();
-      const summary = document.getElementById("summary").value.trim();
+    const elements = {
+      type: document.getElementById("type"),
+      title: document.getElementById("title"),
+      author: document.getElementById("author"),
+      version: document.getElementById("version"),
+      date: document.getElementById("date"),
+      source: document.getElementById("source"),
+      summary: document.getElementById("summary"),
+      files: document.getElementById("files"),
+      citation: document.getElementById("citation"),
+      metadata: document.getElementById("metadata"),
+      formStatus: document.getElementById("form-status"),
+      citationStatus: document.getElementById("citation-status"),
+      metadataStatus: document.getElementById("metadata-status")
+    };
 
-      const citation = `${author || "Author"}. (${date || "n.d."}). ${title || "Untitled Work"}. Version ${version || "n/a"}. Canonical source: ${source || "not provided"}`;
+    setTodayAsDefault();
+
+    function setTodayAsDefault() {
+      if (!elements.date.value) {
+        const today = new Date();
+        const localDate = new Date(
+          today.getTime() - today.getTimezoneOffset() * 60000
+        )
+          .toISOString()
+          .slice(0, 10);
+
+        elements.date.value = localDate;
+      }
+    }
+
+    function generateRecord() {
+      clearStatusMessages();
+
+      const type = elements.type.value.trim();
+      const title = elements.title.value.trim();
+      const author = elements.author.value.trim();
+      const version = elements.version.value.trim();
+      const releaseDate = elements.date.value.trim();
+      const canonicalSource = elements.source.value.trim();
+      const summary = elements.summary.value.trim();
+
+      const relatedFiles = elements.files.value
+        .split("\n")
+        .map((file) => file.trim())
+        .filter(Boolean);
+
+      if (!title || !author) {
+        elements.formStatus.textContent =
+          "Please enter at least a title and author. 请至少填写作品标题和作者。";
+        return;
+      }
+
+      if (canonicalSource && !/^https?:\/\/\S+$/i.test(canonicalSource)) {
+        elements.formStatus.textContent =
+          "Canonical Source must begin with http:// or https://. 规范来源必须以 http:// 或 https:// 开头。";
+        return;
+      }
+
+      currentCitation = createCitation({
+        author,
+        releaseDate,
+        title,
+        version,
+        canonicalSource
+      });
 
       currentJSON = {
-        tool: "Provenance Tool v0.1",
+        tool_name: "Provenance Tool",
+        tool_version: "0.1",
         generated_at: new Date().toISOString(),
         release_type: type,
         title: title,
         author: author,
         version: version,
-        release_date: date,
-        canonical_source: source,
+        release_date: releaseDate,
+        canonical_source: canonicalSource,
         summary: summary,
-        citation: citation,
-        language_note: "Bilingual metadata may support cross-language provenance recognition.",
+        related_files: relatedFiles,
+        citation: currentCitation,
         boundary: {
-          does: [
-            "record authorship",
-            "record version information",
-            "record canonical source",
-            "generate citation text",
-            "support provenance packaging"
-          ],
           does_not: [
-            "determine originality",
-            "judge legal ownership",
+            "prove originality",
+            "determine legal ownership",
             "verify truth",
-            "replace human judgment",
-            "resolve authorship disputes"
+            "resolve authorship disputes",
+            "create copyright registration",
+            "replace human judgment"
           ]
         },
-        principle: "Automation can support structure, but responsibility remains visible."
+        principle:
+          "Automation can support structure, but responsibility remains visible."
       };
 
-      document.getElementById("citation").textContent = citation;
-      document.getElementById("metadata").textContent = JSON.stringify(currentJSON, null, 2);
+      elements.citation.textContent = currentCitation;
+      elements.metadata.textContent = JSON.stringify(currentJSON, null, 2);
+
+      elements.formStatus.textContent =
+        "Record generated. Review it before copying or downloading. 已生成记录，请在复制或下载前核对内容。";
     }
 
-    function copyCitation() {
-      const text = document.getElementById("citation").textContent;
-      navigator.clipboard.writeText(text);
-      alert("Citation copied.");
+    function createCitation({
+      author,
+      releaseDate,
+      title,
+      version,
+      canonicalSource
+    }) {
+      const year = releaseDate ? releaseDate.slice(0, 4) : "n.d.";
+      const versionText = version ? " Version " + version + "." : "";
+      const sourceText = canonicalSource
+        ? " Canonical source: " + canonicalSource
+        : "";
+
+      return (
+        author +
+        ". (" +
+        year +
+        "). " +
+        title +
+        "." +
+        versionText +
+        sourceText
+      ).trim();
     }
 
-    function copyJSON() {
-      const text = document.getElementById("metadata").textContent;
-      navigator.clipboard.writeText(text);
-      alert("JSON copied.");
+    async function copyCitation() {
+      clearStatusMessages();
+
+      if (!currentCitation) {
+        elements.citationStatus.textContent =
+          "Generate a record first. 请先生成记录。";
+        return;
+      }
+
+      const copied = await copyText(currentCitation);
+
+      elements.citationStatus.textContent = copied
+        ? "Citation copied. 引用文本已复制。"
+        : "Copy failed. Please select and copy the text manually. 复制失败，请手动选择文本复制。";
+    }
+
+    async function copyJSON() {
+      clearStatusMessages();
+
+      if (!currentJSON) {
+        elements.metadataStatus.textContent =
+          "Generate a record first. 请先生成记录。";
+        return;
+      }
+
+      const text = JSON.stringify(currentJSON, null, 2);
+      const copied = await copyText(text);
+
+      elements.metadataStatus.textContent = copied
+        ? "JSON copied. JSON 已复制。"
+        : "Copy failed. Please select and copy the JSON manually. 复制失败，请手动选择 JSON 复制。";
+    }
+
+    async function copyText(text) {
+      try {
+        await navigator.clipboard.writeText(text);
+        return true;
+      } catch (error) {
+        return false;
+      }
     }
 
     function downloadJSON() {
-      const data = JSON.stringify(currentJSON, null, 2);
-      const blob = new Blob([data], { type: "application/json" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
+      clearStatusMessages();
 
-      a.href = url;
-      a.download = "metadata.json";
-      a.click();
+      if (!currentJSON) {
+        elements.metadataStatus.textContent =
+          "Generate a record first. 请先生成记录。";
+        return;
+      }
+
+      const data = JSON.stringify(currentJSON, null, 2);
+
+      const blob = new Blob([data], {
+        type: "application/json;charset=utf-8"
+      });
+
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+
+      link.href = url;
+      link.download = createFilename(currentJSON.title);
+
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
 
       URL.revokeObjectURL(url);
+
+      elements.metadataStatus.textContent =
+        "JSON downloaded. JSON 已下载。";
+    }
+
+    function createFilename(title) {
+      const safeTitle = (title || "work")
+        .toLowerCase()
+        .normalize("NFKD")
+        .replace(/[^\w\s-]/g, "")
+        .trim()
+        .replace(/\s+/g, "-")
+        .replace(/-+/g, "-")
+        .slice(0, 70);
+
+      return (safeTitle || "work") + "-metadata.json";
+    }
+
+    function clearForm() {
+      elements.type.selectedIndex = 0;
+      elements.title.value = "";
+      elements.author.value = "";
+      elements.version.value = "";
+      elements.source.value = "";
+      elements.summary.value = "";
+      elements.files.value = "";
+      elements.date.value = "";
+
+      setTodayAsDefault();
+
+      currentJSON = null;
+      currentCitation = "";
+
+      elements.citation.textContent =
+        "Citation will appear here after generation.\n生成后，引用文本将显示在这里。";
+
+      elements.metadata.textContent =
+        "metadata.json will appear here after generation.\n生成后，JSON 记录将显示在这里。";
+
+      clearStatusMessages();
+      elements.title.focus();
+    }
+
+    function clearStatusMessages() {
+      elements.formStatus.textContent = "";
+      elements.citationStatus.textContent = "";
+      elements.metadataStatus.textContent = "";
     }
   </script>
+
 </body>
 </html>
