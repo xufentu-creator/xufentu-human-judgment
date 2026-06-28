@@ -189,45 +189,54 @@
       font-size: 14px;
     }
 
+
     .hero {
-      max-width: 700px;
-      margin: 0 auto 36px;
+      max-width: 980px;
+      margin: 0 auto 30px;
+      padding: 44px 0 30px;
       text-align: center;
     }
 
     .eyebrow {
-      margin: 0 0 13px;
+      margin: 0 0 10px;
       color: var(--muted);
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 650;
-      letter-spacing: 0.055em;
+      letter-spacing: 0.07em;
       text-transform: uppercase;
     }
 
     h1 {
-      margin: 0;
+      max-width: 880px;
+      margin: 0 auto;
       color: var(--text);
-      font-size: clamp(38px, 6vw, 58px);
+      font-size: clamp(42px, 6vw, 66px);
       font-weight: 650;
       letter-spacing: -0.05em;
-      line-height: 1.08;
+      line-height: 1.03;
     }
 
     .hero-description {
-      max-width: 620px;
-      margin: 16px auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      max-width: 900px;
+      margin: 18px auto 0;
       color: var(--muted);
-      font-size: clamp(16px, 2.2vw, 18px);
+      font-size: clamp(15px, 1.9vw, 17px);
       line-height: 1.55;
     }
 
-    .privacy-line {
+    .hero-separator {
+      color: var(--muted-light);
+    }
+
+    .privacy-inline {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      margin-top: 14px;
-      color: var(--muted);
-      font-size: 13px;
+      gap: 7px;
     }
 
     .privacy-dot {
@@ -525,33 +534,33 @@
       margin-top: 15px;
     }
 
-.footer {
-max-width: 790px;
-margin: 24px auto 0;
-padding: 0 6px;
-color: var(--muted);
-font-size: 12px;
-line-height: 1.65;
-text-align: center;
-}
 
-.footer p {
-  margin: 3px 0;
-}
-    .footer-main {
+    .footer {
+      margin-top: 20px;
+      padding: 14px 4px 0;
+      border-top: 1px solid var(--border);
       color: var(--muted);
+      font-size: 11px;
+      line-height: 1.6;
+      text-align: center;
     }
 
-.footer-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  margin-top: 5px;
-}
+    .footer-line {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
 
-    .footer-meta strong {
+    .footer-line span,
+    .footer-line a {
+      display: inline;
+    }
+
+    .footer-separator {
+      margin: 0 4px;
+      color: var(--muted-light);
+    }
+
+    .footer strong {
       color: var(--text);
       font-weight: 600;
     }
@@ -561,10 +570,6 @@ text-align: center;
       text-decoration: underline;
       text-decoration-color: var(--border-strong);
       text-underline-offset: 3px;
-    }
-
-    .footer-principle {
-      color: var(--muted);
     }
 
     @media (max-width: 720px) {
@@ -586,7 +591,29 @@ text-align: center;
       }
 
       .hero {
-        margin-bottom: 30px;
+        margin-bottom: 24px;
+        padding: 36px 0 26px;
+      }
+
+      .hero-description {
+        display: block;
+        max-width: 620px;
+      }
+
+      .hero-separator {
+        display: none;
+      }
+
+      .privacy-inline {
+        display: flex;
+        justify-content: center;
+        margin-top: 8px;
+      }
+
+      .footer {
+        margin-top: 16px;
+        padding-top: 12px;
+        font-size: 10.5px;
       }
 
       .form-grid {
@@ -669,17 +696,21 @@ text-align: center;
     Create a portable record for your work.
   </h1>
 
-  <p class="hero-description" data-i18n="heroDescription">
-    Generate a basic authorship, version, citation, and canonical-source
-    record before publication.
-  </p>
-
-  <div class="privacy-line">
-    <span class="privacy-dot" aria-hidden="true"></span>
-    <span data-i18n="privacyLine">
-      Processed in your browser. Nothing is automatically stored.
+  <p class="hero-description">
+    <span data-i18n="heroDescription">
+      Generate a basic authorship, version, citation, and canonical-source
+      record before publication.
     </span>
-  </div>
+
+    <span class="hero-separator" aria-hidden="true">·</span>
+
+    <span class="privacy-inline">
+      <span class="privacy-dot" aria-hidden="true"></span>
+      <span data-i18n="privacyLine">
+        Processed in your browser. Nothing is automatically stored.
+      </span>
+    </span>
+  </p>
 </header>
 
 <section class="workspace" aria-labelledby="form-title">
@@ -997,30 +1028,29 @@ text-align: center;
 </section>
 
 <footer class="footer">
-  <p class="footer-main">
+  <p class="footer-line">
     <span data-i18n="boundaryText">
-      This tool supports basic documentation and traceability. It does not
+      This tool supports basic documentation and traceability but does not
       prove originality, determine legal ownership, verify truth, resolve
       authorship disputes, create copyright registration, or replace human
       judgment.
     </span>
-  </p>
 
-  <p class="footer-meta">
+    <span class="footer-separator" aria-hidden="true">·</span>
     <span>Provenance Tool v0.1</span>
-    <span aria-hidden="true">·</span>
-    <span>
-      Concept and authorship:
-      <strong>Xufen Tu</strong>
-    </span>
-    <span aria-hidden="true">·</span>
+
+    <span class="footer-separator" aria-hidden="true">·</span>
+    <strong>Xufen Tu</strong>
+
+    <span class="footer-separator" aria-hidden="true">·</span>
     <a href="https://xufentu.com/provenance-tool/">
       xufentu.com/provenance-tool
     </a>
-  </p>
 
-  <p class="footer-principle" data-i18n="principle">
-    Automation can support structure, but responsibility remains visible.
+    <span class="footer-separator" aria-hidden="true">·</span>
+    <span data-i18n="principle">
+      Automation can support structure, but responsibility remains visible.
+    </span>
   </p>
 </footer>
 
