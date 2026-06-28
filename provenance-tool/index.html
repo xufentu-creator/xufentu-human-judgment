@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Provenance Tool v0.1</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #f7f6f2;
+      color: #1f2933;
+      line-height: 1.6;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 60px 22px;
+    }
+
+    h1 {
+      font-size: 42px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .intro {
+      max-width: 760px;
+      color: #4b5563;
+      margin-bottom: 36px;
+    }
+
+    .zh {
+      color: #6b7280;
+      font-size: 15px;
+    }
+
+    .box {
+      background: #fff;
+      border: 1px solid #d8d8d2;
+      border-radius: 18px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+
+    label {
+      display: block;
+      margin-top: 18px;
+      font-weight: 600;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      font-size: 15px;
+      box-sizing: border-box;
+      background: white;
+    }
+
+    textarea {
+      min-height: 90px;
+    }
+
+    button {
+      margin-top: 18px;
+      margin-right: 8px;
+      padding: 11px 18px;
+      border: none;
+      border-radius: 999px;
+      background: #1f2937;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    button.secondary {
+      background: #4b5563;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      background: #f9fafb;
+      border: 1px solid #d8d8d2;
+      border-radius: 14px;
+      padding: 18px;
+      margin-top: 16px;
+      font-size: 14px;
+      overflow-x: auto;
+    }
+
+    footer {
+      margin-top: 48px;
+      font-size: 13px;
+      color: #6b7280;
+      border-top: 1px solid #d8d8d2;
+      padding-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Provenance Tool v0.1</h1>
+
+    <p class="intro">
+      Generate a basic provenance record before publishing a work.
+      This tool helps record authorship, version, citation, canonical source, and release metadata.
+      <br />
+      <span class="zh">在作品发布前生成基础溯源记录。</span>
+    </p>
+
+    <div class="box">
+      <p><strong>How to use</strong></p>
+      <p>
+        Fill in the basic information, click Generate, then copy or download the provenance record.
+        <br />
+        <span class="zh">填写基本信息，点击生成，然后复制或下载溯源记录。</span>
+      </p>
+    </div>
+
+    <div class="box">
+      <label>Release Type</label>
+      <select id="type">
+        <option>Research Paper</option>
+        <option>GitHub Repository</option>
+        <option>Dataset</option>
+        <option>Software</option>
+        <option>Image</option>
+        <option>Book</option>
+        <option>Presentation</option>
+        <option>Other</option>
+      </select>
+
+      <label>Title</label>
+      <input id="title" placeholder="Work title" />
+
+      <label>Author</label>
+      <input id="author" placeholder="Author name" />
+
+      <label>Version</label>
+      <input id="version" placeholder="1.0" />
+
+      <label>Release Date</label>
+      <input id="date" type="date" />
+
+      <label>Canonical Source</label>
+      <input id="source" placeholder="https://..." />
+
+      <label>Summary</label>
+      <textarea id="summary" placeholder="Short description of the work"></textarea>
+
+      <button onclick="generate()">Generate</button>
+    </div>
+
+    <div class="box">
+      <h2>Citation</h2>
+      <pre id="citation">Citation will appear here.</pre>
+      <button onclick="copyCitation()">Copy Citation</button>
+    </div>
+
+    <div class="box">
+      <h2>metadata.json</h2>
+      <pre id="metadata">metadata.json will appear here.</pre>
+      <button onclick="copyJSON()">Copy JSON</button>
+      <button class="secondary" onclick="downloadJSON()">Download JSON</button>
+    </div>
+
+    <footer>
+      Provenance Tool v0.1 · Concept by Xufen Tu
+      <br />
+      Automation can support structure, but responsibility remains visible.
+      <br />
+      自动化可以帮助建立结构，责任仍然需要由人承担。
+    </footer>
+  </main>
+
+  <script>
+    let currentJSON = {};
+
+    function generate() {
+      const type = document.getElementById("type").value.trim();
+      const title = document.getElementById("title").value.trim();
+      const author = document.getElementById("author").value.trim();
+      const version = document.getElementById("version").value.trim();
+      const date = document.getElementById("date").value.trim();
+      const source = document.getElementById("source").value.trim();
+      const summary = document.getElementById("summary").value.trim();
+
+      const citation = `${author || "Author"}. (${date || "n.d."}). ${title || "Untitled Work"}. Version ${version || "n/a"}. Canonical source: ${source || "not provided"}`;
+
+      currentJSON = {
+        tool: "Provenance Tool v0.1",
+        generated_at: new Date().toISOString(),
+        release_type: type,
+        title: title,
+        author: author,
+        version: version,
+        release_date: date,
+        canonical_source: source,
+        summary: summary,
+        citation: citation,
+        language_note: "Bilingual metadata may support cross-language provenance recognition.",
+        boundary: {
+          does: [
+            "record authorship",
+            "record version information",
+            "record canonical source",
+            "generate citation text",
+            "support provenance packaging"
+          ],
+          does_not: [
+            "determine originality",
+            "judge legal ownership",
+            "verify truth",
+            "replace human judgment",
+            "resolve authorship disputes"
+          ]
+        },
+        principle: "Automation can support structure, but responsibility remains visible."
+      };
+
+      document.getElementById("citation").textContent = citation;
+      document.getElementById("metadata").textContent = JSON.stringify(currentJSON, null, 2);
+    }
+
+    function copyCitation() {
+      const text = document.getElementById("citation").textContent;
+      navigator.clipboard.writeText(text);
+      alert("Citation copied.");
+    }
+
+    function copyJSON() {
+      const text = document.getElementById("metadata").textContent;
+      navigator.clipboard.writeText(text);
+      alert("JSON copied.");
+    }
+
+    function downloadJSON() {
+      const data = JSON.stringify(currentJSON, null, 2);
+      const blob = new Blob([data], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+
+      a.href = url;
+      a.download = "metadata.json";
+      a.click();
+
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>
