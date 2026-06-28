@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Page Not Found | Xufen Tu</title>
+
+<meta
+ name="description"
+ content="The requested page could not be found. Return to Xufen Tu’s canonical public research website."
+/>
+
+  <meta name="robots" content="noindex, follow" />
+
+  <style>
+    :root {
+      --page: #f7f7f5;
+      --surface: #ffffff;
+      --text: #171717;
+      --muted: #737373;
+      --border: #e6e6e2;
+      --button: #171717;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: var(--page);
+      color: var(--text);
+      font-family:
+        Inter,
+        ui-sans-serif,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      width: min(100%, 680px);
+      padding: 48px;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: var(--surface);
+      text-align: center;
+    }
+
+    .code {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(40px, 8vw, 68px);
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    p {
+      max-width: 520px;
+      margin: 20px auto 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    a.primary {
+      border-color: var(--button);
+      background: var(--button);
+      color: #ffffff;
+    }
+
+    @media (max-width: 520px) {
+      main {
+        padding: 34px 22px;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      a {
+        width: 100%;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <main>
+    <p class="code">404 · Page not found</p>
+
+<h1>This page is not available.</h1>
+
+<p>
+  The address may have changed or the page may no longer exist.
+  Return to the canonical public research website or open the public
+  provenance tool.
+</p>
+
+<div class="actions">
+  <a class="primary" href="https://xufentu.com/">
+    Return to xufentu.com
+  </a>
+
+  <a href="https://xufentu.com/provenance-tool/">
+    Open Provenance Tool
+  </a>
+</div>
+
+  </main>
+</body>
+</html>
