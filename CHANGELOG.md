@@ -1,4 +1,3 @@
-
 # Changelog
 
 All notable public changes to this repository are recorded here.
@@ -16,6 +15,14 @@ All notable public changes to this repository are recorded here.
 - Simplified the optional official link field.
 - Updated the public tool interface and documentation.
 
+## Provenance Tool v0.2.0 — 2026-06-30
+
+- Added local file processing.
+- Added SHA-256 file-integrity records.
+- Added downloadable provenance ZIP packages.
+- Added multilingual work-type labels.
+- Added support for documents, source files, images, audio, video, archives, datasets, and project folders.
+- Clarified that selected files are not automatically uploaded.
 
 ## Public Research Website v1.6.0 — 2026-06-28
 
@@ -25,12 +32,3 @@ All notable public changes to this repository are recorded here.
 - Added the public provenance anchor `TUX-133.144~`.
 - Added public research identity metadata.
 - Added public rights, citation, security, and provenance records.
-
-## Provenance Tool v0.2.0 — 2026-06-30
-
-- Added local file processing.
-- Added SHA-256 file-integrity records.
-- Added downloadable provenance ZIP packages.
-- Added multilingual work-type labels.
-- Added support for documents, source files, images, audio, video, archives, datasets, and project folders.
-- Clarified that selected files are not automatically uploaded.
