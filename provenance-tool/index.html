@@ -3,131 +3,397 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Provenance Tool v0.2.0 | Local File Provenance Package</title>
-  <meta name="description" content="Create a local provenance package with authorship, citation, SHA-256 file hashes, metadata, and a downloadable ZIP." />
+  <title>Provenance Tool v0.3.0 | Create, Verify and Compare</title>
+  <meta name="description" content="Create, verify, and compare portable file provenance records locally in your browser." />
   <meta name="author" content="Xufen Tu" />
-  <meta name="version" content="0.2.0" />
+  <meta name="version" content="0.3.0" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://xufentu.com/provenance-tool/" />
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
   <style>
-    :root{--bg:#fafafa;--surface:#fff;--text:#171717;--muted:#737373;--line:#e5e5e5;--strong:#d1d1d1;--soft:#f5f5f5;--ok:#24734c;--error:#b42318;--radius:14px;--max:920px}
-    *{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}button,input,select,textarea{font:inherit}button,select{cursor:pointer}a{color:inherit}.page{width:min(calc(100% - 28px),var(--max));margin:auto;padding:16px 0 48px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:48px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:14px;font-weight:700}.mark{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--text);color:#fff}.language{height:40px;padding:0 34px 0 12px;border:1px solid var(--line);border-radius:10px;background:#fff}.hero{text-align:center;padding:56px 0 30px}.eyebrow{margin:0 0 10px;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}h1{max-width:820px;margin:auto;font-size:clamp(42px,7vw,68px);line-height:1.02;letter-spacing:-.055em}.hero p:last-child{max-width:760px;margin:18px auto 0;color:var(--muted)}.workspace{border-top:1px solid var(--line);padding-top:28px}.drop{padding:34px 20px;border:1.5px dashed var(--strong);border-radius:18px;background:var(--surface);text-align:center;transition:.15s}.drop.drag{border-color:var(--text);background:var(--soft)}.drop h2{margin:0;font-size:20px}.drop p{margin:8px 0 18px;color:var(--muted);font-size:14px}.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}.button{min-height:44px;padding:0 17px;border:1px solid var(--line);border-radius:10px;background:#fff;font-weight:650}.button.primary{border-color:var(--text);background:var(--text);color:#fff}.button:disabled{opacity:.45;cursor:not-allowed}.file-list{display:none;margin:20px 0;border-top:1px solid var(--line)}.file-list.visible{display:block}.file-row{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);font-size:13px}.file-name{font-weight:650;overflow-wrap:anywhere}.file-meta,.file-state{color:var(--muted);white-space:nowrap}.section-title{margin:30px 0 6px;font-size:20px}.section-copy{margin:0 0 20px;color:var(--muted);font-size:14px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.field.full{grid-column:1/-1}label{display:block;margin-bottom:7px;font-size:14px;font-weight:650}.required{margin-left:5px;color:var(--muted);font-size:12px;font-weight:500}input,select,textarea{width:100%;border:1px solid var(--strong);border-radius:12px;background:#fff;color:var(--text)}input,select{height:46px;padding:0 13px}textarea{min-height:104px;padding:12px 13px;resize:vertical}.note{margin:7px 0 0;color:var(--muted);font-size:12px}.options{display:flex;align-items:center;gap:9px;margin:22px 0;color:var(--muted);font-size:13px}.options input{width:16px;height:16px;margin:0}.form-actions{display:flex;flex-wrap:wrap;gap:10px;padding-top:22px;border-top:1px solid var(--line)}.status{min-height:20px;margin-top:13px;color:var(--ok);font-size:13px}.status.error{color:var(--error)}.results{display:none;margin-top:28px;padding-top:26px;border-top:1px solid var(--line)}.results.visible{display:block}.tabs{display:flex;gap:18px;border-bottom:1px solid var(--line)}.tab{padding:0 0 10px;border:0;background:transparent;color:var(--muted);font-weight:650}.tab.active{color:var(--text);box-shadow:inset 0 -2px var(--text)}.panel{display:none;padding-top:20px}.panel.active{display:block}pre{padding:16px;border:1px solid var(--line);border-radius:12px;background:#fff;white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace}.footer{margin-top:28px;padding-top:16px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:11px}.footer strong{color:var(--text)}
-    @media(max-width:700px){.grid{grid-template-columns:1fr}.field.full{grid-column:auto}.file-row{grid-template-columns:minmax(0,1fr) auto}.file-state{display:none}.form-actions{flex-direction:column}.form-actions .button{width:100%}.hero{padding-top:42px}.brand-text{display:none}}
+    :root{
+      --bg:#f4f4f1;--panel:#fff;--text:#111;--muted:#737373;--line:#deded8;
+      --soft:#f7f7f4;--dark:#141414;--ok:#196b45;--warn:#9a6700;--bad:#b42318;
+      --radius:22px;--shadow:0 18px 55px rgba(0,0,0,.07);--max:1180px
+    }
+    *{box-sizing:border-box}
+    html{background:var(--bg);scroll-behavior:smooth}
+    body{margin:0;background:
+      radial-gradient(circle at 15% 0%,rgba(255,255,255,.9),transparent 33%),
+      var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,-apple-system,
+      BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.55;
+      -webkit-font-smoothing:antialiased}
+    button,input,select,textarea{font:inherit}
+    button,select{cursor:pointer}
+    button:disabled{cursor:not-allowed;opacity:.42}
+    a{color:inherit;text-decoration:none}
+    .shell{width:min(calc(100% - 28px),var(--max));margin:0 auto;padding:18px 0 64px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;
+      padding:11px 14px;border:1px solid rgba(222,222,216,.9);border-radius:16px;
+      background:rgba(255,255,255,.82);backdrop-filter:blur(16px);position:sticky;top:10px;z-index:20}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:700;font-size:14px}
+    .mark{display:grid;place-items:center;width:31px;height:31px;border-radius:10px;background:var(--dark);color:#fff;font-size:12px}
+    .lang{height:38px;border:1px solid var(--line);border-radius:10px;background:#fff;padding:0 34px 0 12px;color:var(--text)}
+    .hero{padding:72px 4px 38px}
+    .eyebrow{margin:0 0 12px;color:var(--muted);font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+    h1{margin:0;max-width:900px;font-size:clamp(48px,7.5vw,84px);font-weight:650;letter-spacing:-.06em;line-height:.98}
+    .hero-copy{max-width:760px;margin:22px 0 0;color:var(--muted);font-size:18px}
+    .privacy{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:8px 11px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.72);font-size:13px}
+    .dot{width:7px;height:7px;border-radius:50%;background:#2a9b66}
+    .modebar{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0 18px;padding:7px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.72)}
+    .modebtn{min-height:52px;border:0;border-radius:13px;background:transparent;color:var(--muted);font-weight:650}
+    .modebtn.active{background:var(--dark);color:#fff;box-shadow:0 8px 22px rgba(0,0,0,.12)}
+    .workspace{min-height:620px;border:1px solid var(--line);border-radius:28px;background:rgba(255,255,255,.9);box-shadow:var(--shadow);overflow:hidden}
+    .view{display:none;padding:34px}
+    .view.active{display:block}
+    .view-head{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:24px}
+    .view-head h2{margin:0;font-size:30px;letter-spacing:-.04em}
+    .view-head p{max-width:650px;margin:7px 0 0;color:var(--muted)}
+    .canvas{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    .drop{min-height:330px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:34px;border:1.5px dashed #c8c8c2;border-radius:22px;background:linear-gradient(180deg,#fff,#fafaf8);transition:.18s ease}
+    .drop.drag{border-color:#111;background:#f4f4f0;transform:translateY(-2px)}
+    .drop-icon{width:58px;height:58px;display:grid;place-items:center;border-radius:18px;background:#111;color:#fff;font-size:24px;margin-bottom:18px}
+    .drop h3{margin:0;font-size:24px;letter-spacing:-.03em}
+    .drop p{max-width:430px;margin:9px 0 18px;color:var(--muted)}
+    .button{min-height:44px;padding:0 17px;border:0;border-radius:11px;font-weight:650}
+    .primary{background:#111;color:#fff}
+    .secondary{background:#fff;color:#111;border:1px solid var(--line)}
+    .sidecard{padding:24px;border:1px solid var(--line);border-radius:22px;background:var(--soft)}
+    .sidecard h3{margin:0 0 17px;font-size:17px}
+    .compact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .compact-grid .full{grid-column:1/-1}
+    .mini{display:flex;flex-direction:column;gap:6px}
+    .mini label{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:.05em;text-transform:uppercase}
+    .mini input,.mini select,.mini textarea{width:100%;border:1px solid var(--line);border-radius:11px;background:#fff;color:#111;padding:11px 12px;outline:none}
+    .mini input,.mini select{height:44px}
+    .mini textarea{min-height:82px;resize:vertical}
+    .mini input:focus,.mini select:focus,.mini textarea:focus{border-color:#111;box-shadow:0 0 0 3px rgba(0,0,0,.07)}
+    .actionrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:17px}
+    .filelist{margin-top:18px;border-top:1px solid var(--line)}
+    .filerow{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);font-size:13px}
+    .fname{font-weight:650;overflow-wrap:anywhere}
+    .fmeta,.fstate{color:var(--muted);white-space:nowrap}
+    .resultbox{display:none;margin-top:20px;padding:24px;border-radius:20px;background:#111;color:#fff}
+    .resultbox.show{display:block}
+    .resultbox h3{margin:0;font-size:22px}
+    .resultbox p{margin:7px 0 17px;color:#cfcfcf}
+    .dual{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .slot{min-height:280px;padding:28px;border:1.5px dashed #c8c8c2;border-radius:22px;background:#fff;display:flex;flex-direction:column;justify-content:center;text-align:center}
+    .slot.drag{border-color:#111;background:#f7f7f4}
+    .slot .label{font-size:11px;font-weight:750;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+    .slot h3{margin:8px 0 6px;font-size:24px;letter-spacing:-.03em}
+    .slot p{margin:0 0 16px;color:var(--muted)}
+    .summarygrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px}
+    .metric{padding:18px;border:1px solid var(--line);border-radius:16px;background:#fff}
+    .metric strong{display:block;font-size:28px;letter-spacing:-.04em}
+    .metric span{font-size:12px;color:var(--muted)}
+    .tablewrap{overflow:auto;margin-top:18px;border:1px solid var(--line);border-radius:18px;background:#fff}
+    table{width:100%;border-collapse:collapse;font-size:13px}
+    th,td{padding:13px 14px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+    th{color:var(--muted);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+    tr:last-child td{border-bottom:0}
+    .badge{display:inline-flex;align-items:center;padding:4px 8px;border-radius:999px;font-size:11px;font-weight:700}
+    .same{background:#eaf5ef;color:var(--ok)}
+    .changed{background:#fff3d6;color:var(--warn)}
+    .added{background:#e8f0ff;color:#2456a6}
+    .removed{background:#fdecea;color:var(--bad)}
+    .verify-panel{display:none;margin-top:20px}
+    .verify-panel.show{display:block}
+    .verify-hero{padding:26px;border-radius:20px;background:#111;color:#fff}
+    .verify-hero.ok{background:#145c3d}
+    .verify-hero.bad{background:#8f241d}
+    .verify-hero h3{margin:0;font-size:26px}
+    .verify-hero p{margin:7px 0 0;color:rgba(255,255,255,.78)}
+    .footer{padding:24px 4px 0;text-align:center;color:var(--muted);font-size:12px}
+    @media(max-width:900px){
+      .canvas,.dual{grid-template-columns:1fr}
+      .summarygrid{grid-template-columns:repeat(2,1fr)}
+      .view{padding:22px}
+    }
+    @media(max-width:620px){
+      .shell{width:min(calc(100% - 16px),var(--max))}
+      .hero{padding-top:50px}
+      .modebar{grid-template-columns:1fr}
+      .compact-grid{grid-template-columns:1fr}
+      .compact-grid .full{grid-column:auto}
+      .summarygrid{grid-template-columns:1fr 1fr}
+      .view-head{display:block}
+      .topbar{top:6px}
+    }
   </style>
 </head>
 <body>
-<main class="page">
-  <nav class="topbar">
-    <a class="brand" href="https://xufentu.com/provenance-tool/"><span class="mark">P</span><span class="brand-text">Provenance Tool</span></a>
-    <select id="lang" translate="no" class="language" aria-label="Interface language">
-      <option value="en">English</option><option value="zh-CN">简体中文</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="pt">Português</option><option value="ja">日本語</option><option value="ko">한국어</option>
-    </select>
-  </nav>
+  <main class="shell">
+    <nav class="topbar">
+      <a class="brand" href="https://xufentu.com/provenance-tool/">
+        <span class="mark">P</span><span>Provenance Tool</span>
+      </a>
+      <select id="language" class="lang" aria-label="Language" translate="no">
+        <option value="en">English</option>
+        <option value="zh-CN">简体中文</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="pt">Português</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+      </select>
+    </nav>
 
-  <header class="hero">
-    <p class="eyebrow" data-i18n="eyebrow">Local provenance package</p>
-    <h1 data-i18n="title">Drop in your files. Generate the record.</h1>
-    <p data-i18n="subtitle">Documents, images, audio, video, archives, and folders are processed locally in your browser. Nothing is uploaded.</p>
-  </header>
+    <header class="hero">
+      <p class="eyebrow" data-i18n="eyebrow">Portable file provenance</p>
+      <h1 data-i18n="hero">Create. Verify. Compare.</h1>
+      <p class="hero-copy" data-i18n="heroCopy">A local browser workspace for creating portable records, checking file integrity, and comparing versions without automatically uploading source files.</p>
+      <div class="privacy"><span class="dot"></span><span data-i18n="privacy">Processed locally in your browser.</span></div>
+    </header>
 
-  <section class="workspace">
-    <div id="drop" class="drop" tabindex="0" role="button" aria-label="Add files or drag a folder">
-      <h2 data-i18n="dropTitle">Drop files or folders here</h2>
-      <p data-i18n="dropCopy">Archives are recorded as complete files and are not automatically unpacked.</p>
-      <div class="actions">
-        <button id="pickFiles" class="button" type="button" data-i18n="pickFiles">Select files</button>
+    <div class="modebar">
+      <button class="modebtn active" data-mode="create" data-i18n="modeCreate">Create record</button>
+      <button class="modebtn" data-mode="verify" data-i18n="modeVerify">Verify record</button>
+      <button class="modebtn" data-mode="compare" data-i18n="modeCompare">Compare versions</button>
+    </div>
+
+    <section class="workspace">
+      <div id="create" class="view active">
+        <div class="view-head">
+          <div><h2 data-i18n="createTitle">Build one portable package</h2><p data-i18n="createCopy">Add files, enter only the essential details, and download one ZIP containing the complete record.</p></div>
+        </div>
+        <div class="canvas">
+          <div>
+            <div id="createDrop" class="drop" tabindex="0">
+              <div class="drop-icon">+</div>
+              <h3 data-i18n="dropTitle">Drop files or a folder</h3>
+              <p data-i18n="dropCopy">Documents, source code, images, audio, video, datasets, and archives are supported.</p>
+              <button id="createPick" class="button secondary" data-i18n="selectFiles">Select files</button>
+              <input id="createInput" type="file" multiple hidden />
+            </div>
+            <div id="createFiles" class="filelist"></div>
+          </div>
+          <aside class="sidecard">
+            <h3 data-i18n="essential">Essential details</h3>
+            <div class="compact-grid">
+              <div class="mini full"><label data-i18n="title">Title</label><input id="title" /></div>
+              <div class="mini"><label data-i18n="author">Author or entity</label><input id="author" /></div>
+              <div class="mini"><label data-i18n="version">Version</label><input id="version" placeholder="1.0" /></div>
+              <div class="mini"><label data-i18n="date">Date</label><input id="date" type="date" /></div>
+              <div class="mini"><label data-i18n="type">Type</label>
+                <select id="type" translate="no">
+                  <option value="Research Paper" data-i18n="tPaper">Research Paper</option>
+                  <option value="Website" data-i18n="tWebsite">Website</option>
+                  <option value="GitHub Repository" data-i18n="tRepo">GitHub Repository</option>
+                  <option value="Software" data-i18n="tSoftware">Software</option>
+                  <option value="Source Code" data-i18n="tCode">Source Code</option>
+                  <option value="Internal System" data-i18n="tInternal">Internal System</option>
+                  <option value="Private Research" data-i18n="tPrivate">Private Research</option>
+                  <option value="Client Deliverable" data-i18n="tClient">Client Deliverable</option>
+                  <option value="Audio" data-i18n="tAudio">Audio</option>
+                  <option value="Video" data-i18n="tVideo">Video</option>
+                  <option value="Image" data-i18n="tImage">Image</option>
+                  <option value="Archive" data-i18n="tArchive">Archive</option>
+                  <option value="Other" data-i18n="tOther">Other</option>
+                </select>
+              </div>
+              <div class="mini"><label data-i18n="classification">Classification</label>
+                <select id="classification" translate="no">
+                  <option value="Public" data-i18n="cPublic">Public</option>
+                  <option value="Internal" data-i18n="cInternal">Internal</option>
+                  <option value="Confidential" data-i18n="cConfidential">Confidential</option>
+                  <option value="Restricted" data-i18n="cRestricted">Restricted</option>
+                </select>
+              </div>
+              <div class="mini full"><label data-i18n="source">Canonical source (optional)</label><input id="source" type="url" placeholder="https://..." /></div>
+            </div>
+            <div class="actionrow">
+              <button id="generate" class="button primary" data-i18n="generate">Generate package</button>
+              <button id="resetCreate" class="button secondary" data-i18n="clear">Clear</button>
+            </div>
+            <div id="createResult" class="resultbox">
+              <h3 data-i18n="ready">Package ready</h3>
+              <p data-i18n="readyCopy">One ZIP contains metadata, provenance, citation, manifest, and SHA-256 records.</p>
+              <div class="actionrow">
+                <button id="downloadPackage" class="button primary" data-i18n="download">Download ZIP</button>
+                <button id="copyCitation" class="button secondary" data-i18n="copyCitation">Copy citation</button>
+              </div>
+            </div>
+          </aside>
+        </div>
       </div>
-      <input id="files" type="file" multiple hidden />
-    </div>
 
-    <div id="fileList" class="file-list" aria-live="polite"></div>
-
-    <h2 class="section-title" data-i18n="detailsTitle">Work details</h2>
-    <p class="section-copy" data-i18n="detailsCopy">Only the title and responsible person or organization are required.</p>
-
-    <div class="grid">
-      <div class="field full"><label><span data-i18n="workTitle">Title</span><span class="required" data-i18n="required">Required</span></label><input id="workTitle" type="text" data-i18n-placeholder="titlePlaceholder" placeholder="Official title of the work" /></div>
-      <div class="field"><label><span data-i18n="author">Author or responsible entity</span><span class="required" data-i18n="required">Required</span></label><input id="author" type="text" data-i18n-placeholder="authorPlaceholder" placeholder="Name or organization" /></div>
-      <div class="field"><label data-i18n="version">Version</label><input id="version" type="text" placeholder="1.0" /></div>
-      <div class="field"><label data-i18n="releaseDate">Release date</label><input id="releaseDate" type="date" /></div>
-      <div class="field"><label data-i18n="releaseType">Release type</label><select id="releaseType" translate="no">
-        <option value="Research Paper" data-i18n="typeResearchPaper">Research Paper</option>
-        <option value="Website" data-i18n="typeWebsite">Website</option>
-        <option value="GitHub Repository" data-i18n="typeRepository">GitHub Repository</option>
-        <option value="Dataset" data-i18n="typeDataset">Dataset</option>
-        <option value="Software" data-i18n="typeSoftware">Software</option>
-        <option value="Source Code" data-i18n="typeSourceCode">Source Code</option>
-        <option value="Internal System" data-i18n="typeInternalSystem">Internal System</option>
-        <option value="Private Research" data-i18n="typePrivateResearch">Private Research</option>
-        <option value="Internal Methodology" data-i18n="typeInternalMethodology">Internal Methodology</option>
-        <option value="Client Deliverable" data-i18n="typeClientDeliverable">Client Deliverable</option>
-        <option value="Audio" data-i18n="typeAudio">Audio</option>
-        <option value="Video" data-i18n="typeVideo">Video</option>
-        <option value="Image" data-i18n="typeImage">Image</option>
-        <option value="Archive" data-i18n="typeArchive">Archive</option>
-        <option value="Other" data-i18n="typeOther">Other</option>
-      </select></div>
-
-      <div class="field">
-        <label data-i18n="classificationLabel">Record classification</label>
-        <select id="classification" translate="no">
-          <option value="Public" data-i18n="classPublic">Public</option>
-          <option value="Internal" data-i18n="classInternal">Internal</option>
-          <option value="Confidential" data-i18n="classConfidential">Confidential</option>
-          <option value="Restricted" data-i18n="classRestricted">Restricted</option>
-        </select>
+      <div id="verify" class="view">
+        <div class="view-head">
+          <div><h2 data-i18n="verifyTitle">Check whether files still match</h2><p data-i18n="verifyCopy">Add the current files on the left and the saved provenance ZIP or file-integrity-records.json on the right.</p></div>
+        </div>
+        <div class="dual">
+          <div id="verifyFilesDrop" class="slot">
+            <span class="label" data-i18n="currentFiles">Current files</span>
+            <h3 data-i18n="addFiles">Add files to verify</h3>
+            <p data-i18n="addFilesCopy">The tool recalculates SHA-256 locally.</p>
+            <button id="verifyFilesPick" class="button secondary" data-i18n="selectFiles">Select files</button>
+            <input id="verifyFilesInput" type="file" multiple hidden />
+            <div id="verifyFilesNames" class="filelist"></div>
+          </div>
+          <div id="verifyRecordDrop" class="slot">
+            <span class="label" data-i18n="savedRecord">Saved record</span>
+            <h3 data-i18n="addRecord">Add provenance ZIP or JSON</h3>
+            <p data-i18n="addRecordCopy">The stored hashes are read locally.</p>
+            <button id="verifyRecordPick" class="button secondary" data-i18n="selectRecord">Select record</button>
+            <input id="verifyRecordInput" type="file" accept=".zip,.json,application/json,application/zip" hidden />
+            <div id="verifyRecordName" class="filelist"></div>
+          </div>
+        </div>
+        <div class="actionrow"><button id="runVerify" class="button primary" data-i18n="runVerify">Run verification</button></div>
+        <div id="verifyPanel" class="verify-panel">
+          <div id="verifyHero" class="verify-hero"><h3 id="verifyHeadline"></h3><p id="verifyText"></p></div>
+          <div id="verifyTable" class="tablewrap"></div>
+        </div>
       </div>
 
-      <div class="field full"><label data-i18n="canonical">Canonical source</label><input id="canonical" type="url" placeholder="https://example.com/work/" /><p class="note" data-i18n="canonicalNote">The public URL where this work is officially maintained.</p></div>
-      <div class="field full"><label data-i18n="summary">Summary</label><textarea id="summary" data-i18n-placeholder="summaryPlaceholder" placeholder="Short factual description"></textarea></div>
-    </div>
+      <div id="compare" class="view">
+        <div class="view-head">
+          <div><h2 data-i18n="compareTitle">See exactly what changed</h2><p data-i18n="compareCopy">Add a previous version and a current version. The comparison stays inside the browser.</p></div>
+        </div>
+        <div class="dual">
+          <div id="beforeDrop" class="slot">
+            <span class="label" data-i18n="before">Previous version</span>
+            <h3 data-i18n="addBefore">Add older files</h3>
+            <p data-i18n="folderSupport">Files or folders are supported.</p>
+            <button id="beforePick" class="button secondary" data-i18n="selectFiles">Select files</button>
+            <input id="beforeInput" type="file" multiple hidden />
+            <div id="beforeNames" class="filelist"></div>
+          </div>
+          <div id="afterDrop" class="slot">
+            <span class="label" data-i18n="after">Current version</span>
+            <h3 data-i18n="addAfter">Add newer files</h3>
+            <p data-i18n="folderSupport">Files or folders are supported.</p>
+            <button id="afterPick" class="button secondary" data-i18n="selectFiles">Select files</button>
+            <input id="afterInput" type="file" multiple hidden />
+            <div id="afterNames" class="filelist"></div>
+          </div>
+        </div>
+        <div class="actionrow"><button id="runCompare" class="button primary" data-i18n="runCompare">Compare versions</button></div>
+        <div id="compareResults" style="display:none">
+          <div class="summarygrid">
+            <div class="metric"><strong id="mSame">0</strong><span data-i18n="unchanged">Unchanged</span></div>
+            <div class="metric"><strong id="mChanged">0</strong><span data-i18n="changed">Changed</span></div>
+            <div class="metric"><strong id="mAdded">0</strong><span data-i18n="added">Added</span></div>
+            <div class="metric"><strong id="mRemoved">0</strong><span data-i18n="removed">Removed</span></div>
+          </div>
+          <div id="compareTable" class="tablewrap"></div>
+        </div>
+      </div>
+    </section>
 
-    <label class="options"><input id="includeOriginals" type="checkbox" /><span data-i18n="includeOriginals">Include original files in the ZIP package</span></label>
+    <footer class="footer">
+      <span>Provenance Tool v0.3.0 · Xufen Tu · </span>
+      <span data-i18n="boundary">Integrity records support verification but do not prove originality or legal ownership.</span>
+    </footer>
+  </main>
 
-    <div class="form-actions">
-      <button id="generate" class="button primary" type="button" data-i18n="generate">Generate provenance package</button>
-      <button id="downloadZip" class="button" type="button" disabled data-i18n="downloadZip">Download ZIP</button>
-      <button id="clear" class="button" type="button" data-i18n="clear">Clear</button>
-    </div>
-    <div id="status" class="status" aria-live="polite"></div>
-  </section>
-
-  <section id="results" class="results">
-    <div class="tabs"><button class="tab active" data-panel="citation" data-i18n="citationTab">Citation</button><button class="tab" data-panel="metadata">metadata.json</button><button class="tab" data-panel="integrity">File integrity</button></div>
-    <div id="citation" class="panel active"><pre id="citationOut"></pre><div class="actions"><button id="copyCitation" class="button" data-i18n="copyCitation">Copy citation</button></div></div>
-    <div id="metadata" class="panel"><pre id="metadataOut"></pre><div class="actions"><button id="copyMetadata" class="button" data-i18n="copyJson">Copy JSON</button></div></div>
-    <div id="integrity" class="panel"><pre id="integrityOut"></pre></div>
-  </section>
-
-  <footer class="footer"><span data-i18n="boundary">This tool supports documentation and traceability. It does not prove originality, determine legal ownership, verify truth, resolve authorship disputes, create copyright registration, or replace human judgment.</span> · <strong>Provenance Tool v0.2.0</strong> · Xufen Tu · <a href="https://xufentu.com/provenance-tool/">xufentu.com/provenance-tool</a></footer>
-</main>
 <script>
-const I18N={
- en:{eyebrow:"Local provenance package",title:"Drop in your files. Generate the record.",subtitle:"Documents, images, audio, video, archives, and folders are processed locally in your browser. Nothing is uploaded.",dropTitle:"Drop files or folders here",dropCopy:"Drop files or an entire folder here. Archives are recorded as complete files and are not automatically unpacked.",pickFiles:"Select files",pickFolder:"Select folder",detailsTitle:"Work details",detailsCopy:"Only the title and responsible person or organization are required.",workTitle:"Title",required:"Required",titlePlaceholder:"Official title of the work",author:"Author or responsible entity",authorPlaceholder:"Name or organization",version:"Version",releaseDate:"Release date",releaseType:"Release type",canonical:"Canonical source",canonicalNote:"The public URL where this work is officially maintained.",summary:"Summary",summaryPlaceholder:"Short factual description",includeOriginals:"Include original files in the ZIP package",generate:"Generate provenance package",downloadZip:"Download ZIP",clear:"Clear",citationTab:"Citation",copyCitation:"Copy citation",copyJson:"Copy JSON",boundary:"This tool supports documentation and traceability. It does not prove originality, determine legal ownership, verify truth, resolve authorship disputes, create copyright registration, or replace human judgment.",needFiles:"Add at least one file.",needFields:"Enter a title and an author or responsible entity.",hashing:"Calculating SHA-256 locally…",ready:"Package ready. Review the records or download the ZIP.",downloaded:"ZIP package downloaded.",added:"Files added.",typeResearchPaper:"Research Paper",typeWebsite:"Website",typeRepository:"GitHub Repository",typeDataset:"Dataset",typeSoftware:"Software",typeAudio:"Audio",typeVideo:"Video",typeImage:"Image",typeArchive:"Archive",typeOther:"Other",fileReady:"Ready",typeSourceCode:"Source Code",typeInternalSystem:"Internal System",typePrivateResearch:"Private Research",typeInternalMethodology:"Internal Methodology",typeClientDeliverable:"Client Deliverable",classificationLabel:"Record classification",classPublic:"Public",classInternal:"Internal",classConfidential:"Confidential",classRestricted:"Restricted"},
- "zh-CN":{eyebrow:"本地溯源包",title:"把文件放进去，自动生成记录。",subtitle:"文档、图片、音频、视频、压缩包和文件夹只在浏览器本地处理，不会上传。",dropTitle:"将文件或文件夹拖到这里",dropCopy:"可拖入单个文件、多个文件或整个文件夹。压缩包按完整文件记录，不自动解压。",pickFiles:"选择文件",pickFolder:"选择文件夹",detailsTitle:"作品信息",detailsCopy:"只需要填写标题和作者或责任主体。",workTitle:"作品标题",required:"必填",titlePlaceholder:"作品正式标题",author:"作者或责任主体",authorPlaceholder:"姓名或机构名称",version:"版本",releaseDate:"发布日期",releaseType:"作品类型",canonical:"规范公开来源",canonicalNote:"作品正式发布或长期维护的公开网址。",summary:"作品说明",summaryPlaceholder:"简短、客观的说明",includeOriginals:"在 ZIP 溯源包中包含原始文件",generate:"生成溯源包",downloadZip:"下载 ZIP",clear:"清空",citationTab:"建议引用",copyCitation:"复制引用",copyJson:"复制 JSON",boundary:"该工具支持基础记录与可追踪性，但不能证明原创性、判断法律所有权、验证真实性、解决作者争议、完成版权登记或代替人类判断。",needFiles:"请至少添加一个文件。",needFields:"请填写作品标题和作者或责任主体。",hashing:"正在本地计算 SHA-256…",ready:"溯源包已生成，请核对记录或下载 ZIP。",downloaded:"ZIP 溯源包已下载。",added:"文件已添加。",typeResearchPaper:"研究论文",typeWebsite:"网站",typeRepository:"GitHub 仓库",typeDataset:"数据集",typeSoftware:"软件",typeAudio:"音频",typeVideo:"视频",typeImage:"图片",typeArchive:"压缩包",typeOther:"其他",fileReady:"已就绪",typeSourceCode:"源代码",typeInternalSystem:"内部系统",typePrivateResearch:"私有研究",typeInternalMethodology:"内部方法论",typeClientDeliverable:"客户交付文件",classificationLabel:"记录级别",classPublic:"公开",classInternal:"内部",classConfidential:"机密",classRestricted:"受限"},
- es:{eyebrow:"Paquete local de procedencia",title:"Añada sus archivos. Genere el registro.",subtitle:"Los archivos se procesan localmente en el navegador y no se cargan.",dropTitle:"Arrastre archivos o carpetas aquí",dropCopy:"Arrastre archivos o una carpeta completa. Los archivos comprimidos no se descomprimen automáticamente.",pickFiles:"Seleccionar archivos",pickFolder:"Seleccionar carpeta",detailsTitle:"Datos de la obra",detailsCopy:"Solo se requieren el título y la entidad responsable.",workTitle:"Título",required:"Obligatorio",author:"Autor o entidad responsable",version:"Versión",releaseDate:"Fecha de publicación",releaseType:"Tipo",canonical:"Fuente canónica",summary:"Resumen",includeOriginals:"Incluir archivos originales en el ZIP",generate:"Generar paquete",downloadZip:"Descargar ZIP",clear:"Borrar",citationTab:"Cita",copyCitation:"Copiar cita",copyJson:"Copiar JSON",needFiles:"Añada al menos un archivo.",needFields:"Introduzca título y autor.",hashing:"Calculando SHA-256 localmente…",ready:"Paquete listo.",downloaded:"ZIP descargado.",added:"Archivos añadidos.",typeResearchPaper:"Artículo de investigación",typeWebsite:"Sitio web",typeRepository:"Repositorio de GitHub",typeDataset:"Conjunto de datos",typeSoftware:"Software",typeAudio:"Audio",typeVideo:"Video",typeImage:"Imagen",typeArchive:"Archivo comprimido",typeOther:"Otro",fileReady:"Listo",typeSourceCode:"Código fuente",typeInternalSystem:"Sistema interno",typePrivateResearch:"Investigación privada",typeInternalMethodology:"Metodología interna",typeClientDeliverable:"Entrega al cliente",classificationLabel:"Clasificación del registro",classPublic:"Público",classInternal:"Interno",classConfidential:"Confidencial",classRestricted:"Restringido"},
- fr:{eyebrow:"Paquet local de provenance",title:"Ajoutez vos fichiers. Générez l’enregistrement.",subtitle:"Les fichiers sont traités localement dans le navigateur et ne sont pas téléversés.",dropTitle:"Déposez des fichiers ou dossiers ici",dropCopy:"Déposez des fichiers ou un dossier complet. Les archives ne sont pas automatiquement décompressées.",pickFiles:"Choisir des fichiers",pickFolder:"Choisir un dossier",detailsTitle:"Informations sur l’œuvre",detailsCopy:"Seuls le titre et l’entité responsable sont requis.",workTitle:"Titre",required:"Obligatoire",author:"Auteur ou entité responsable",version:"Version",releaseDate:"Date de publication",releaseType:"Type",canonical:"Source canonique",summary:"Résumé",includeOriginals:"Inclure les fichiers originaux dans le ZIP",generate:"Générer le paquet",downloadZip:"Télécharger le ZIP",clear:"Effacer",citationTab:"Citation",copyCitation:"Copier la citation",copyJson:"Copier le JSON",needFiles:"Ajoutez au moins un fichier.",needFields:"Saisissez le titre et l’auteur.",hashing:"Calcul SHA-256 local…",ready:"Paquet prêt.",downloaded:"ZIP téléchargé.",added:"Fichiers ajoutés.",typeResearchPaper:"Article de recherche",typeWebsite:"Site web",typeRepository:"Dépôt GitHub",typeDataset:"Jeu de données",typeSoftware:"Logiciel",typeAudio:"Audio",typeVideo:"Vidéo",typeImage:"Image",typeArchive:"Archive",typeOther:"Autre",fileReady:"Prêt",typeSourceCode:"Code source",typeInternalSystem:"Système interne",typePrivateResearch:"Recherche privée",typeInternalMethodology:"Méthodologie interne",typeClientDeliverable:"Livrable client",classificationLabel:"Classification du dossier",classPublic:"Public",classInternal:"Interne",classConfidential:"Confidentiel",classRestricted:"Restreint"},
- de:{eyebrow:"Lokales Provenienzpaket",title:"Dateien hinzufügen. Nachweis erzeugen.",subtitle:"Dateien werden lokal im Browser verarbeitet und nicht hochgeladen.",dropTitle:"Dateien oder Ordner hier ablegen",dropCopy:"Dateien oder einen ganzen Ordner hier ablegen. Archive werden nicht automatisch entpackt.",pickFiles:"Dateien auswählen",pickFolder:"Ordner auswählen",detailsTitle:"Werkangaben",detailsCopy:"Nur Titel und verantwortliche Stelle sind erforderlich.",workTitle:"Titel",required:"Erforderlich",author:"Autor oder verantwortliche Stelle",version:"Version",releaseDate:"Veröffentlichungsdatum",releaseType:"Typ",canonical:"Kanonische Quelle",summary:"Zusammenfassung",includeOriginals:"Originaldateien in ZIP aufnehmen",generate:"Paket erzeugen",downloadZip:"ZIP herunterladen",clear:"Leeren",citationTab:"Zitierhinweis",copyCitation:"Zitierhinweis kopieren",copyJson:"JSON kopieren",needFiles:"Mindestens eine Datei hinzufügen.",needFields:"Titel und Autor eingeben.",hashing:"SHA-256 wird lokal berechnet…",ready:"Paket bereit.",downloaded:"ZIP heruntergeladen.",added:"Dateien hinzugefügt.",typeResearchPaper:"Forschungsarbeit",typeWebsite:"Website",typeRepository:"GitHub-Repository",typeDataset:"Datensatz",typeSoftware:"Software",typeAudio:"Audio",typeVideo:"Video",typeImage:"Bild",typeArchive:"Archiv",typeOther:"Andere",fileReady:"Bereit",typeSourceCode:"Quellcode",typeInternalSystem:"Internes System",typePrivateResearch:"Private Forschung",typeInternalMethodology:"Interne Methodik",typeClientDeliverable:"Kundenlieferung",classificationLabel:"Einstufung",classPublic:"Öffentlich",classInternal:"Intern",classConfidential:"Vertraulich",classRestricted:"Beschränkt"},
- pt:{eyebrow:"Pacote local de procedência",title:"Adicione os arquivos. Gere o registro.",subtitle:"Os arquivos são processados localmente no navegador e não são enviados.",dropTitle:"Solte arquivos ou pastas aqui",dropCopy:"Solte arquivos ou uma pasta inteira aqui. Arquivos compactados não são extraídos automaticamente.",pickFiles:"Selecionar arquivos",pickFolder:"Selecionar pasta",detailsTitle:"Dados da obra",detailsCopy:"Apenas título e entidade responsável são obrigatórios.",workTitle:"Título",required:"Obrigatório",author:"Autor ou entidade responsável",version:"Versão",releaseDate:"Data de publicação",releaseType:"Tipo",canonical:"Fonte canônica",summary:"Resumo",includeOriginals:"Incluir arquivos originais no ZIP",generate:"Gerar pacote",downloadZip:"Baixar ZIP",clear:"Limpar",citationTab:"Citação",copyCitation:"Copiar citação",copyJson:"Copiar JSON",needFiles:"Adicione pelo menos um arquivo.",needFields:"Informe título e autor.",hashing:"Calculando SHA-256 localmente…",ready:"Pacote pronto.",downloaded:"ZIP baixado.",added:"Arquivos adicionados.",typeResearchPaper:"Artigo de pesquisa",typeWebsite:"Site",typeRepository:"Repositório GitHub",typeDataset:"Conjunto de dados",typeSoftware:"Software",typeAudio:"Áudio",typeVideo:"Vídeo",typeImage:"Imagem",typeArchive:"Arquivo compactado",typeOther:"Outro",fileReady:"Pronto",typeSourceCode:"Código-fonte",typeInternalSystem:"Sistema interno",typePrivateResearch:"Pesquisa privada",typeInternalMethodology:"Metodologia interna",typeClientDeliverable:"Entrega ao cliente",classificationLabel:"Classificação do registro",classPublic:"Público",classInternal:"Interno",classConfidential:"Confidencial",classRestricted:"Restrito"},
- ja:{eyebrow:"ローカル来歴パッケージ",title:"ファイルを追加して記録を生成。",subtitle:"ファイルはブラウザ内で処理され、アップロードされません。",dropTitle:"ファイルまたはフォルダをここにドロップ",dropCopy:"ファイルまたはフォルダ全体をここにドロップできます。アーカイブは自動展開されません。",pickFiles:"ファイルを選択",pickFolder:"フォルダを選択",detailsTitle:"作品情報",detailsCopy:"タイトルと責任主体のみ必須です。",workTitle:"タイトル",required:"必須",author:"著者または責任主体",version:"バージョン",releaseDate:"公開日",releaseType:"種類",canonical:"正規公開元",summary:"概要",includeOriginals:"ZIPに元ファイルを含める",generate:"パッケージ生成",downloadZip:"ZIPをダウンロード",clear:"消去",citationTab:"引用",copyCitation:"引用をコピー",copyJson:"JSONをコピー",needFiles:"ファイルを追加してください。",needFields:"タイトルと著者を入力してください。",hashing:"SHA-256を計算中…",ready:"パッケージの準備ができました。",downloaded:"ZIPをダウンロードしました。",added:"ファイルを追加しました。",typeResearchPaper:"研究論文",typeWebsite:"ウェブサイト",typeRepository:"GitHubリポジトリ",typeDataset:"データセット",typeSoftware:"ソフトウェア",typeAudio:"音声",typeVideo:"動画",typeImage:"画像",typeArchive:"アーカイブ",typeOther:"その他",fileReady:"準備完了",typeSourceCode:"ソースコード",typeInternalSystem:"内部システム",typePrivateResearch:"非公開研究",typeInternalMethodology:"内部方法論",typeClientDeliverable:"顧客納品物",classificationLabel:"記録区分",classPublic:"公開",classInternal:"内部",classConfidential:"機密",classRestricted:"制限"},
- ko:{eyebrow:"로컬 출처 기록 패키지",title:"파일을 넣고 기록을 생성하세요.",subtitle:"파일은 브라우저에서만 처리되며 업로드되지 않습니다.",dropTitle:"파일 또는 폴더를 여기에 놓으세요",dropCopy:"압축 파일은 해제하지 않습니다.",pickFiles:"파일 선택",pickFolder:"폴더 선택",detailsTitle:"작품 정보",detailsCopy:"제목과 책임 주체만 필수입니다.",workTitle:"제목",required:"필수",author:"저자 또는 책임 주체",version:"버전",releaseDate:"공개일",releaseType:"유형",canonical:"공식 공개 출처",summary:"요약",includeOriginals:"ZIP에 원본 파일 포함",generate:"패키지 생성",downloadZip:"ZIP 다운로드",clear:"지우기",citationTab:"인용문",copyCitation:"인용문 복사",copyJson:"JSON 복사",needFiles:"파일을 추가하세요.",needFields:"제목과 저자를 입력하세요.",hashing:"SHA-256 계산 중…",ready:"패키지가 준비되었습니다.",downloaded:"ZIP을 다운로드했습니다.",added:"파일이 추가되었습니다."}
+const $=id=>document.getElementById(id);
+const state={create:[],verifyFiles:[],verifyRecord:null,before:[],after:[],packageBlob:null,citation:""};
+const translations={
+en:{eyebrow:"Portable file provenance",hero:"Create. Verify. Compare.",heroCopy:"A local browser workspace for creating portable records, checking file integrity, and comparing versions without automatically uploading source files.",privacy:"Processed locally in your browser.",modeCreate:"Create record",modeVerify:"Verify record",modeCompare:"Compare versions",createTitle:"Build one portable package",createCopy:"Add files, enter only the essential details, and download one ZIP containing the complete record.",dropTitle:"Drop files or a folder",dropCopy:"Documents, source code, images, audio, video, datasets, and archives are supported.",selectFiles:"Select files",essential:"Essential details",title:"Title",author:"Author or entity",version:"Version",date:"Date",type:"Type",classification:"Classification",source:"Canonical source (optional)",generate:"Generate package",clear:"Clear",ready:"Package ready",readyCopy:"One ZIP contains metadata, provenance, citation, manifest, and SHA-256 records.",download:"Download ZIP",copyCitation:"Copy citation",verifyTitle:"Check whether files still match",verifyCopy:"Add the current files on the left and the saved provenance ZIP or file-integrity-records.json on the right.",currentFiles:"Current files",addFiles:"Add files to verify",addFilesCopy:"The tool recalculates SHA-256 locally.",savedRecord:"Saved record",addRecord:"Add provenance ZIP or JSON",addRecordCopy:"The stored hashes are read locally.",selectRecord:"Select record",runVerify:"Run verification",compareTitle:"See exactly what changed",compareCopy:"Add a previous version and a current version. The comparison stays inside the browser.",before:"Previous version",after:"Current version",addBefore:"Add older files",addAfter:"Add newer files",folderSupport:"Files or folders are supported.",runCompare:"Compare versions",unchanged:"Unchanged",changed:"Changed",added:"Added",removed:"Removed",boundary:"Integrity records support verification but do not prove originality or legal ownership.",tPaper:"Research Paper",tWebsite:"Website",tRepo:"GitHub Repository",tSoftware:"Software",tCode:"Source Code",tInternal:"Internal System",tPrivate:"Private Research",tClient:"Client Deliverable",tAudio:"Audio",tVideo:"Video",tImage:"Image",tArchive:"Archive",tOther:"Other",cPublic:"Public",cInternal:"Internal",cConfidential:"Confidential",cRestricted:"Restricted"},
+"zh-CN":{eyebrow:"可携带文件溯源",hero:"创建 · 验证 · 对比",heroCopy:"在浏览器本地生成记录、核验文件完整性并比较前后版本，原始文件不会自动上传。",privacy:"文件仅在浏览器本地处理。",modeCreate:"创建记录",modeVerify:"验证记录",modeCompare:"前后对比",createTitle:"生成一个完整记录包",createCopy:"添加文件，只填写必要信息，最后只需下载一个包含全部记录的 ZIP。",dropTitle:"拖入文件或文件夹",dropCopy:"支持文档、源代码、图片、音频、视频、数据集和压缩包。",selectFiles:"选择文件",essential:"必要信息",title:"标题",author:"作者或机构",version:"版本",date:"日期",type:"类型",classification:"记录级别",source:"规范来源（选填）",generate:"生成记录包",clear:"清空",ready:"记录包已准备完成",readyCopy:"一个 ZIP 包含元数据、溯源信息、引用、清单和 SHA-256 记录。",download:"下载 ZIP",copyCitation:"复制建议引用",verifyTitle:"检查文件是否仍然一致",verifyCopy:"左侧添加当前文件，右侧添加以前保存的溯源 ZIP 或 file-integrity-records.json。",currentFiles:"当前文件",addFiles:"添加要验证的文件",addFilesCopy:"工具会在本地重新计算 SHA-256。",savedRecord:"已保存记录",addRecord:"添加溯源 ZIP 或 JSON",addRecordCopy:"工具会在本地读取已保存的哈希。",selectRecord:"选择记录",runVerify:"开始验证",compareTitle:"清楚看到前后变化",compareCopy:"分别添加旧版本和新版本，所有比较都在浏览器本地完成。",before:"旧版本",after:"新版本",addBefore:"添加之前的文件",addAfter:"添加现在的文件",folderSupport:"支持文件或文件夹。",runCompare:"开始对比",unchanged:"未变化",changed:"已修改",added:"新增",removed:"删除",boundary:"完整性记录支持核验，但不能证明原创性或法律所有权。",tPaper:"研究论文",tWebsite:"网站",tRepo:"GitHub 仓库",tSoftware:"软件",tCode:"源代码",tInternal:"内部系统",tPrivate:"私有研究",tClient:"客户交付文件",tAudio:"音频",tVideo:"视频",tImage:"图片",tArchive:"压缩包",tOther:"其他",cPublic:"公开",cInternal:"内部",cConfidential:"机密",cRestricted:"受限"}
 };
-const $=id=>document.getElementById(id);const el={lang:$("lang"),drop:$("drop"),files:$("files"),pickFiles:$("pickFiles"),fileList:$("fileList"),workTitle:$("workTitle"),author:$("author"),version:$("version"),releaseDate:$("releaseDate"),releaseType:$("releaseType"),classification:$("classification"),canonical:$("canonical"),summary:$("summary"),includeOriginals:$("includeOriginals"),generate:$("generate"),downloadZip:$("downloadZip"),clear:$("clear"),status:$("status"),results:$("results"),citationOut:$("citationOut"),metadataOut:$("metadataOut"),integrityOut:$("integrityOut"),copyCitation:$("copyCitation"),copyMetadata:$("copyMetadata")};
-let language="en",selected=[],packageFiles=null,currentCitation="";
-function t(k){return (I18N[language]&&I18N[language][k])||I18N.en[k]||k}function applyLang(v){language=I18N[v]?v:"en";document.documentElement.lang=language;document.querySelectorAll("[data-i18n]").forEach(n=>n.textContent=t(n.dataset.i18n));document.querySelectorAll("[data-i18n-placeholder]").forEach(n=>n.placeholder=t(n.dataset.i18nPlaceholder));el.lang.value=language}
-function today(){const d=new Date(Date.now()-new Date().getTimezoneOffset()*60000).toISOString().slice(0,10);el.releaseDate.value=d}function show(msg,error=false){el.status.textContent=msg;el.status.classList.toggle("error",error)}
-function addFiles(list){Array.from(list||[]).forEach(file=>{const path=file.webkitRelativePath||file.name,key=`${path}:${file.size}:${file.lastModified}`;if(!selected.some(x=>x.key===key))selected.push({file,path,key,sha256:null})});renderFiles();show(t("added"))}
-function bytes(n){if(!n)return"0 B";const u=["B","KB","MB","GB","TB"],i=Math.min(Math.floor(Math.log(n)/Math.log(1024)),u.length-1);return`${(n/1024**i).toFixed(i?1:0)} ${u[i]}`}
-function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"})[c])}
-function renderFiles(){el.fileList.innerHTML="";el.fileList.classList.toggle("visible",selected.length>0);selected.forEach(x=>{const row=document.createElement("div");row.className="file-row";row.innerHTML=`<div class="file-name">${esc(x.path)}</div><div class="file-meta">${bytes(x.file.size)}</div><div class="file-state">${x.sha256?"SHA-256 ✓":t("fileReady")}</div>`;el.fileList.appendChild(row)})}
-async function hash(file){const b=await file.arrayBuffer(),d=await crypto.subtle.digest("SHA-256",b);return Array.from(new Uint8Array(d)).map(x=>x.toString(16).padStart(2,"0")).join("")}
+["es","fr","de","pt","ja","ko"].forEach(l=>translations[l]=translations.en);
+let currentLang="en";
+function t(k){return (translations[currentLang]||translations.en)[k]||translations.en[k]||k}
+function applyLang(lang){
+ currentLang=translations[lang]?lang:"en";document.documentElement.lang=currentLang;$("language").value=currentLang;
+ document.querySelectorAll("[data-i18n]").forEach(n=>{const k=n.dataset.i18n;if(t(k))n.textContent=t(k)});
+}
+$("language").addEventListener("change",e=>applyLang(e.target.value));applyLang("en");
+$("date").value=new Date(Date.now()-new Date().getTimezoneOffset()*60000).toISOString().slice(0,10);
+
+document.querySelectorAll(".modebtn").forEach(b=>b.addEventListener("click",()=>{
+ document.querySelectorAll(".modebtn").forEach(x=>x.classList.toggle("active",x===b));
+ document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id===b.dataset.mode));
+}));
+
+function fmt(bytes){if(!bytes)return"0 B";const u=["B","KB","MB","GB","TB"],i=Math.min(Math.floor(Math.log(bytes)/Math.log(1024)),u.length-1);return`${(bytes/1024**i).toFixed(i?1:0)} ${u[i]}`}
+function safe(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[c]))}
+async function hash(file){const d=await crypto.subtle.digest("SHA-256",await file.arrayBuffer());return[...new Uint8Array(d)].map(x=>x.toString(16).padStart(2,"0")).join("")}
+async function collectDropped(dt){
+ const items=[...(dt.items||[])],entries=items.map(i=>i.webkitGetAsEntry&&i.webkitGetAsEntry()).filter(Boolean);
+ if(!entries.length)return[...(dt.files||[])].map(f=>({file:f,path:f.name}));
+ const out=[];
+ async function walk(entry,path=""){
+  if(entry.isFile){await new Promise(r=>entry.file(f=>{out.push({file:f,path:path+f.name});r()}))}
+  else if(entry.isDirectory){const reader=entry.createReader();let batch;do{batch=await new Promise(r=>reader.readEntries(r));for(const e of batch)await walk(e,path+entry.name+"/")}while(batch.length)}
+ }
+ for(const e of entries)await walk(e,"");return out
+}
+function setDrop(id,inputId,pickId,key,listId){
+ const zone=$(id),input=$(inputId),pick=$(pickId);
+ pick.onclick=()=>input.click();input.onchange=()=>setFiles(key,[...input.files].map(f=>({file:f,path:f.webkitRelativePath||f.name})),listId);
+ ["dragenter","dragover"].forEach(ev=>zone.addEventListener(ev,e=>{e.preventDefault();zone.classList.add("drag")}));
+ ["dragleave","drop"].forEach(ev=>zone.addEventListener(ev,e=>{e.preventDefault();zone.classList.remove("drag")}));
+ zone.addEventListener("drop",async e=>setFiles(key,await collectDropped(e.dataTransfer),listId));
+}
+function setFiles(key,items,listId){
+ const seen=new Set(),clean=[];items.forEach(x=>{const k=x.path+":"+x.file.size+":"+x.file.lastModified;if(!seen.has(k)){seen.add(k);clean.push({...x,hash:null})}});
+ state[key]=clean;renderList(clean,listId)
+}
+function renderList(items,id){
+ const box=$(id);box.innerHTML=items.map(x=>`<div class="filerow"><div class="fname">${safe(x.path)}</div><div class="fmeta">${fmt(x.file.size)}</div><div class="fstate">Ready</div></div>`).join("")
+}
+setDrop("createDrop","createInput","createPick","create","createFiles");
+setDrop("verifyFilesDrop","verifyFilesInput","verifyFilesPick","verifyFiles","verifyFilesNames");
+setDrop("beforeDrop","beforeInput","beforePick","before","beforeNames");
+setDrop("afterDrop","afterInput","afterPick","after","afterNames");
+
+$("verifyRecordPick").onclick=()=>$("verifyRecordInput").click();
+$("verifyRecordInput").onchange=e=>{state.verifyRecord=e.target.files[0]||null;$("verifyRecordName").innerHTML=state.verifyRecord?`<div class="filerow"><div class="fname">${safe(state.verifyRecord.name)}</div><div class="fmeta">${fmt(state.verifyRecord.size)}</div><div class="fstate">Ready</div></div>`:""};
+
+async function ensureHashes(items){for(const x of items)if(!x.hash)x.hash=await hash(x.file)}
 function slug(s){return(s||"work").toLowerCase().normalize("NFKD").replace(/[^\w\s-]/g,"").trim().replace(/\s+/g,"-").replace(/-+/g,"-").slice(0,60)||"work"}
-async function generate(){if(!selected.length)return show(t("needFiles"),true);if(!el.workTitle.value.trim()||!el.author.value.trim())return show(t("needFields"),true);show(t("hashing"));el.generate.disabled=true;for(const x of selected)if(!x.sha256)x.sha256=await hash(x.file);renderFiles();const generated=new Date().toISOString(),title=el.workTitle.value.trim(),author=el.author.value.trim(),version=el.version.value.trim(),date=el.releaseDate.value,canonical=el.canonical.value.trim();currentCitation=`${author}. (${date?date.slice(0,4):"n.d."}). ${title}.${version?` Version ${version}.`:""}${canonical?` Canonical source: ${canonical}`:""}`;const files=selected.map(x=>({name:x.file.name,relative_path:x.path,mime_type:x.file.type||"application/octet-stream",size_bytes:x.file.size,last_modified:new Date(x.file.lastModified).toISOString(),sha256:x.sha256}));const metadata={tool_name:"Provenance Tool",tool_version:"0.2.0",tool_url:"https://xufentu.com/provenance-tool/",generated_at:generated,release_type:el.releaseType.value,record_classification:el.classification.value,title,author_or_responsible_entity:author,version,release_date:date,canonical_source:canonical,summary:el.summary.value.trim(),integrity_algorithm:"SHA-256",files,suggested_citation:currentCitation,boundary:{does_not:["prove originality","determine legal ownership","verify truth","resolve authorship disputes","create copyright registration","replace human judgment"]},principle:"Automation can support structure, but responsibility remains visible."};const provenance={record_type:"Publication Provenance Record",record_version:"1.0",generated_with:{tool_name:"Provenance Tool",tool_version:"0.2.0",tool_url:"https://xufentu.com/provenance-tool/"},generated_at:generated,record_classification:el.classification.value,title,author_or_responsible_entity:author,version,release_date:date,canonical_source:canonical,file_count:files.length,integrity_algorithm:"SHA-256",boundary:metadata.boundary,principle:metadata.principle};const integrity={algorithm:"SHA-256",generated_at:generated,files};const manifest={package_type:"Provenance Package",package_version:"0.2.0",generated_at:generated,record_classification:el.classification.value,title,source_files_included:el.includeOriginals.checked,generated_files:["metadata.json","provenance.json","file-integrity-records.json","release-manifest.json","citation.txt","README.md"]};const readme=`# Provenance Package\n\nTitle: ${title}\nAuthor or responsible entity: ${author}\nVersion: ${version||"Not specified"}\nRelease date: ${date||"Not specified"}\nCanonical source: ${canonical||"Not specified"}\n\nGenerated locally in the browser with Provenance Tool v0.2.0.\n\nThis package supports documentation and traceability. It does not prove originality, determine legal ownership, verify truth, resolve authorship disputes, create copyright registration, or replace human judgment.\n`;packageFiles={"metadata.json":JSON.stringify(metadata,null,2),"provenance.json":JSON.stringify(provenance,null,2),"file-integrity-records.json":JSON.stringify(integrity,null,2),"release-manifest.json":JSON.stringify(manifest,null,2),"citation.txt":currentCitation+"\n","README.md":readme};el.citationOut.textContent=currentCitation;el.metadataOut.textContent=packageFiles["metadata.json"];el.integrityOut.textContent=packageFiles["file-integrity-records.json"];el.results.classList.add("visible");el.downloadZip.disabled=false;el.generate.disabled=false;show(t("ready"));el.results.scrollIntoView({behavior:"smooth",block:"start"})}
-async function downloadZip(){if(!packageFiles)return;if(typeof JSZip==="undefined")return show("ZIP library could not be loaded.",true);const zip=new JSZip();Object.entries(packageFiles).forEach(([n,c])=>zip.file(n,c));if(el.includeOriginals.checked){const f=zip.folder("source-files");selected.forEach(x=>f.file(x.path,x.file))}show("Creating ZIP…");const blob=await zip.generateAsync({type:"blob"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=`${slug(el.workTitle.value)}-provenance-package.zip`;document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);show(t("downloaded"))}
-function clearAll(){selected=[];packageFiles=null;currentCitation="";el.files.value="";el.fileList.innerHTML="";el.fileList.classList.remove("visible");[el.workTitle,el.author,el.version,el.canonical,el.summary].forEach(x=>x.value="");today();el.results.classList.remove("visible");el.downloadZip.disabled=true;show("")}
-async function copy(text){try{await navigator.clipboard.writeText(text);show("Copied.")}catch{show("Copy failed.",true)}}
-el.lang.addEventListener("change",()=>applyLang(el.lang.value));el.pickFiles.addEventListener("click",()=>el.files.click());el.files.addEventListener("change",e=>addFiles(e.target.files));["dragenter","dragover"].forEach(type=>el.drop.addEventListener(type,e=>{e.preventDefault();el.drop.classList.add("drag")}));["dragleave","drop"].forEach(type=>el.drop.addEventListener(type,e=>{e.preventDefault();el.drop.classList.remove("drag")}));el.drop.addEventListener("drop",e=>addFiles(e.dataTransfer.files));el.generate.addEventListener("click",generate);el.downloadZip.addEventListener("click",downloadZip);el.clear.addEventListener("click",clearAll);el.copyCitation.addEventListener("click",()=>copy(currentCitation));el.copyMetadata.addEventListener("click",()=>copy(packageFiles?packageFiles["metadata.json"]:""));document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x===b));document.querySelectorAll(".panel").forEach(p=>p.classList.toggle("active",p.id===b.dataset.panel))}));today();applyLang(localStorage.getItem("provenance-lang")||"en");el.lang.addEventListener("change",()=>localStorage.setItem("provenance-lang",el.lang.value));
+
+$("generate").onclick=async()=>{
+ const title=$("title").value.trim(),author=$("author").value.trim();if(!title||!author||!state.create.length){alert("Please add files, title, and author.");return}
+ if(typeof JSZip==="undefined"){alert("ZIP library could not be loaded.");return}
+ await ensureHashes(state.create);
+ const generated=new Date().toISOString(),version=$("version").value.trim(),date=$("date").value,source=$("source").value.trim();
+ state.citation=`${author}. (${date?date.slice(0,4):"n.d."}). ${title}.${version?` Version ${version}.`:""}${source?` Canonical source: ${source}`:""}`;
+ const files=state.create.map(x=>({name:x.file.name,relative_path:x.path,mime_type:x.file.type||"application/octet-stream",size_bytes:x.file.size,last_modified:new Date(x.file.lastModified).toISOString(),sha256:x.hash}));
+ const metadata={tool_name:"Provenance Tool",tool_version:"0.3.0",generated_at:generated,release_type:$("type").value,record_classification:$("classification").value,title,author_or_responsible_entity:author,version,release_date:date,canonical_source:source,files,integrity_algorithm:"SHA-256",suggested_citation:state.citation};
+ const provenance={record_type:"Portable Provenance Record",record_version:"1.0",generated_at:generated,title,version,record_classification:$("classification").value,file_count:files.length,integrity_algorithm:"SHA-256"};
+ const integrity={algorithm:"SHA-256",generated_at:generated,files};
+ const manifest={package_type:"Provenance Package",package_version:"0.3.0",generated_at:generated,contents:["metadata.json","provenance.json","file-integrity-records.json","release-manifest.json","citation.txt","README.md"]};
+ const readme=`# Provenance Package\n\nTitle: ${title}\nAuthor or entity: ${author}\nVersion: ${version||"Not specified"}\nGenerated: ${generated}\n\nThis package remains readable independently of the website that generated it.\n`;
+ const zip=new JSZip();zip.file("metadata.json",JSON.stringify(metadata,null,2));zip.file("provenance.json",JSON.stringify(provenance,null,2));zip.file("file-integrity-records.json",JSON.stringify(integrity,null,2));zip.file("release-manifest.json",JSON.stringify(manifest,null,2));zip.file("citation.txt",state.citation+"\n");zip.file("README.md",readme);
+ state.packageBlob=await zip.generateAsync({type:"blob"});$("createResult").classList.add("show");
+};
+$("downloadPackage").onclick=()=>{if(!state.packageBlob)return;const u=URL.createObjectURL(state.packageBlob),a=document.createElement("a");a.href=u;a.download=slug($("title").value)+"-provenance-package.zip";a.click();URL.revokeObjectURL(u)};
+$("copyCitation").onclick=async()=>{if(state.citation)await navigator.clipboard.writeText(state.citation)};
+$("resetCreate").onclick=()=>{state.create=[];state.packageBlob=null;state.citation="";["title","author","version","source"].forEach(id=>$(id).value="");$("createFiles").innerHTML="";$("createResult").classList.remove("show")};
+
+async function readIntegrity(file){
+ if(!file)throw new Error("No record");
+ if(file.name.toLowerCase().endsWith(".zip")){
+  const z=await JSZip.loadAsync(file),entry=z.file("file-integrity-records.json");if(!entry)throw new Error("Missing file-integrity-records.json");return JSON.parse(await entry.async("string"))
+ }
+ return JSON.parse(await file.text())
+}
+$("runVerify").onclick=async()=>{
+ if(!state.verifyFiles.length||!state.verifyRecord){alert("Add current files and a saved record.");return}
+ await ensureHashes(state.verifyFiles);let rec;try{rec=await readIntegrity(state.verifyRecord)}catch(e){alert("The record could not be read.");return}
+ const stored=new Map((rec.files||[]).map(x=>[x.relative_path||x.name,x])),current=new Map(state.verifyFiles.map(x=>[x.path,x]));
+ const keys=[...new Set([...stored.keys(),...current.keys()])].sort(),rows=[];let all=true;
+ for(const k of keys){const a=stored.get(k),b=current.get(k);let status;if(!a)status="added";else if(!b)status="removed";else if(a.sha256===b.hash)status="same";else status="changed";if(status!=="same")all=false;rows.push({k,status})}
+ $("verifyHero").className="verify-hero "+(all?"ok":"bad");$("verifyHeadline").textContent=all?"All files match":"Differences found";$("verifyText").textContent=all?"The current files match the saved SHA-256 records.":"One or more files are changed, missing, or newly added.";
+ $("verifyTable").innerHTML=makeTable(rows);$("verifyPanel").classList.add("show");
+};
+function badge(status){const label={same:"Unchanged",changed:"Changed",added:"Added",removed:"Removed"}[status];return`<span class="badge ${status}">${label}</span>`}
+function makeTable(rows){return`<table><thead><tr><th>File</th><th>Status</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${safe(r.k)}</td><td>${badge(r.status)}</td></tr>`).join("")}</tbody></table>`}
+
+$("runCompare").onclick=async()=>{
+ if(!state.before.length||!state.after.length){alert("Add both versions.");return}
+ await ensureHashes(state.before);await ensureHashes(state.after);
+ const a=new Map(state.before.map(x=>[x.path,x])),b=new Map(state.after.map(x=>[x.path,x])),keys=[...new Set([...a.keys(),...b.keys()])].sort(),rows=[],count={same:0,changed:0,added:0,removed:0};
+ for(const k of keys){const x=a.get(k),y=b.get(k);let s;if(!x)s="added";else if(!y)s="removed";else if(x.hash===y.hash)s="same";else s="changed";count[s]++;rows.push({k,status:s})}
+ $("mSame").textContent=count.same;$("mChanged").textContent=count.changed;$("mAdded").textContent=count.added;$("mRemoved").textContent=count.removed;$("compareTable").innerHTML=makeTable(rows);$("compareResults").style.display="block";
+};
 </script>
 </body>
 </html>
