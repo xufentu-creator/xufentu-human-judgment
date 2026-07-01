@@ -14,8 +14,11 @@ Independent Interdisciplinary Researcher
 Complex Systems · AI Governance · Decision Architecture · Enterprise Transformation · Human Judgment
 
 ---
-## Public Tool
 
-[Provenance Tool v0.1](https://xufentu.com/provenance-tool/)
+### Public Tool
 
-A small web prototype for generating basic provenance records before publication.
+## Provenance Tool v0.3.1
+
+A local browser-based workspace for creating, verifying, and comparing portable provenance records for documents, source files, media, archives, and project folders.
+
+[Open Provenance Tool](https://xufentu.com/provenance-tool/)
