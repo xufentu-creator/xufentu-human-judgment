@@ -1,55 +1,194 @@
-# Provenance Tool v0.1
+# Provenance Tool v0.2.0
 
-Provenance Tool is a multilingual public web prototype for creating basic publication records before a work is released.
+> A local browser-based provenance package generator for documents, source files, media, archives, and project folders.
 
-It is designed for independent authors, researchers, creators, organizations, and small project maintainers who want to keep declared authorship, title, version, release date, suggested citation, canonical public source, and related-file information together in a consistent record.
+[![Version](https://img.shields.io/badge/version-0.2.0-black)](https://xufentu.com/provenance-tool/)
+[![Processing](https://img.shields.io/badge/processing-local%20browser-lightgrey)](https://xufentu.com/provenance-tool/)
+[![Integrity](https://img.shields.io/badge/integrity-SHA--256-lightgrey)](https://xufentu.com/provenance-tool/)
+[![Languages](https://img.shields.io/badge/languages-8-lightgrey)](https://xufentu.com/provenance-tool/)
 
-The public interface currently supports:
-
-English · 简体中文 · Español · Français · Deutsch · Português · 日本語 · 한국어
-
-Users may enter titles, names, summaries, and filenames in any language. Generated JSON field names remain in English to support broader technical compatibility and cross-platform readability.
-
-The suggested citation is created from the information entered by the user and refers to that specific work. It does not automatically identify or cite the creator of this tool as an author of the user’s work.
-
-The canonical source should be the permanent public URL where the specific work is officially published, maintained, or expected to be cited. This may be a research-paper page, repository, project website, publication page, or another stable public address.
-
-Information entered into the tool is processed in the user’s browser and is not automatically stored by this website. Users remain responsible for reviewing, downloading, preserving, and publishing their generated records together with the corresponding work.
-
-This tool supports basic documentation and traceability. It does not prove originality, determine legal ownership, verify truth, resolve authorship disputes, create copyright registration, or replace human judgment.
-
-**Tool version:** 0.1
-**Status:** Multilingual public web prototype
-**Concept and authorship:** Xufen Tu
 **Public access:** https://xufentu.com/provenance-tool/
 
-**Automation can support structure, but responsibility remains visible.**
+Provenance Tool helps people create a portable record before a work is released, delivered, archived, or cited. A user can drag in a document, source-code file, image, audio recording, video, archive, or project folder, add basic publication information, and generate a downloadable record package without uploading the selected files to a server.
+
+The tool is intended for independent authors, researchers, creators, developers, organizations, and small project maintainers who need a simple way to keep authorship declarations, version information, file integrity, citation guidance, and a canonical public source together.
 
 ---
 
-# 溯源工具 v0.1
+## How it works
 
-Provenance Tool 是一个用于作品公开发布前生成基础作品记录的多语言网页原型。
+```text
+Add files
+    ↓
+Enter basic work information
+    ↓
+Calculate SHA-256 locally
+    ↓
+Generate a portable provenance package
+```
 
-它面向独立作者、研究人员、创作者、机构和小型项目维护者，用于把声明作者、作品标题、版本、发布日期、建议引用、规范公开来源和相关文件信息保存在同一份记录中。
+Files are processed inside the browser. Compressed archives are recorded as complete files and are not automatically unpacked. Users may work with a single file, multiple files, or a project folder, depending on browser support.
+
+The public interface is available in:
+
+**English · 简体中文 · Español · Français · Deutsch · Português · 日本語 · 한국어**
+
+Titles, names, summaries, and filenames may be entered in any language. Generated JSON field names remain in English for broader technical compatibility and cross-platform readability.
+
+---
+
+## Generated package
+
+A completed package may contain:
+
+```text
+metadata.json
+provenance.json
+file-integrity-records.json
+release-manifest.json
+citation.txt
+README.md
+```
+
+Each selected file may be recorded with its filename, relative path, file type, size, last-modified time, and SHA-256 value. Users may also choose whether to include the original files inside the downloaded ZIP package.
+
+The generated package is designed to stay with the corresponding work. It may be stored with a publication, attached to a release, included in an archive, or preserved as part of a project delivery record.
+
+---
+
+## What SHA-256 adds
+
+SHA-256 creates a reproducible integrity value for a file. When the same file is checked again:
+
+```text
+Matching hash
+→ The file content is identical
+
+Different hash
+→ The file content has changed
+```
+
+This supports later verification of file integrity, but it does not independently prove who first created the work or when the work was originally created.
+
+Stronger evidence may be formed by preserving the generated package together with a dated repository release, publication platform, institutional record, trusted timestamp, IPFS record, or another independent public record.
+
+---
+
+## Public boundary
+
+The tool supports documentation, integrity checking, citation continuity, and traceability.
+
+It does not prove originality, determine legal ownership, verify truth, detect plagiarism, identify whether content was generated by AI, resolve authorship disputes, create copyright registration, or replace human judgment.
+
+Users remain responsible for reviewing, downloading, preserving, publishing, and verifying their generated records.
+
+---
+
+## Project information
+
+| Item                   | Record                                            |
+| ---------------------- | ------------------------------------------------- |
+| Tool version           | `0.2.0`                                           |
+| Status                 | Public browser-based provenance package generator |
+| Processing             | Local browser processing                          |
+| Integrity algorithm    | `SHA-256`                                         |
+| Interface languages    | 8                                                 |
+| Concept and authorship | Xufen Tu                                          |
+| Public access          | `https://xufentu.com/provenance-tool/`            |
+
+> **Automation can support structure, but responsibility remains visible.**
+
+---
+
+# 溯源工具 v0.2.0
+
+> 一个面向文档、源代码、图片、音频、视频、压缩文件和项目文件夹的浏览器本地溯源记录包生成工具。
+
+Provenance Tool 用于在作品发布、项目交付、长期存档或对外引用之前，建立一份可以跟随作品保存的公开记录。使用者可以直接拖入文件，填写少量基础信息，在浏览器本地计算 SHA-256，并生成一个可下载的溯源记录包。所选择的文件不会自动上传到服务器。
+
+这个工具面向独立作者、研究人员、创作者、开发者、机构和小型项目维护者。它把作者声明、作品版本、文件完整性、建议引用和规范公开来源放在同一个记录结构中，让原本分散的发布信息更容易保存和核对。
+
+---
+
+## 使用方式
+
+```text
+添加文件
+    ↓
+填写作品基本信息
+    ↓
+本地计算 SHA-256
+    ↓
+生成可下载的溯源记录包
+```
+
+工具支持单个文件、多个文件以及在浏览器允许情况下拖入整个项目文件夹。压缩文件会作为一个完整文件记录，不会自动解压。
 
 当前公开界面支持：
 
-English · 简体中文 · Español · Français · Deutsch · Português · 日本語 · 한국어
+**English · 简体中文 · Español · Français · Deutsch · Português · 日本語 · 한국어**
 
-使用者可以用任何语言填写标题、姓名、摘要和文件名。生成的 JSON 字段名称继续使用英文，以保持更广泛的技术兼容性和跨平台读取一致性。
+标题、姓名、摘要和文件名可以使用任何语言填写。生成的 JSON 字段名称继续使用英文，以保持更广泛的技术兼容性和跨平台读取一致性。
 
-建议引用文本根据使用者填写的作品信息生成，只用于引用该具体作品，不会自动把本工具创作者写成使用者作品的作者。
+---
 
-规范公开来源应填写该具体作品正式发布、长期维护或应被引用的永久公开网址，例如论文页面、项目仓库、作品网站、正式发布页面或其他稳定公开地址。
+## 生成内容
 
-填写内容仅在使用者的浏览器中处理，本网站不会自动保存。使用者需要自行核对、下载、保存，并将生成记录与对应作品一起发布。
+完成后，工具可以生成：
 
-该工具用于支持基础记录与可追踪性，但不能证明原创性、判断法律所有权、验证真实性、解决作者争议、完成版权登记或代替人类判断。
+```text
+metadata.json
+provenance.json
+file-integrity-records.json
+release-manifest.json
+citation.txt
+README.md
+```
 
-**工具版本：** 0.1
-**状态：** 多语言公开网页原型
-**概念与作者：** Xufen Tu
-**公开地址：** https://xufentu.com/provenance-tool/
+每个文件可以记录文件名、相对路径、类型、大小、最后修改时间和 SHA-256。使用者还可以自行选择是否把原始文件一起放入下载的 ZIP 包中。
 
-**自动化可以支持结构，但责任必须保持可见。**
+这份记录包适合与对应作品一起保存，可以放进公开发布、GitHub Release、项目归档、交付文件或其他长期记录中。
+
+---
+
+## SHA-256 的作用
+
+SHA-256 为文件生成一个可以重复核对的完整性值。
+
+```text
+哈希一致
+→ 文件内容完全相同
+
+哈希不同
+→ 文件内容已经发生变化
+```
+
+它可以帮助以后确认文件是否被修改，但不能单独证明作品最早由谁创作，也不能单独证明作品最早形成于什么时间。
+
+更强的公开证据可以通过把生成记录包与带日期的仓库 Release、正式出版平台、机构记录、可信时间戳、IPFS 记录或其他独立公开记录一起保存来形成。
+
+---
+
+## 公开边界
+
+该工具用于支持基础记录、文件完整性、引用连续性与可追踪性。
+
+它不能证明原创性、判断法律所有权、验证真实性、识别抄袭、判断内容是否由 AI 生成、解决作者争议、完成版权登记或代替人类判断。
+
+使用者需要自行核对、下载、保存、发布并验证生成的记录。
+
+---
+
+## 项目信息
+
+| 项目    | 记录                                     |
+| ----- | -------------------------------------- |
+| 工具版本  | `0.2.0`                                |
+| 当前状态  | 浏览器本地溯源记录包生成工具                         |
+| 处理方式  | 浏览器本地处理                                |
+| 完整性算法 | `SHA-256`                              |
+| 界面语言  | 8 种                                    |
+| 概念与作者 | Xufen Tu                               |
+| 公开地址  | `https://xufentu.com/provenance-tool/` |
+
+> **自动化可以支持结构，但责任必须保持可见。**
