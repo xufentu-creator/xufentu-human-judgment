@@ -1,0 +1,49 @@
+cff-version: 1.2.0
+message: "Please cite this public research repository using the metadata below."
+
+title: "Xufen Tu Public Research Website and Human Judgment Research Reference"
+type: software
+version: "1.6.0"
+date-released: 2026-06-28
+
+authors:
+
+* family-names: "Tu"
+  given-names: "Xufen"
+  orcid: "https://orcid.org/0009-0007-5265-964X"
+
+abstract: >
+A canonical public research website and repository presenting selected
+research references on human judgment, AI governance, complex systems,
+decision architecture, responsibility drift, provenance governance,
+structural accountability, and related public tools.
+
+keywords:
+
+* human judgment
+* AI governance
+* complex systems
+* decision architecture
+* responsibility drift
+* structural accountability
+* provenance governance
+* decision traceability
+
+url: "https://xufentu.com/"
+repository-code: "https://github.com/xufentu-creator/xufentu-human-judgment"
+
+identifiers:
+
+* type: url
+  value: "https://xufentu.com/"
+  description: "Canonical public research website"
+
+preferred-citation:
+type: generic
+title: "Human Judgment as Structural Constraint"
+authors:
+- family-names: "Tu"
+given-names: "Xufen"
+year: 2026
+version: "1.6.0"
+url: "https://xufentu.com/"
