@@ -1,6 +1,21 @@
+
 # Changelog
 
 All notable public changes to this repository are recorded here.
+
+## Provenance Tool v0.3.1 — 2026-07-01
+
+- Added Create, Verify, and Compare working modes.
+- Simplified the result into one portable provenance ZIP package.
+- Added visible SHA-256 records after package generation.
+- Added verification against a previously saved provenance ZIP or integrity record.
+- Added version comparison for unchanged, changed, added, and removed files.
+- Limited suggested citation to public records.
+- Added concise record information for Internal, Confidential, and Restricted records.
+- Added clipboard confirmation for copied record information.
+- Simplified the optional official link field.
+- Updated the public tool interface and documentation.
+
 
 ## Public Research Website v1.6.0 — 2026-06-28
 
