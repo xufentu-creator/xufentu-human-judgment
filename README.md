@@ -149,22 +149,6 @@ Research observations published through this repository form part of the continu
 
 ---
 
-## Observation Note · 观察说明
-
-The materials shared here are records of observation, reflection, and ongoing research. They may continue to develop as context, evidence, and understanding change.
-
-A provenance or activity record can support identification and continuity, but it should not automatically be treated as complete proof of awareness, confirmation, authorization, or acceptance of responsibility.
-
-这里公开的内容属于观察、思考与持续研究记录。随着语境、证据与理解发生变化，其中的表达也可能继续发展。
-
-溯源记录或行为记录可以支持身份识别与连续性，但不应被自动视为已经知情、确认、授权或接受责任的完整证明。
-
-> **Record is not awareness. Record is not confirmation. Record is not automatic responsibility.**
->
-> **记录不等于知情。记录不等于确认。记录不等于自动承担责任。**
-
----
-
 ## Public Research Links · 公开研究链接
 
 | Reference | Link |
@@ -184,6 +168,3 @@ A provenance or activity record can support identification and continuity, but i
 
 `TUX-133.144~`
 
-This public provenance anchor supports identification and continuity across research records associated with Xufen Tu（涂绪芬）.
-
-该公开溯源锚点用于支持与 Xufen Tu（涂绪芬）相关研究记录之间的身份识别与连续性。
