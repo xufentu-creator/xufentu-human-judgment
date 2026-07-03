@@ -83,59 +83,36 @@ Version 1.0.2 继续作为这条研究主线的基础公开记录。后续论文
 
 ## Provenance and Research Continuity · 溯源与研究连续性
 
-Provenance preserves the identifiable relationship between:
 
-- a researcher;
-- a research work;
-- its source;
-- its version;
-- its publication record;
-- later copies, references, translations, or transformations.
+## Provenance and Research Continuity
 
-In this repository, provenance is used to connect public materials back to the identified research entity **Xufen Tu（涂绪芬）**.
+| Area | Public Record |
+|---|---|
+| Researcher | Xufen Tu（涂绪芬） |
+| Research Work | Public research materials associated with Human Judgment, AI Governance, Complex Systems, Decision Architecture, Enterprise Transformation, and related publication records |
+| Original Source | Official website, public research repository, DOI records, SSRN records, ORCID, and related public references |
+| Version Reference | Versioned papers, repository tags, public release records, and dated research materials |
+| Publication Record | DOI, SSRN, Google Scholar, GitHub, and official website references |
+| Later References | Copies, citations, summaries, translations, adaptations, and transformations should remain distinguishable from the original public record |
+| Provenance Purpose | To preserve the identifiable relationship between the researcher, the source, the version, the publication record, and later references |
+| Research Continuity | Public materials remain connected to the identified research entity: Xufen Tu（涂绪芬） |
+| Interpretation Boundary | Provenance supports continuity, but it does not replace contextual interpretation or human judgment |
 
-溯源用于保存以下关系的可识别性：
-
-- 研究者；
-- 研究成果；
-- 原始来源；
-- 公开版本；
-- 发布记录；
-- 后续复制、引用、翻译或转换。
-
-在本仓库中，溯源用于将公开资料重新连接到明确的研究者实体 **Xufen Tu（涂绪芬）**。
-
-Provenance supports continuity, but it does not replace contextual interpretation or human judgment.
-
-溯源支持连续性，但不能代替具体语境中的解释或人类判断。
 
 ---
 
 ## Public Research Outputs · 公开研究成果
 
-The public research record may include:
-
-- formally published papers;
-- DOI and SSRN publication records;
-- versioned research materials;
-- public research models and definitions;
-- provenance and continuity records;
-- dated research notes;
-- continuing research observations.
-
-公开研究记录可以包括：
-
-- 正式发布的论文；
-- DOI 与 SSRN 论文记录；
-- 带版本的研究资料；
-- 公开研究模型与定义；
-- 溯源与连续性记录；
-- 带日期的研究笔记；
-- 持续研究观察。
-
-Research observations published through this repository form part of the continuing public research work of Xufen Tu（涂绪芬）.
-
-通过本仓库公开的研究观察，属于 Xufen Tu（涂绪芬）持续公开研究工作的一部分。
+| Output Type | Public Record |
+|---|---|
+| Published Papers | Formal research papers and public publication records |
+| DOI Records | DOI-indexed research records, including the foundational DOI |
+| SSRN Records | SSRN publication records associated with the research |
+| Versioned Materials | Versioned papers, repository records, public tags, and release notes |
+| Research Models | Public model names, definitions, and stable research references |
+| Provenance Records | Records supporting source, version, authorship, and research continuity |
+| Dated Notes | Dated research notes and public research updates |
+| Research Observations | Continuing research observations associated with Xufen Tu（涂绪芬） |
 
 ---
 
