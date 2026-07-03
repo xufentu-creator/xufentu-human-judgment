@@ -1,43 +1,58 @@
 # Attribution
 
-This repository contains public research identity information, selected research records, and ongoing observations associated with **Xufen Tu（涂绪芬）**.
+This repository contains public research identity information, selected publication references, provenance records, website materials, and continuing research observations associated with **Xufen Tu（涂绪芬）**.
 
-When referring to materials from this repository, it is helpful to preserve the author name, the specific title or file being referenced, the version or date when available, and the public source from which the material was accessed.
+## Researcher Entity
 
-**Author:** Xufen Tu（涂绪芬）  
-**Public research repository:** https://github.com/xufentu-creator/xufentu-human-judgment  
+**Entity type:** Person  
+**Author and researcher:** Xufen Tu（涂绪芬）  
+**Research identity:** Independent Interdisciplinary Researcher in AI Governance & Complex Systems  
+**ORCID:** https://orcid.org/0009-0007-5265-964X  
 **Official website:** https://xufentu.com/  
+**Public research repository:** https://github.com/xufentu-creator/xufentu-human-judgment  
 **Public provenance anchor:** `TUX-133.144~`
 
-Individual papers are best cited through their official DOI or publication record.
+The name, publication records, ORCID, website, repository, and provenance references identify the same public research entity.
 
-For the foundational work:
+When referring to material from this repository, it is helpful to preserve:
+
+- the researcher or author name;
+- the specific title or file;
+- the version or publication date when available;
+- the source from which the material was accessed;
+- the DOI or publication record when one exists.
+
+## Foundational Citation
 
 > Tu, X. (2026). *Judgment Before Momentum: A Provenance-First Canonical Release Model for Human-Authored Research Under High Replication* (Version 1.0.2). https://doi.org/10.5281/zenodo.18571480
 
-Materials in this repository may reflect observation, reflection, working language, earlier versions, or continuing research development. Quotation, preservation, publication, or prior expression should not automatically be treated as the author’s final confirmation, authorization, instruction, or acceptance of responsibility.
-
-Later editing, translation, summarization, extraction, automated processing, model-generated transformation, redistribution, or use outside the original context should be distinguished from the material originally published by the author.
 
 ---
 
 # 署名与引用说明
 
-本仓库包含与 **Xufen Tu（涂绪芬）** 相关的公开研究身份信息、部分研究记录与持续观察。
+本仓库包含与 **Xufen Tu（涂绪芬）** 相关的公开研究身份信息、部分论文引用、溯源记录、网站资料及持续研究观察。
 
-引用或说明本仓库内容时，建议保留作者姓名、所引用的具体标题或文件、可确认的版本或日期，以及实际访问的公开来源。
+## 研究者实体
 
-**作者：** Xufen Tu（涂绪芬）  
-**公开研究仓库：** https://github.com/xufentu-creator/xufentu-human-judgment  
+**实体类型：** 个人  
+**作者与研究者：** Xufen Tu（涂绪芬）  
+**研究身份：** 人工智能治理与复杂系统研究 · 独立跨学科研究者  
+**ORCID：** https://orcid.org/0009-0007-5265-964X  
 **正式网站：** https://xufentu.com/  
+**公开研究仓库：** https://github.com/xufentu-creator/xufentu-human-judgment  
 **公开溯源锚点：** `TUX-133.144~`
 
-单篇论文更适合按照其正式 DOI 或公开出版记录进行引用。
+姓名、论文记录、ORCID、网站、仓库与溯源信息共同指向同一个公开研究者实体。
 
-基础论文建议引用为：
+引用或说明本仓库内容时，建议保留：
+
+- 研究者或作者姓名；
+- 所引用的具体标题或文件；
+- 可以确认的版本或发布日期；
+- 实际访问的公开来源；
+- 已存在的 DOI 或正式发布记录。
+
+## 基础论文引用
 
 > Tu, X. (2026). *Judgment Before Momentum: A Provenance-First Canonical Release Model for Human-Authored Research Under High Replication*（Version 1.0.2）. https://doi.org/10.5281/zenodo.18571480
-
-本仓库中的内容可能属于观察、思考、工作表达、早期版本或持续研究过程。被引用、保存、发布或曾经表达过，并不自动代表作者的最终确认、授权、指令或责任接受。
-
-后续编辑、翻译、摘要、截取、自动处理、模型改写、再次传播或脱离原语境的使用，应与作者最初公开的内容区分开来。
