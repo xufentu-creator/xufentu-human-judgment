@@ -151,9 +151,9 @@ Research observations published through this repository form part of the continu
 | Foundational DOI | https://doi.org/10.5281/zenodo.18571480 |
 | Foundational SSRN Record | https://ssrn.com/abstract=6078249 |
 | Provenance Tool | https://github.com/xufentu-creator/provenance-tool |
+| Tool Note | Early tool records are retained as historical provenance records; current tool releases are maintained in the dedicated repository. |
 
 ---
-
 ## Public Provenance Anchor · 公开溯源锚点
 
 `TUX-133.144~`
