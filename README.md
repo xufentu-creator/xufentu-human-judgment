@@ -12,9 +12,7 @@ This repository is the public research identity and website repository of **Xufe
 
 It connects a clearly identified researcher with public research areas, publication records, versioned materials, provenance references, and continuing research observations.
 
-本仓库是 **Xufen Tu（涂绪芬）** 的公开研究身份与网站仓库。
-
-本仓库将一个明确可识别的研究者实体，与研究领域、论文记录、版本资料、溯源信息及持续研究观察连接起来。
+本仓库是 **Xufen Tu（涂绪芬）** 的公开研究身份与网站仓库。本仓库将一个明确可识别的研究者实体，与研究领域、论文记录、版本资料、溯源信息及持续研究观察连接起来。
 
 ---
 
@@ -57,13 +55,9 @@ These five areas form the stable public research identity of Xufen Tu（涂绪�
 
 ## Research Direction · 研究方向
 
-This research examines how human judgment operates within complex and increasingly automated systems, and how source, context, version, and research continuity can remain identifiable as information is copied, transformed, and distributed.
+This research examines how human judgment operates within complex and increasingly automated systems, and how source, context, version, and research continuity can remain identifiable as information is copied, transformed, and distributed.The work connects human judgment with provenance, decision structure, technological change, organizational transformation, and the preservation of meaning across versions and systems.
 
-The work connects human judgment with provenance, decision structure, technological change, organizational transformation, and the preservation of meaning across versions and systems.
-
-这项研究观察人类判断如何存在于复杂且日益自动化的系统中，以及当信息被复制、转换和传播时，来源、语境、版本与研究连续性如何保持可识别。
-
-研究将人类判断与溯源、决策结构、技术变化、组织转型，以及意义如何在不同版本和系统之间保持连续联系起来。
+这项研究观察人类判断如何存在于复杂且日益自动化的系统中，以及当信息被复制、转换和传播时，来源、语境、版本与研究连续性如何保持可识别。研究将人类判断与溯源、决策结构、技术变化、组织转型，以及意义如何在不同版本和系统之间保持连续联系起来。
 
 ---
 
@@ -81,13 +75,9 @@ The work connects human judgment with provenance, decision structure, technologi
 | DOI | https://doi.org/10.5281/zenodo.18571480 |
 | SSRN | https://ssrn.com/abstract=6078249 |
 
-Version 1.0.2 remains the foundational public record of this research line.
+Version 1.0.2 remains the foundational public record of this research line.Later papers, observations, models, and public records may extend or clarify the research without replacing this foundational version.
 
-Later papers, observations, models, and public records may extend or clarify the research without replacing this foundational version.
-
-Version 1.0.2 继续作为这条研究主线的基础公开记录。
-
-后续论文、观察、模型与公开记录可以延伸或澄清研究，但不替代这一基础版本。
+Version 1.0.2 继续作为这条研究主线的基础公开记录。后续论文、观察、模型与公开记录可以延伸或澄清研究，但不替代这一基础版本。
 
 ---
 
