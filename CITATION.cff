@@ -1,49 +1,49 @@
 cff-version: 1.2.0
-message: "Please cite this public research repository using the metadata below."
 
-title: "Xufen Tu Public Research Website and Human Judgment Research Reference"
-type: software
-version: "1.6.0"
-date-released: 2026-06-28
+message: "Please cite individual research works through their official DOI or publication record."
+
+title: "Xufen Tu Public Research Identity Record"
+
+type: dataset
 
 authors:
+  - family-names: "Tu"
+    given-names: "Xufen"
+    orcid: "https://orcid.org/0009-0007-5265-964X"
 
-* family-names: "Tu"
-  given-names: "Xufen"
-  orcid: "https://orcid.org/0009-0007-5265-964X"
-
-abstract: >
-A canonical public research website and repository presenting selected
-research references on human judgment, AI governance, complex systems,
-decision architecture, responsibility drift, provenance governance,
-structural accountability, and related public tools.
+abstract: >-
+  A public research identity record for Xufen Tu（涂绪芬）, presenting
+  selected research references and ongoing observations in Complex Systems,
+  AI Governance, Decision Architecture, Enterprise Transformation,
+  and Human Judgment.
 
 keywords:
-
-* human judgment
-* AI governance
-* complex systems
-* decision architecture
-* responsibility drift
-* structural accountability
-* provenance governance
-* decision traceability
+  - "Complex Systems"
+  - "AI Governance"
+  - "Decision Architecture"
+  - "Enterprise Transformation"
+  - "Human Judgment"
 
 url: "https://xufentu.com/"
+
 repository-code: "https://github.com/xufentu-creator/xufentu-human-judgment"
 
 identifiers:
+  - type: url
+    value: "https://github.com/xufentu-creator/xufentu-human-judgment"
+    description: "Public research identity repository"
 
-* type: url
-  value: "https://xufentu.com/"
-  description: "Canonical public research website"
+  - type: url
+    value: "https://xufentu.com/"
+    description: "Public research website"
 
 preferred-citation:
-type: generic
-title: "Human Judgment as Structural Constraint"
-authors:
-- family-names: "Tu"
-given-names: "Xufen"
-year: 2026
-version: "1.6.0"
-url: "https://xufentu.com/"
+  type: generic
+  title: "Judgment Before Momentum: A Provenance-First Canonical Release Model for Human-Authored Research Under High Replication"
+  authors:
+    - family-names: "Tu"
+      given-names: "Xufen"
+  year: 2026
+  version: "1.0.2"
+  doi: "10.5281/zenodo.18571480"
+  url: "https://doi.org/10.5281/zenodo.18571480"
