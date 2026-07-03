@@ -1,212 +1,58 @@
 {
-"record_schema_version": "1.0",
-"record_type": "public_research_identity",
-"version": "1.3.0",
-"release_type": "consolidated_public_release",
-"identifier": "HJSC-v1.3.0",
-"canonical_url": "https://xufentu.com/",
-"last_updated": "2026-06-21",
-
-"version_continuity": {
-"unified_baseline": "v1.3.0",
-"statement": "Version 1.3.0 serves as the unified public baseline for future releases.",
-"historical_record": "Earlier tags and releases remain preserved as historical development records.",
-"future_versioning": {
-"patch_release": "v1.3.x for corrections and minor public updates",
-"minor_release": "v1.x.0 for significant public additions",
-"major_release": "v2.0.0 for a substantial change to the core framework"
-}
-},
-
-"repository_continuity": {
-"originating_repository": {
-"name": "judgment-as-structural-constraint",
-"url": "https://github.com/xufentu-creator/judgment-as-structural-constraint",
-"role": "Originating research repository and preserved historical development record",
-"current_visibility": "private",
-"continuity_status": "preserved"
-},
-"canonical_public_reference": {
-"url": "https://xufentu.com/",
-"role": "Canonical public research website and machine-readable reference"
-},
-"statement": "This public identity record continues the research framework, authorship record, model development, and release history established in the originating repository. The originating repository is currently private, while the canonical public reference remains available at https://xufentu.com/."
-},
-
-"author": {
-"name": "Xufen Tu",
-"alternate_name": "涂绪芬",
-"role": "Independent Interdisciplinary Researcher",
-"research_identity": "AI Governance & Complex Systems",
-"canonical_profile": "https://xufentu.com/",
-"orcid": "https://orcid.org/0009-0007-5265-964X",
-"github": "https://github.com/xufentu-creator",
-"google_scholar": "https://scholar.google.com/citations?user=NseOI0QAAAAJ",
-"linkedin": "https://www.linkedin.com/in/xufentu/"
-},
-
-"research_framework": {
-"canonical_name": "Human Judgment as Structural Constraint in AI-Mediated Complex Systems",
-"short_name": "Human Judgment as Structural Constraint",
-"named_principle": {
-"en": "Judgment Before Momentum",
-"zh": "判断先于动量"
-},
-"framework_description": {
-"en": "A research framework examining where human judgment, responsibility, confirmation, traceability, and decision boundaries must remain in AI-mediated complex systems.",
-"zh": "一项研究人类判断、责任归属、人类确认、可追溯性与决策边界如何在 AI 介导的复杂系统中继续保留的研究框架。"
-},
-"research_areas": [
-"Complex Systems",
-"AI Governance",
-"Decision Architecture",
-"Enterprise Transformation",
-"Human Judgment"
-],
-"public_concepts": [
-"Responsibility Drift",
-"AI Decision Responsibility",
-"Decision Traceability",
-"Structural Accountability",
-"Provenance Governance",
-"Human Oversight",
-"Human Confirmation Boundaries",
-"Non-Transferable Responsibility"
-]
-},
-
-"core_models": [
-{
-"id": "SBF-001",
-"name": "Structural Boundary Framework",
-"description": "Where human judgment becomes structurally necessary."
-},
-{
-"id": "RD-001",
-"name": "Responsibility Drift",
-"description": "How accountability becomes fragmented, hidden, or displaced."
-},
-{
-"id": "DAF-001",
-"name": "Decision Arbitration Framework",
-"description": "How competing directions are brought toward an executable decision."
-}
-],
-
-"enterprise_value": {
-"primary_focus": "Enterprise AI Governance and Decision Architecture",
-"positioning": {
-"en": "I help organizations clarify human judgment, responsibility, and decision boundaries in AI-assisted systems.",
-"zh": "我帮助企业厘清 AI 系统中的人类判断、责任归属与决策边界。"
-},
-"problems_addressed": [
-"Unclear ownership of AI-assisted decisions",
-"Weak or symbolic human confirmation",
-"Fragmented responsibility across teams, vendors, platforms, and models",
-"Untraceable decision paths",
-"Mixed public information, private assets, and operational systems",
-"Operational risk before AI outputs become real-world action"
-],
-"expected_outcomes": [
-"Clearer decision ownership",
-"Visible human confirmation boundaries",
-"Documented responsibility gaps",
-"Traceable decision paths",
-"Public-private system separation",
-"Earlier operational risk visibility"
-],
-"related_application_areas": [
-"Enterprise AI Readiness",
-"AI Governance and Decision Architecture",
-"Public and Private Information Boundaries",
-"Education and Human Judgment",
-"Real-World Service Systems"
-]
-},
-
-"stable_public_statements": [
-{
-"en": "AI can move fast. Humans remain responsible for getting it right.",
-"zh": "AI 负责快，人负责对。"
-},
-{
-"en": "Wherever content travels, its source should remain attached.",
-"zh": "内容走到哪，出处跟到哪。"
-},
-{
-"en": "A human confirmation click does not necessarily mean that a human has taken responsibility.",
-"zh": "不是有人点了确认，就代表有人真正负责。"
-},
-{
-"en": "Service is not a keyword. It means someone receives the request, someone performs the work, and someone remains responsible.",
-"zh": "服务不是关键词，服务是有人接、有人做、有人负责。"
-},
-{
-"en": "Judgment Before Momentum.",
-"zh": "判断先于动量。"
-},
-{
-"en": "Human judgment cannot be removed from systems where uncertainty, consequence, and responsibility remain human.",
-"zh": "只要不确定性、后果与责任仍然由人承担，人类判断就不能从系统中被移除。"
-}
-],
-
-"public_papers": [
-{
-"title": "Human Judgment as an Irreducible Interface",
-"url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6193698",
-"relationship": "Public research paper"
-},
-{
-"title": "Judgment Before Momentum",
-"url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6078249",
-"relationship": "Public research paper"
-}
-],
-
-"public_scope": [
-"Research direction",
-"Named concepts and model overviews",
-"Public principles and stable statements",
-"Papers and citable references",
-"Enterprise application directions",
-"Authorship and continuity records",
-"Public provenance references",
-"Machine-readable research identity"
-],
-
-"private_scope": [
-"Detailed evaluation methods",
-"Scoring structures",
-"Internal checklists",
-"Implementation workflows",
-"Semantic libraries",
-"Validation procedures",
-"Client delivery methods",
-"Pricing and commercial processes",
-"Backend and operational logic"
-],
-
-"provenance": {
-"canonical_reference": "https://xufentu.com/",
-"public_release": "v1.3.0",
-"status": "Earlier public research record",
-"continuity": "This release consolidates and expands earlier framework, model, integrity, identity, and enterprise application records while preserving their historical sequence.",
-"evidence_types": [
-"Dated publications",
-"Repository history",
-"Tags and releases",
-"ORCID records",
-"Public website updates",
-"Public articles",
-"File integrity records"
-],
-"boundary": "This record supports documented authorship, continuity, and canonical attribution for the named framework and listed public materials. It does not claim that no similar idea existed elsewhere at an earlier time."
-},
-
-"public_private_boundary": {
-"public_reference_role": "The public website provides stable identity, research concepts, papers, application directions, and citable references.",
-"private_repository_role": "The originating private repository preserves detailed methods, internal tools, validation materials, historical development, and implementation assets.",
-"synchronization_rule": "The public-research-identity.json file should remain identical in the public website repository and the identity directory of the private originating repository."
+  "record_type": "public_research_identity",
+  "record_version": "2.0.0",
+  "record_created": "2026-06-28",
+  "record_updated": "2026-07-03",
+  "entity_type": "Person",
+  "name": "Xufen Tu",
+  "name_zh": "涂绪芬",
+  "research_identity": {
+    "en": "Independent Interdisciplinary Researcher in AI Governance & Complex Systems",
+    "zh": "人工智能治理与复杂系统研究 · 独立跨学科研究者"
+  },
+  "research_areas": [
+    {
+      "en": "Complex Systems",
+      "zh": "复杂系统"
+    },
+    {
+      "en": "AI Governance",
+      "zh": "人工智能治理"
+    },
+    {
+      "en": "Decision Architecture",
+      "zh": "决策架构"
+    },
+    {
+      "en": "Enterprise Transformation",
+      "zh": "企业转型"
+    },
+    {
+      "en": "Human Judgment",
+      "zh": "人类判断"
+    }
+  ],
+  "foundational_work": {
+    "title": "Judgment Before Momentum: A Provenance-First Canonical Release Model for Human-Authored Research Under High Replication",
+    "short_title": "Judgment Before Momentum",
+    "author": "Xufen Tu",
+    "version": "1.0.2",
+    "year": 2026,
+    "doi": "10.5281/zenodo.18571480",
+    "doi_url": "https://doi.org/10.5281/zenodo.18571480",
+    "ssrn_id": "6078249",
+    "ssrn_url": "https://ssrn.com/abstract=6078249"
+  },
+  "public_identifiers": {
+    "official_website": "https://xufentu.com/",
+    "public_repository": "https://github.com/xufentu-creator/xufentu-human-judgment",
+    "github_profile": "https://github.com/xufentu-creator",
+    "orcid": "https://orcid.org/0009-0007-5265-964X",
+    "google_scholar": "https://scholar.google.com/citations?user=NseOI0QAAAAJ",
+    "public_provenance_anchor": "TUX-133.144~"
+  },
+"record_note": {
+  "en": "This record supports public identification and provenance continuity.",
+  "zh": "本记录用于支持公开身份识别与溯源连续性。"
 }
 }
