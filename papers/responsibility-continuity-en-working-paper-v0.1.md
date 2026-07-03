@@ -14,7 +14,7 @@ This manuscript was first developed in Chinese in order to stabilize its central
 
 ## Public Publication and Research Continuity Statement
 
-**Responsibility Continuity** is the central concept introduced and systematized in this paper by Xufen Tu as part of a continuously documented research program in AI governance and complex systems. The concept extends prior work on *Judgment Before Momentum*, human judgment as an irreducible interface, the Human Responsibility Node, Responsibility Drift, version continuity, and provenance. This paper connects source, canonical version, file integrity, human interpretation, human judgment, consequential decision, action, and accountability within one continuous structural relation. The final published English edition and its DOI record will constitute the principal scholarly reference for the concept. The author’s website serves as the unified public identity and research hub linking this paper, prior publications, authorized language editions, publication metadata, and public records. Private repositories are maintained separately for research development, draft management, and non-public methods; they are not required for public citation or verification.
+**Responsibility Continuity** is the central concept introduced and systematized in this paper by Xufen Tu as part of a continuously documented research program in AI governance and complex systems. The concept emerges from the author’s prior work on *Judgment Before Momentum*, human judgment as an irreducible interface, the Human Responsibility Node, Responsibility Drift, version continuity, and provenance.This paper connects source, canonical version, file integrity, human interpretation, human judgment, consequential decision, action, and accountability within one continuous structural relation. The final published English edition and its DOI record will constitute the principal scholarly reference for the concept. The author’s website serves as the unified public identity and research hub linking this paper, prior publications, authorized language editions, publication metadata, and public records. Private repositories are maintained separately for research development, draft management, and non-public methods; they are not required for public citation or verification.
 
 This paper does not claim that provenance, responsibility, human oversight, accountability, data lineage, or related general ideas originated with the author. Its specific original contribution is the formal definition of Responsibility Continuity and the integration of provenance, version, interpretation, human judgment, consequential decision, action, and accountability as a continuous responsibility structure in high-replication AI systems.
 
@@ -58,14 +58,15 @@ Work on **Responsibility Drift** then described how responsibility can become in
 
 The broader human-centered governance orientation of this research line was also articulated in *Primary Frequency System: A Structural Framework for Human-Centered AI Governance* (Tu, 2026c), which positioned human judgment, structural boundaries, and responsibility as organizing concerns rather than residual safeguards.
 
-Responsibility Continuity joins these prior propositions. Judgment Before Momentum establishes that speed cannot substitute for judgment. Human judgment as an irreducible interface identifies the boundary at which information acquires meaning and direction. The Human Responsibility Node requires that consequential judgment remain connected to a real actor or institution. Responsibility Drift explains how this connection weakens across distributed systems. Provenance and version records preserve the informational basis upon which later review depends. Responsibility Continuity advances the combined claim that source, version, interpretation, judgment, decision, action, and accountability must remain connected across the entire movement from information to consequence.
+Responsibility Continuity emerges from this continuous research line while addressing a distinct structural problem.
+ Judgment Before Momentum establishes that speed cannot substitute for judgment. Human judgment as an irreducible interface identifies the boundary at which information acquires meaning and direction. The Human Responsibility Node requires that consequential judgment remain connected to a real actor or institution. Responsibility Drift explains how this connection weakens across distributed systems. Provenance and version records preserve the informational basis upon which later review depends. Responsibility Continuity advances the combined claim that source, version, interpretation, judgment, decision, action, and accountability must remain connected across the entire movement from information to consequence.
 
 This research continuity is established through public papers, dates, versions, DOI records, authorship metadata, and the author’s public research website. It does not depend on public access to private development repositories. Nor does the paper claim absolute global priority over every adjacent idea. Existing work has already developed data provenance, responsibility gaps, meaningful human control, reviewability, traceability, and algorithmic accountability (Buneman et al., 2001; Cobbe et al., 2021; Kroll et al., 2017; Matthias, 2004; Santoni de Sio & van den Hoven, 2018). The specific claim made here is that Responsibility Continuity names and defines a distinct relation: the continued connection of provenance and version to human interpretation, judgment, consequential decision, action, and accountable response under conditions of high replication.
 
 
 # 3. Related Literature and Conceptual Distinction
 
-Responsibility Continuity enters an existing field rather than replacing it. Provenance research, data lineage, traceability, explainability, meaningful human control, responsibility-gap analysis, algorithmic accountability, reviewability, and socio-technical governance each address part of the problem. Their differences matter because the central claim of this paper depends on identifying a relation that is not exhausted by any one of them. The purpose of this section is therefore not to present an encyclopedic literature review, but to locate the concept in relation to adjacent ideas and to clarify the specific theoretical work it is intended to perform.
+Existing scholarship provides the surrounding context for this paper. Responsibility Continuity addresses a distinct structural problem that is not fully captured by provenance, data lineage, traceability, explainability, human oversight, meaningful human control, responsibility-gap analysis, algorithmic accountability, reviewability, or socio-technical governance.Their differences matter because the central claim of this paper depends on identifying a relation that is not exhausted by any one of them. The purpose of this section is therefore not to present an encyclopedic literature review, but to locate the concept in relation to adjacent ideas and to clarify the specific theoretical work it is intended to perform.
 
 ## 3.1 Provenance and data lineage
 
@@ -93,7 +94,7 @@ In generative systems, explanation-like language can be produced after the fact,
 
 Human oversight is now a central governance requirement. The EU AI Act requires high-risk systems to be designed so they can be effectively overseen by natural persons during use and describes capacities that include understanding limitations, avoiding over-reliance, interpreting outputs, overriding or disregarding them, and interrupting system operation where appropriate (European Union, 2024). These requirements reflect the inadequacy of merely placing a human in a workflow.
 
-Meaningful human control provides a deeper philosophical account. Santoni de Sio and van den Hoven (2018) connect control to reasons and responsibility rather than to direct physical intervention. Siebert et al. (2022) further identify actionable properties, including the requirement that attributed responsibility be commensurate with a human’s ability and authority to influence the system and that explicit links exist between AI actions and responsible human actions. Responsibility Continuity is compatible with these accounts but extends the temporal and informational frame.
+Meaningful human control provides a deeper philosophical account. Santoni de Sio and van den Hoven (2018) connect control to reasons and responsibility rather than to direct physical intervention. Siebert et al. (2022) further identify actionable properties, including the requirement that attributed responsibility be commensurate with a human’s ability and authority to influence the system and that explicit links exist between AI actions and responsible human actions. Responsibility Continuity is situated alongside these accounts but addresses a distinct structural problem involving continuity across version, interpretation, judgment, action, and accountability.
 
 Meaningful human control primarily asks whether human agency and moral responsibility remain appropriately connected to system behavior. Responsibility Continuity asks whether this connection remains intelligible across source, version change, translation, reinterpretation, distributed authorization, action, and later consequence. A system might be under meaningful human control at deployment yet lose responsibility continuity after a model update, organizational transfer, language transformation, or personnel change. Conversely, a later reviewer may have authority but lack the version and decision context required to exercise responsible control. Responsibility Continuity therefore treats meaningful control not as a one-time property but as a relation that must survive transformation and institutional time.
 
@@ -111,12 +112,10 @@ Reviewability similarly shifts attention from isolated output explanation to the
 
 ## 3.7 The specific contribution of Responsibility Continuity
 
-The adjacent fields can be summarized without collapsing them. Provenance preserves informational history. Data lineage preserves derivation. Traceability preserves observable paths. Explainability supports understanding of model behavior or outputs. Human oversight creates a role for intervention. Meaningful human control connects system behavior to human reasons and authority. Responsibility-gap analysis examines failures of attribution. Reviewability supports institutional examination. Algorithmic accountability asks who must justify and remedy system effects.
-
-Responsibility Continuity asks whether these informational, human, institutional, and temporal relations remain connected from the version relied upon through interpretation and judgment to decision, action, and an answerable subject. It is a relational concept, not a file property; a temporal condition, not a one-time approval; and an institutional requirement, not a claim that a single person must control every technical step. Its focus is not the mere existence of records or humans, but the continued intelligibility of the relation by which an output acquires practical force and remains open to correction.
+Responsibility Continuity is not another name for provenance, data lineage, traceability, explainability, human oversight, meaningful human control, responsibility-gap analysis, reviewability, or algorithmic accountability. Those fields provide important surrounding scholarship, but they address different questions. Responsibility Continuity is a distinct relational concept concerned with whether the version relied upon, human interpretation and judgment, consequential decision, action, and accountable response remain connected across high-replication AI systems. It is a relational concept, not a file property; a temporal condition, not a one-time approval; and an institutional requirement, not a claim that a single person must control every technical step. Its focus is not the mere existence of records or humans, but the continued intelligibility of the relation by which an output acquires practical force and remains open to correction.
 
 
-# 5. Structural Conditions of High-Replication AI Systems
+# 4. Structural Conditions of High-Replication AI Systems
 
 High replication is not merely the production of more content. It is the low-cost and repeated transformation of information through generation, rewriting, summarization, translation, recombination, migration, and downstream use. A proposition developed in one context can become a business recommendation, a technical description can become an instruction, an internal report can become an executive summary, and a model output can be embedded directly in an automated workflow. Each transformation may preserve part of the original content while losing part of the context needed to interpret it responsibly.
 
@@ -159,7 +158,7 @@ The relation can be stated simply: integrity preserves object state; provenance 
 
 # 6. Responsibility Continuity
 
-**Responsibility Continuity**, as formally introduced and developed in this paper by Xufen Tu, is the maintained, visible, and interpretable connection among the source and version relied upon, the human interpretation and judgment involved, the consequential decision made, the action that followed, and the person or institution that remains accountable for the result. It rejects the idea that responsibility can be fully represented by a signature, a confirmation click, an approval field, or a single moment at the end of a workflow. Responsibility is a relation that must remain intelligible across information formation, version change, semantic transformation, decision, implementation, and consequence.
+**Responsibility Continuity**, formally introduced and defined in this paper by Xufen Tu, refers to the maintained, visible, and interpretable connection among the source and version relied upon, human interpretation and judgment, the consequential decision made, the action that followed, and the person or institution that remains accountable for the result. It rejects the idea that responsibility can be fully represented by a signature, a confirmation click, an approval field, or a single moment at the end of a workflow. **Responsibility Continuity is a relational condition that must remain intelligible across information formation, version change, semantic transformation, decision, implementation, and consequence.**
 
 The first relation is **version relation**. A consequential decision should be traceable to the informational state on which it was actually based, including the content, limitations, revision status, and context visible at the time. Preserving only the final file can distort later review. The second is **interpretive relation**. Information must be assigned practical meaning before it can support action. The same document can be treated as research, warning, advice, policy, or instruction. Interpretation determines which facts are considered relevant, which limitations are accepted, and which institutional context is applied. The third is **judgment relation**. Judgment addresses uncertainty, conflict, exception, purpose, and acceptable consequence. It connects what is known to what should be done. If no one can identify who accepted a risk, resolved a conflict, or decided to proceed, responsibility will migrate toward the model, the process, or the final operator.
 
@@ -264,7 +263,7 @@ Semantic continuity does not require perfect agreement among interpreters. Compl
 This point prevents the concept from becoming a demand for semantic uniformity. Continuity preserves relation, not sameness. It allows translations, adaptations, and contextual uses to differ, provided that the difference is visible, authorized, and connected to a responsible subject.
 
 
-# 12. Fields of Application
+# 11. Fields of Application
 
 In research and scholarly publishing, Responsibility Continuity concerns the relation among authorship, AI assistance, version status, canonical publication, citation, and correction. AI can assist with language, structure, search, code, and summarization, but the author remains responsible for deciding which claims to retain, verifying references, stabilizing definitions, authorizing release, and correcting error. A version number and DOI provide stable references but do not prove the truth of the argument. Citation responsibility requires that a cited claim actually appear in the cited version. Automatically generated references should not be accepted because they look formally complete.
 
@@ -277,7 +276,7 @@ In education, the relevant relation is not simply how much AI was used but wheth
 In software and automated systems, mature version control does not by itself preserve decision responsibility. A repository may show what changed without showing why a critical configuration was accepted, who assessed the risk, or who authorized deployment. AI-generated code may run while containing unsuitable assumptions or vulnerabilities. Technical traceability must connect to requirements, authority, deployment, monitoring, and correction. In archives and cultural records, Responsibility Continuity requires clear distinctions among original records, digitized copies, restorations, translations, edited versions, and generated reconstructions. Different versions may coexist, but their status and transformation should not be obscured.
 
 
-## 10.1 Research publishing and scholarly continuity
+## 11.1 Research publishing and scholarly continuity
 
 Research publishing makes the distinction between object continuity and responsibility continuity particularly visible. A manuscript may exist as an early draft, a repository file, a preprint, a translated edition, a revised PDF, and a version of record. Each can be technically authentic while expressing a different stage of author judgment. A later reader who cites an early draft as the final position may preserve file provenance while misrepresenting scholarly responsibility. Conversely, an author may revise a claim without preserving the earlier version, making it difficult to reconstruct which proposition was publicly available at a particular time.
 
@@ -285,7 +284,7 @@ AI assistance adds another layer. The central question is not whether a model pr
 
 A useful boundary case is a paper whose final PDF is unchanged but whose public description is rewritten by an automated platform. The abstract shown to readers may overstate the conclusion. The file integrity of the paper remains intact, yet the semantic and responsibility relation surrounding its discovery has changed. Responsibility Continuity asks who controls that description, whether the author can correct it, and which representation a later user actually relied upon.
 
-## 10.2 Enterprise decisions and organizational authority
+## 11.2 Enterprise decisions and organizational authority
 
 In enterprises, AI outputs rarely act alone. They are embedded in budgets, performance expectations, interface design, procurement decisions, policy, and managerial authority. Consider a supplier-screening tool that ranks vendors. The platform provider may define the model, procurement leadership may require its use, analysts may review the scores, and executives may approve contracts. If a supplier is excluded, the last analyst may be visible, but the analyst may not control the data, threshold, or policy. Responsibility Continuity requires the organization to preserve the relation among those layers rather than treating the final confirmation as the sole decision.
 
@@ -293,7 +292,7 @@ Another case involves informal conversion from advice to rule. A company may ini
 
 Enterprise continuity also depends on institutional memory. A system may be introduced by one leadership team, configured by a consultant, and inherited by managers who know only that it is “approved.” Vendor documents remain available, but the internal reason for accepting the system, the limits originally agreed upon, and the person authorized to change it have disappeared. A responsible organization must preserve more than procurement history. It must preserve enough judgment context to determine whether continued use remains justified.
 
-## 10.3 Public administration and public answerability
+## 11.3 Public administration and public answerability
 
 Public administration adds legal authority and public duty. When AI supports eligibility, prioritization, fraud detection, inspection, or resource allocation, the affected person does not encounter an abstract model; the person encounters the state or a public institution. Outsourcing technical development does not outsource public responsibility. A vendor may explain system performance, but only the authorized institution can justify why that performance was considered an acceptable basis for exercising public power.
 
@@ -301,7 +300,7 @@ A formally available appeal is insufficient if the appeal body cannot access the
 
 Public-sector systems also demonstrate why a single responsible person may be inappropriate. Responsibility may properly belong to a public body, professional office, or multi-level administrative structure. What matters is that institutional responsibility does not become an abstraction. An affected person should be able to identify which body made the decision, which rules and system state were used, and which body can now provide correction.
 
-## 10.4 Education, learning, and authorship
+## 11.4 Education, learning, and authorship
 
 Education reveals the difference between generated performance and human understanding. A student may submit a fluent essay generated through AI assistance while being unable to explain the argument or verify the sources. The file has an author name, but the educational judgment concerns what the student knows and can defend. Responsibility Continuity connects the sources used, the student’s interpretive work, the final submission, the evaluation decision, and the institution’s rules. It cannot be reduced to an AI-detection score.
 
@@ -309,7 +308,7 @@ Teachers and institutions face parallel responsibilities. A teacher may use AI t
 
 Educational continuity also matters across time. A learner may depend on generated summaries that obscure foundational gaps. Short-term performance appears successful, while later courses reveal that the learner never formed the judgment needed to apply knowledge independently. Responsibility Continuity in education therefore concerns not only document provenance but the continued relation between tool use, human understanding, assessment, and institutional responsibility for learning conditions.
 
-## 10.5 Professional and high-consequence services
+## 11.5 Professional and high-consequence services
 
 In medicine, law, finance, engineering, and similar fields, professional responsibility is not created by the fluency of an output. A model may identify patterns or retrieve relevant materials, but the professional must determine whether the output applies to the specific case, whether contrary evidence exists, and whether the proposed action meets professional duties. At the same time, an individual professional should not absorb unlimited responsibility for a system mandated by an institution and controlled by a vendor.
 
@@ -317,7 +316,7 @@ Consider a clinical support system updated after hospital approval. The new vers
 
 In legal or financial services, generated text may appear authoritative while containing invented authority, outdated law, or inappropriate assumptions. The professional remains responsible for verification, but the organization also bears responsibility for training, system selection, workload, and correction. The concept does not prescribe a universal allocation. It prevents the allocation question from being answered solely by pointing to the last human who touched the output.
 
-## 10.6 Software, automation, and infrastructure
+## 11.6 Software, automation, and infrastructure
 
 Software projects already use repositories, issue trackers, tests, logs, and release records, yet these do not automatically preserve decision context. A commit shows that a configuration changed. It may not show why a risk was accepted, who had authority to approve deployment, or whether the change altered the basis of prior authorization. AI-generated code intensifies this gap because code can be produced rapidly and integrated by developers who understand local behavior but not all assumptions.
 
@@ -325,13 +324,13 @@ Infrastructure systems also persist beyond their creators. A model or automated 
 
 Incident response provides a clear test. After harm occurs, can the organization identify the deployed version, the change that affected behavior, the people and institutions that accepted the risk, and the current party able to stop or remedy the system? If the answer is no despite complete technical logs, the failure is not simply traceability. It is a failure of continuity between trace and responsibility.
 
-## 10.7 Archives, cultural records, and long-term public memory
+## 11.7 Archives, cultural records, and long-term public memory
 
 Digital archives increasingly contain originals, scans, restored images, colorized versions, translations, edited compilations, and AI-generated reconstructions. All may have legitimate value, but their status should not be merged. A generated completion of a damaged image is not the same object as the source artifact. A translation can preserve meaning while altering interpretive emphasis. A restoration can improve visibility while introducing choices that later viewers mistake for original features.
 
 Responsibility Continuity in archives connects the source object, transformation history, curatorial judgment, public presentation, and the institution responsible for correction. It does not demand one authoritative interpretation of culture. It demands that the boundary between source, reconstruction, and interpretation remain visible. When material is later used in education, commerce, or public narrative, the institutional force of the representation may change, requiring renewed responsibility rather than mere preservation of the original file record.
 
-## 10.8 Cross-domain structure
+## 11.8 Cross-domain structure
 
 Across these fields, the common question is whether the system can still explain what was relied upon, how it was interpreted, who made the consequential choice, how action followed, and who remains responsible. Responsibility Continuity is not a universal solution to bias, error, illegality, or institutional failure. It is a structural condition that makes meaningful review, correction, and learning possible.
 
@@ -375,7 +374,7 @@ The theory also changes the meaning of transparency and explanation. More inform
 
 Responsibility Continuity is therefore not only a blame structure. It is a learning structure. Stable source and version relations help locate error; judgment relations help identify what was missed; responsibility relations identify who can stop harm, repair outcomes, and revise practice. Without these connections, organizations may search for a scapegoat or repeat failures they cannot reconstruct. The concept seeks to move AI governance from output management toward relationship governance.
 
-## 13.1 Institutional memory
+## 14.1 Institutional memory
 
 Institutional memory is often treated as a documentation problem, but it is also a responsibility problem. Organizations preserve contracts, logs, and technical records while losing the reasons that made a system acceptable. Staff turnover separates present operators from past judgment. A new team may know that a system was approved without knowing which limitations were material, which uses were excluded, or who had authority to revisit the decision. Responsibility Continuity requires that enough judgment context survive for current actors to determine whether inherited authority remains valid.
 
@@ -383,7 +382,7 @@ This requirement does not mean preserving every conversation. Institutional memo
 
 Institutional memory also includes responsibility succession. When the original decision-maker leaves, the obligation does not vanish. An institution must identify who inherits the duty to monitor, reassess, and respond. Succession is especially important for systems embedded in infrastructure, where the absence of a current responsible subject may remain unnoticed until a failure occurs.
 
-## 13.2 Corrective capacity
+## 14.2 Corrective capacity
 
 Accountability is sometimes understood as the ability to assign blame after harm. Responsibility Continuity treats corrective capacity as equally important. A responsible relation must reach a subject who can do something: suspend a system, revise a policy, reopen a decision, notify affected persons, repair a record, provide remedy, or commission a new judgment. Naming a historical actor without identifying present corrective authority creates retrospective visibility but not governance.
 
@@ -391,7 +390,7 @@ Corrective capacity also distinguishes meaningful appeal from symbolic appeal. A
 
 Correction should not be understood only as reversal. Some harms cannot be fully reversed. Corrective responsibility may involve explanation, mitigation, compensation, institutional learning, or prevention of recurrence. The appropriate response varies by domain, but the structural need remains: consequence must connect to a subject with an ongoing obligation to respond.
 
-## 13.3 Power and responsibility
+## 14.3 Power and responsibility
 
 Responsibility Continuity is inseparable from power. The ability to determine which output enters action, which person is prioritized, which resource is withheld, or which process continues is a form of authority even when expressed through technical settings. Systems often distribute this power without naming it. A threshold, ranking rule, interface default, or procurement choice can shape outcomes more strongly than the final human confirmation.
 
@@ -399,13 +398,13 @@ Responsibility should broadly correspond to this distribution of power. This doe
 
 Power also affects the reality of refusal. A worker may formally possess override authority while facing organizational penalties for using it. A public officer may have discretion while being evaluated against automated throughput targets. A professional may be told that a model is only advisory while deviations trigger audit. Responsibility Continuity must therefore attend to effective authority, not merely written authority. The social and organizational conditions under which judgment can be exercised are part of the responsibility relation.
 
-## 13.4 Continuity as a condition of contestability
+## 14.4 Continuity as a condition of contestability
 
 A system is contestable when affected persons and reviewing institutions can challenge its operation or outcome in a meaningful way. Contestability requires more than an explanation interface. A challenge must reach the relevant version, reasons, authority, and corrective subject. Without continuity, a person may receive fragments: a model explanation without the policy decision, a policy statement without the model version, or a contact person without authority.
 
 Responsibility Continuity supports contestability by preserving the object and subject of challenge. It enables a claimant to ask not only “Why did the model produce this output?” but also “Why was this version used, who decided it was sufficient, what role did the institution assign to it, and who can now reconsider the result?” These are governance questions that no single technical explanation can answer.
 
-## 13.5 From output governance to relationship governance
+## 14.5 From output governance to relationship governance
 
 Many AI-governance practices concentrate on outputs: accuracy, bias, explanations, prohibited content, or performance. These remain important, but high-replication systems can replace one output while preserving the same broken responsibility relation. A model can become more accurate while institutional authority remains unclear. A new explanation can be added while no one can correct a decision. A provenance record can be improved while human review remains ceremonial.
 
@@ -416,13 +415,13 @@ Relationship governance shifts attention to the connections that make outputs co
 
 A concept intended for broad use in AI governance should be tested against plausible objections. Responsibility Continuity may be criticized as too demanding, too human-centered, too difficult to operationalize, or insufficiently distinct from existing ideas. These objections are important because they clarify the boundaries of the claim and prevent the concept from becoming a vague label for every form of accountability.
 
-## 14.1 Objection: existing provenance and audit systems are already enough
+## 15.1 Objection: existing provenance and audit systems are already enough
 
 One objection is that modern systems already maintain extensive logs, model versions, access records, approvals, and incident histories. If these records can reconstruct what happened, a separate concept of Responsibility Continuity may seem unnecessary. The response is that reconstruction of events does not necessarily reconstruct judgment or answerability. Logs may show that a person approved an output without showing what that person saw, whether the person understood the limitations, whether refusal was possible, or whether the person remains able to correct the result. An audit system can preserve chronology while obscuring authority.
 
 The distinction can be illustrated by two organizations with identical technical records. In the first, reviewers receive the full relevant context, possess time and authority to challenge the recommendation, and can trigger reconsideration after deployment. In the second, reviewers receive only a summary, face penalties for disagreement, and cannot change the system after approval. The log structure may be the same. The responsibility relation is not. Responsibility Continuity describes the difference that technical reconstruction alone cannot capture.
 
-## 14.2 Objection: responsibility can be assigned by law or contract
+## 15.2 Objection: responsibility can be assigned by law or contract
 
 A second objection is that responsibility need not be structurally continuous because law, regulation, or contract can assign it after the fact. A provider, deployer, employer, public authority, or professional can be designated as legally responsible regardless of the internal decision process. Formal allocation is indispensable, but it does not eliminate the need for continuity.
 
@@ -430,7 +429,7 @@ First, legal responsibility and practical corrective capacity may diverge. A par
 
 The concept also helps identify situations in which formal responsibility is unfairly assigned. A frontline employee may be designated as the final decision-maker while lacking meaningful discretion. A professional may be held to account for an institutional system that changed without notice. A contract may describe a platform as a neutral tool even though its defaults materially structure outcomes. Continuity analysis reveals these misalignments without predetermining the legal result.
 
-## 14.3 Objection: the concept places too much emphasis on humans
+## 15.3 Objection: the concept places too much emphasis on humans
 
 A third objection is that Responsibility Continuity is excessively anthropocentric. Future AI systems may possess greater analytical capacity, stable memory, self-monitoring, and sophisticated correction functions. Why insist that responsibility remain connected to humans or human institutions?
 
@@ -438,7 +437,7 @@ The answer depends on the meaning of responsibility in this paper. Responsibilit
 
 This claim need not assume that current legal and moral categories will never change. If future institutions recognize new forms of artificial agency, the theory may require revision. Under present conditions, however, moral, legal, professional, and public responsibility remains organized through human persons and human institutions. Responsibility Continuity reflects that institutional reality while remaining open to later theoretical challenge.
 
-## 14.4 Objection: continuity is impossible in complex systems
+## 15.4 Objection: continuity is impossible in complex systems
 
 Complex systems involve thousands of actors, components, updates, and interactions. Demanding continuity among source, version, judgment, action, and accountability may appear unrealistic. No institution can preserve every relation or identify every contribution.
 
@@ -446,7 +445,7 @@ The objection is correct if continuity is interpreted as exhaustive documentatio
 
 Complex systems already make selective judgments about what must be preserved: safety-critical changes, financial authorizations, clinical decisions, access controls, and legal approvals. Responsibility Continuity proposes that the judgment and accountability relations surrounding consequential AI use deserve similar institutional attention. The precise form will vary, but the impossibility of total documentation does not justify total discontinuity.
 
-## 14.5 Objection: the concept is too difficult to measure
+## 15.5 Objection: the concept is too difficult to measure
 
 A concept that cannot be reduced to a score may seem difficult to apply. Responsibility Continuity includes qualitative relations such as understanding, authority, refusal, and answerability. These cannot always be measured directly, and attempts to convert them into metrics may create false precision.
 
@@ -454,7 +453,7 @@ This limitation is real, but it is not unique. Legitimacy, due process, professi
 
 This paper does not publish a scoring model, measurement formula, implementation template, operational checklist, or automated method for assigning responsibility. Those matters remain outside the public scope of this paper.
 
-## 14.6 Objection: organizations need speed, not additional friction
+## 15.6 Objection: organizations need speed, not additional friction
 
 Organizations may argue that preserving responsibility relations slows innovation and undermines the benefits of automation. High-replication systems are valuable precisely because they reduce the cost and delay of producing and acting on information. Additional review can become bureaucratic, especially when consequences are uncertain.
 
@@ -462,13 +461,13 @@ Responsibility Continuity does not require uniform friction. It distinguishes ro
 
 The earlier principle of Judgment Before Momentum is relevant here. Momentum is not rejected. It is ordered. Speed should follow sufficient judgment at the points where action acquires serious consequence, while routine processes remain capable of automation.
 
-## 14.7 Objection: authorship continuity is self-protective rather than theoretical
+## 15.7 Objection: authorship continuity is self-protective rather than theoretical
 
 Because this paper discusses its own authorship, DOI, versions, and public research record, readers may view its continuity statements as self-protective claims unrelated to the theory. The paper must therefore distinguish scholarly provenance from theoretical proof. Public records do not establish the truth of Responsibility Continuity or exempt it from criticism. They establish only the documented relation among author, version, definition, and prior work.
 
 This distinction is itself theoretically relevant. A concept can be responsibly criticized only when its source and version are stable enough to identify what is being criticized. Scholarly provenance preserves a contestable object. It does not create an untouchable authority. The author-continuity statement is therefore not offered as evidence that the concept is correct; it is offered to prevent the concept’s formal definition and research lineage from being erased or confused during high-replication dissemination.
 
-## 14.8 Further theoretical implications
+## 15.8 Further theoretical implications
 
 The objections reveal several deeper implications. First, Responsibility Continuity is a condition of **institutional intelligibility**. An institution must be able to understand its own consequential actions, not merely possess records of them. Second, it is a condition of **responsible delegation**. Delegation to systems, vendors, teams, or professionals remains legitimate only when authority and answerability survive the delegation. Third, it is a condition of **correction across time**. A system that cannot identify a present corrective subject is not fully accountable even if its historical origin is known.
 
@@ -497,7 +496,7 @@ The final published English edition and its DOI record will serve as the princip
 
 ## Suggested Citation for the Working Paper
 
-Tu, X. (2026). *Responsibility Continuity: Preserving Human Judgment and Accountability Across High-Replication AI Systems* (English working paper, Version 0.2).
+Tu, X. (2026). *Responsibility Continuity: Preserving Human Judgment and Accountability Across High-Replication AI Systems* (English working paper, Version 0.1).
 
 This citation should be replaced by the final DOI-based citation after formal publication.
 
