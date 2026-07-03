@@ -3,14 +3,39 @@
 **Independent Interdisciplinary Researcher in AI Governance & Complex Systems**  
 **人工智能治理与复杂系统研究 · 独立跨学科研究者**
 
-[![Official Website](https://img.shields.io/badge/Website-xufentu.com-111111?style=flat-square)](https://xufentu.com/)
+[![Website](https://img.shields.io/badge/Website-xufentu.com-111111?style=flat-square)](https://xufentu.com/)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0007--5265--964X-A6CE39?style=flat-square)](https://orcid.org/0009-0007-5265-964X)
-[![Foundational DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.18571480-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.18571480)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.18571480-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.18571480)
 [![SSRN](https://img.shields.io/badge/SSRN-6078249-7A1F1F?style=flat-square)](https://ssrn.com/abstract=6078249)
 
-This repository maintains the public research identity, website materials, selected publication references, provenance records, and continuing research observations of **Xufen Tu（涂绪芬）**.
+This repository is the public research identity and website repository of **Xufen Tu（涂绪芬）**.
 
-本仓库用于维护 **Xufen Tu（涂绪芬）** 的公开研究身份、网站资料、部分论文引用、溯源记录与持续研究观察。
+It connects a clearly identified researcher with public research areas, publication records, versioned materials, provenance references, and continuing research observations.
+
+本仓库是 **Xufen Tu（涂绪芬）** 的公开研究身份与网站仓库。
+
+本仓库将一个明确可识别的研究者实体，与研究领域、论文记录、版本资料、溯源信息及持续研究观察连接起来。
+
+---
+
+## Researcher Entity · 研究者实体
+
+| Field | Public Record |
+|---|---|
+| Entity type | Person |
+| Name | Xufen Tu |
+| Chinese name | 涂绪芬 |
+| Public role | Independent Interdisciplinary Researcher |
+| Research identity | Independent Interdisciplinary Researcher in AI Governance & Complex Systems |
+| 中文研究身份 | 人工智能治理与复杂系统研究 · 独立跨学科研究者 |
+| ORCID | https://orcid.org/0009-0007-5265-964X |
+| Official website | https://xufentu.com/ |
+| Public repository | https://github.com/xufentu-creator/xufentu-human-judgment |
+| Public provenance anchor | `TUX-133.144~` |
+
+The name, research identity, publication records, ORCID, website, repository, and provenance references in this repository refer to the same public research entity: **Xufen Tu（涂绪芬）**.
+
+本仓库中的姓名、研究身份、论文记录、ORCID、网站、仓库及溯源信息，共同指向同一个公开研究者实体：**Xufen Tu（涂绪芬）**。
 
 ---
 
@@ -24,9 +49,9 @@ This repository maintains the public research identity, website materials, selec
 | Enterprise Transformation | 企业转型 |
 | Human Judgment | 人类判断 |
 
-These five areas form the stable public research identity of this repository.
+These five areas form the stable public research identity of Xufen Tu（涂绪芬）.
 
-以上五个领域构成本仓库稳定的公开研究身份。
+以上五个领域构成 Xufen Tu（涂绪芬）稳定的公开研究身份。
 
 ---
 
@@ -34,11 +59,11 @@ These five areas form the stable public research identity of this repository.
 
 This research examines how human judgment operates within complex and increasingly automated systems, and how source, context, version, and research continuity can remain identifiable as information is copied, transformed, and distributed.
 
-The work develops across Complex Systems, AI Governance, Decision Architecture, Enterprise Transformation, and Human Judgment. Provenance supports the continuity of records, while human judgment remains necessary for understanding meaning, context, difference, and change.
+The work connects human judgment with provenance, decision structure, technological change, organizational transformation, and the preservation of meaning across versions and systems.
 
 这项研究观察人类判断如何存在于复杂且日益自动化的系统中，以及当信息被复制、转换和传播时，来源、语境、版本与研究连续性如何保持可识别。
 
-研究围绕复杂系统、人工智能治理、决策架构、企业转型与人类判断展开。溯源用于支持记录的连续性，而内容的意义、语境、差异与变化仍需要人类判断。
+研究将人类判断与溯源、决策结构、技术变化、组织转型，以及意义如何在不同版本和系统之间保持连续联系起来。
 
 ---
 
@@ -49,27 +74,94 @@ The work develops across Complex Systems, AI Governance, Decision Architecture, 
 **Full title:**  
 *Judgment Before Momentum: A Provenance-First Canonical Release Model for Human-Authored Research Under High Replication*
 
-**Author:** Xufen Tu  
-**Version:** 1.0.2  
-**DOI:** https://doi.org/10.5281/zenodo.18571480  
-**SSRN:** https://ssrn.com/abstract=6078249
+| Record | Information |
+|---|---|
+| Author | Xufen Tu |
+| Version | `1.0.2` |
+| DOI | https://doi.org/10.5281/zenodo.18571480 |
+| SSRN | https://ssrn.com/abstract=6078249 |
 
-Version 1.0.2 remains the foundational public record of this research line. Later papers, observations, and public records may extend or clarify the research without replacing this foundational version.
+Version 1.0.2 remains the foundational public record of this research line.
 
-Version 1.0.2 继续作为这条研究主线的基础公开记录。后续论文、观察与公开记录可以进行延伸或澄清，但不替代这一基础版本。
+Later papers, observations, models, and public records may extend or clarify the research without replacing this foundational version.
+
+Version 1.0.2 继续作为这条研究主线的基础公开记录。
+
+后续论文、观察、模型与公开记录可以延伸或澄清研究，但不替代这一基础版本。
 
 ---
 
 ## Provenance and Research Continuity · 溯源与研究连续性
 
-Provenance helps preserve the relationship between an author, a source, a version, a publication record, and later copies or transformations.
+Provenance preserves the identifiable relationship between:
 
-It does not replace interpretation or human judgment. A record may show that a file, statement, version, or publication existed, while understanding its meaning still depends on context.
+- a researcher;
+- a research work;
+- its source;
+- its version;
+- its publication record;
+- later copies, references, translations, or transformations.
 
-溯源用于保存作者、来源、版本、公开记录及后续复制或转换之间的关系。
+In this repository, provenance is used to connect public materials back to the identified research entity **Xufen Tu（涂绪芬）**.
 
-溯源不能代替解释或人类判断。一项记录可以说明某个文件、表达、版本或发布曾经存在，但对其意义的理解仍然依赖具体语境。
+溯源用于保存以下关系的可识别性：
 
+- 研究者；
+- 研究成果；
+- 原始来源；
+- 公开版本；
+- 发布记录；
+- 后续复制、引用、翻译或转换。
+
+在本仓库中，溯源用于将公开资料重新连接到明确的研究者实体 **Xufen Tu（涂绪芬）**。
+
+Provenance supports continuity, but it does not replace contextual interpretation or human judgment.
+
+溯源支持连续性，但不能代替具体语境中的解释或人类判断。
+
+---
+
+## Public Research Outputs · 公开研究成果
+
+The public research record may include:
+
+- formally published papers;
+- DOI and SSRN publication records;
+- versioned research materials;
+- public research models and definitions;
+- provenance and continuity records;
+- dated research notes;
+- continuing research observations.
+
+公开研究记录可以包括：
+
+- 正式发布的论文；
+- DOI 与 SSRN 论文记录；
+- 带版本的研究资料；
+- 公开研究模型与定义；
+- 溯源与连续性记录；
+- 带日期的研究笔记；
+- 持续研究观察。
+
+Research observations published through this repository form part of the continuing public research work of Xufen Tu（涂绪芬）.
+
+通过本仓库公开的研究观察，属于 Xufen Tu（涂绪芬）持续公开研究工作的一部分。
+
+---
+
+## Observation Note · 观察说明
+
+The materials shared here are records of observation, reflection, and ongoing research. They may continue to develop as context, evidence, and understanding change.
+
+A provenance or activity record can support identification and continuity, but it should not automatically be treated as complete proof of awareness, confirmation, authorization, or acceptance of responsibility.
+
+这里公开的内容属于观察、思考与持续研究记录。随着语境、证据与理解发生变化，其中的表达也可能继续发展。
+
+溯源记录或行为记录可以支持身份识别与连续性，但不应被自动视为已经知情、确认、授权或接受责任的完整证明。
+
+> **Record is not awareness. Record is not confirmation. Record is not automatic responsibility.**
+>
+> **记录不等于知情。记录不等于确认。记录不等于自动承担责任。**
 
 ---
 
@@ -84,10 +176,14 @@ It does not replace interpretation or human judgment. A record may show that a f
 | Google Scholar | https://scholar.google.com/citations?user=NseOI0QAAAAJ |
 | Foundational DOI | https://doi.org/10.5281/zenodo.18571480 |
 | Foundational SSRN Record | https://ssrn.com/abstract=6078249 |
-| Provenance Tool Repository | https://github.com/xufentu-creator/provenance-tool |
+| Provenance Tool | https://github.com/xufentu-creator/provenance-tool |
 
 ---
+
 ## Public Provenance Anchor · 公开溯源锚点
 
 `TUX-133.144~`
 
+This public provenance anchor supports identification and continuity across research records associated with Xufen Tu（涂绪芬）.
+
+该公开溯源锚点用于支持与 Xufen Tu（涂绪芬）相关研究记录之间的身份识别与连续性。
