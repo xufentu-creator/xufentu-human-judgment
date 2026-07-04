@@ -91,3 +91,10 @@ Additional DOI records and research references are maintained in the author’s 
 ## Preferred Citation
 
 Tu, Xufen. “Why I Keep Returning to Human Judgment.” *Long-term Research Diary on AI Governance & Complex Systems*, 2026.
+
+## Author Website
+
+For the author’s continuing research record, publications, and canonical public profile, please visit:
+
+**Xufen Tu Official Website**  
+https://xufentu.com
