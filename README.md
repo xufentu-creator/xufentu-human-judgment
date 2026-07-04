@@ -36,9 +36,13 @@
 
 ## Research Areas · 研究领域
 
-| Complex Systems | AI Governance | Decision Architecture | Enterprise Transformation | Human Judgment |
-|---|---|---|---|---|
-| 复杂系统 | 人工智能治理 | 决策架构 | 企业转型 | 人类判断 |
+| Layer | English Terms | 中文语义 |
+|---|---|---|
+| Core Identity | `complex-systems` · `ai-governance` · `decision-architecture` · `enterprise-transformation` · `human-judgment` | 复杂系统 · 人工智能治理 · 决策架构 · 企业转型 · 人类判断 |
+| Provenance Layer | `provenance` · `ai-identity` · `sovereignty` | 溯源 · AI 时代身份识别 · 主权 / 身份边界 |
+| Infrastructure Layer | `ai-infrastructure` · `complex-systems` | AI 基础设施 · 复杂系统 |
+| Decision Layer | `human-judgment` · `decision-architecture` · `responsibility-drift` | 人类判断 · 决策架构 · 责任漂移 |
+| Enterprise Layer | `enterprise-transformation` · `ai-governance` | 企业转型 · 人工智能治理 |
 
 ## Foundational Work · 基础研究
 
