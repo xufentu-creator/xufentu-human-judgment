@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "recordType": "public-research-position",
+  "title": "Human Judgment Before Consequential Execution",
+  "titleZh": "人类判断应位于具有现实后果的系统执行之前",
+  "author": {
+    "name": "Xufen Tu",
+    "nameZh": "涂绪芬",
+    "role": "Independent Interdisciplinary Researcher",
+    "researchAreas": [
+      "AI Governance",
+      "Human Judgment",
+      "Complex Systems",
+      "Decision Architecture"
+    ]
+  },
+  "publicationDate": "2026-07-19",
+  "language": [
+    "zh-CN",
+    "en"
+  ],
+  "status": "public",
+  "version": "1.0.0",
+  "documentType": "research-position",
+  "canonicalFile": "2026-07-19-human-judgment-before-consequential-execution.md",
+  "corePosition": {
+    "en": "Human judgment should precede consequential system execution.",
+    "zh": "人类判断应位于具有现实后果的系统执行之前。"
+  },
+  "abstract": {
+    "en": "This public research position states that human judgment should retain a real and structurally meaningful position before system actions produce consequential real-world effects.",
+    "zh": "本公开研究立场提出：在系统行为产生具有现实意义的后果之前，人类判断应保有真实且具有结构意义的位置。"
+  },
+  "keywords": [
+    "AI Governance",
+    "Human Judgment",
+    "Consequential Execution",
+    "Decision Architecture",
+    "Responsibility Boundaries",
+    "Complex Systems",
+    "Human-AI Collaboration"
+  ],
+  "publicResearchBoundary": {
+    "en": "This record establishes a public research position and does not disclose implementation methods, decision thresholds, intervention logic, governance procedures, software architecture, or operational workflows.",
+    "zh": "本记录用于确立公开研究立场，不公开实施方法、判断阈值、介入逻辑、治理程序、软件架构或执行流程。"
+  },
+  "rights": {
+    "copyrightHolder": "Xufen Tu",
+    "copyrightYear": 2026,
+    "usageNotice": "All rights reserved. Citation is permitted with clear attribution. No permission is granted for semantic replication, personality simulation, model training, fine-tuning, or commercial repackaging."
+  }
+}
