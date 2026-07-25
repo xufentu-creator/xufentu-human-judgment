@@ -1,70 +1,41 @@
-# Research Expression
+# 🎵 Research Expression
 
-> Extending long-term research into language, lyrics, stories, and human experience.
+A public collection of original songs and lyrical writing by **Xufen Tu**.
 
-## About
+This repository explores universal human experiences through music and words.
 
-Research Expression is a collection of original lyrical, narrative, and cultural works developed alongside Xufen Tu's ongoing public research.
+Topics include memory, hope, responsibility, loss, courage, time, and the ordinary moments that shape a life.
 
-Rather than presenting ideas through academic writing alone, this directory explores how research questions can also be expressed through language, stories, and artistic expression.
-
-These works are not research papers. They are another way of engaging with questions that remain deeply human.
+These works are independent creative expressions and are published as part of a long-term public body of work.
 
 ---
 
-## Research Themes
+## Collections
 
-Current works may explore topics including:
+### Volume I — Judgment Remains
 
-- Human Judgment
-- Understanding
-- Responsibility
-- Decision-Making
-- Human Presence
-- Identity
-- Choice
-
-Each work focuses on one human experience rather than explaining a theory.
-
----
-
-## Structure
-
-```text
-research-expression/
-├── README.md
-└── judgment-remains/
-    ├── README.md
-    ├── 001-i-did-try-to-tell-you.md
-    ├── 002-that-is-not-what-i-meant.md
-    └── ...
-```
-
----
-
-## Relationship to the Research
-
-Research papers explain ideas.
-
-Research notes preserve observations.
-
-Research Expression explores how those questions can be experienced through language, lyrics, and storytelling.
-
-Together, they form different public expressions of the same long-term research.
+- 001 I Did Try to Tell You
+- 002 I Stopped Explaining
+- 003 Still Waiting
+- 004 If I Had Known
+- 005 Who Decided
+- 006 The Day You Left
+- 007 One More Time
+- 008 The Empty Chair
+- 009 When No One Was Looking
+- 010 You Are Still Here
 
 ---
 
 ## Author
 
-**Xufen Tu**  
-Independent Interdisciplinary Researcher
+**Xufen Tu**
 
-Website: https://xufentu.com
+Independent Interdisciplinary Researcher & Creative Author
+
+Website:
+https://xufentu.com
 
 ---
 
-## Rights
-
-All rights reserved.
-
-Individual works remain the intellectual property of their respective authors unless otherwise stated.
+© Xufen Tu. All rights reserved.
