@@ -9,148 +9,343 @@
 
 ---
 
-我说：
+# I Stopped Explaining
 
-不是这个意思。
+## 后来我不解释了
 
-可是已经没有人停下来。
+**Series:** Judgment Remains  
+**Track:** 002  
+**Author:** Xufen Tu  
+**Status:** Draft
 
-他们开始解释我的解释。
+---
 
-替我补充。
+### 中文
 
-替我定义。
+小时候，
 
-替我完成一句
-我还没有说完的话。
+总觉得，
 
-后来，
+解释清楚，
 
-每个人都在回答。
+事情就会变好。
 
-却没有人再问。
+所以，
 
-他们相信自己的理解。
+我一遍一遍重复。
 
-比相信我的表达，
-更容易。
+怕别人误会。
+
+怕别人难过。
+
+也怕别人觉得，
+
+我变了。
+
+后来长大以后，
+
+我发现，
+
+很多事情，
+
+并不是因为没有听见。
+
+而是因为，
+
+每个人，
+
+都已经带着自己的答案。
+
+我认真说的话，
+
+有人只听见了几个字。
+
+我没有说出口的，
+
+却被别人写成了故事。
 
 于是，
 
-一句简单的话，
+一遍解释，
 
-慢慢变成了另一个故事。
+两遍解释，
 
-我开始删掉很多字。
+很多遍解释。
 
-因为越解释，
+直到有一天，
 
-误会越长。
+我忽然发现，
+
+最累的，
+
+不是误会。
+
+而是一直希望，
+
+所有人都能够理解。
 
 后来，
 
-我终于明白。
+我慢慢学会，
 
-真正理解一个人，
+把一些话，
 
-不是回答得最快。
+留给时间。
 
-而是愿意停下来，
+把一些答案，
 
-把最后一句，
+留给沉默。
 
-也听完。
+把一些委屈，
 
-如果有一天，
+留给自己。
 
-你真的听见我，
+不是因为放弃。
 
-你会发现，
+也不是因为冷漠。
 
-我从来没有复杂。
+只是终于知道，
 
-只是一直，
+真正愿意理解你的人，
 
-没有被真正理解。
+不会因为一句话离开。
+
+真正不愿理解的人，
+
+也不会因为一万句话留下。
+
+所以，
+
+后来我不解释了。
+
+我开始认真生活。
+
+认真工作。
+
+认真爱身边的人。
+
+认真走自己的路。
+
+有一天，
+
+那些曾经需要解释的事情，
+
+慢慢都有了答案。
+
+不是因为我说服了谁。
+
+而是因为时间，
+
+替我说完了，
+
+那些我一直没有说完的话。
+
+---
+
+### Chorus（副歌）
+
+后来我不解释了。
+
+不是因为我输了。
+
+只是终于明白，
+
+真正重要的人，
+
+不会因为沉默，
+
+就忘记你是谁。
+
+后来我不解释了。
+
+不是因为放弃。
+
+而是相信，
+
+时间会慢慢告诉世界，
+
+什么是真实。
 
 ---
 
 ### English
 
-## That Is Not What I Meant
+# I Stopped Explaining
 
-That wasn't
+When I was young,
 
-what I meant.
+I believed
 
-But no one stopped.
+that if I explained myself well enough,
 
-They explained
+everything would be alright.
 
-my explanation.
+So I kept talking.
 
-Finished
+Again.
 
-my unfinished sentence.
+And again.
 
-Added meanings
+I was afraid
 
-I never gave.
+of being misunderstood.
 
-Soon,
+Afraid
 
-everyone had an answer.
+of hurting someone.
 
-No one
+Afraid
 
-had a question.
+that people would think
 
-People trusted
+I had changed.
 
-their own understanding
+Years passed.
 
-more than
+Then I realized,
 
-my own words.
+many people
 
-One simple sentence
+had already decided
 
-became
+what they wanted to believe
 
-a completely different story.
+before I ever spoke.
 
-So I spoke less.
+Some only heard
 
-Because sometimes,
+a few words.
 
-the more we explain,
+Others completed
 
-the larger
+my unfinished story
 
-the misunderstanding grows.
+with their own imagination.
 
-Then I learned,
+So I explained.
 
-understanding someone
+Again.
 
-isn't answering first.
+And again.
 
-It is staying
+Until one day,
 
-long enough
+I discovered
 
-to hear
+that misunderstanding
 
-the final sentence.
+was never
 
-If one day
+the heaviest part.
 
-you truly hear me,
+The heaviest part
 
-you may discover
+was hoping
 
-I was never difficult.
+everyone
 
-I was simply
+would understand.
 
-never fully understood.
+Slowly,
+
+I learned
+
+to leave some questions
+
+to time.
+
+Some answers
+
+to silence.
+
+Some sadness
+
+to myself.
+
+Not because I stopped caring.
+
+Not because I gave up.
+
+But because
+
+those who truly wish
+
+to understand you
+
+do not leave
+
+after one sentence.
+
+And those
+
+who never wished to understand
+
+will not stay
+
+after a thousand.
+
+So,
+
+I stopped explaining.
+
+I started living.
+
+Working.
+
+Loving.
+
+Walking
+
+my own path.
+
+One day,
+
+the things
+
+I once struggled to explain
+
+found their own answers.
+
+Not because
+
+I convinced anyone.
+
+But because
+
+time
+
+finished the sentences
+
+I never could.
+
+---
+
+### Chorus
+
+I stopped explaining.
+
+Not because I lost.
+
+But because I finally learned
+
+that the people
+
+who truly know you
+
+do not forget you
+
+because of silence.
+
+I stopped explaining.
+
+Not because I surrendered.
+
+But because
+
+truth
+
+has its own voice,
+
+and time
+
+always speaks.
