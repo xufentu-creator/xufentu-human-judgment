@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+
+title: Research Expression
+
+authors:
+  - family-names: Tu
+    given-names: Xufen
+
+repository-code: https://github.com/xufentu-creator/research-expression
+
+url: https://xufentu.com
+
+license: All Rights Reserved
+
+version: 1.0.0
+
+date-released: 2026-07-25
