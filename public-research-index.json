@@ -1,78 +1,262 @@
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Xufen Tu",
-  "alternateName": "涂绪芬",
-  "url": "https://xufentu.com",
-  "sameAs": [
-    "https://github.com/xufentu-creator/xufentu-human-judgment",
-    "https://orcid.org/0009-0007-5265-964X",
-    "https://scholar.google.com/citations?user=NseOI0QAAAAJ"
-  ],
-  "jobTitle": "Independent Interdisciplinary Researcher",
-  "knowsAbout": [
-    "Human Judgment",
-    "AI Governance",
-    "Complex Systems",
-    "Decision Architecture",
-    "Structural Accountability",
-    "Provenance"
-  ],
-  "researchIdentity": {
-    "canonicalPublicSource": "https://xufentu.com",
-    "canonicalPublicRepository": "https://github.com/xufentu-creator/xufentu-human-judgment",
-    "publicProvenanceAnchor": "TUX-133.144~"
-  },
-  "publicModels": [
+  "@graph": [
     {
+      "@type": "Person",
+      "@id": "https://xufentu.com/#xufen-tu",
+      "name": "Xufen Tu",
+      "alternateName": "涂绪芬",
+      "url": "https://xufentu.com",
+      "jobTitle": "Independent Interdisciplinary Researcher",
+      "sameAs": [
+        "https://github.com/xufentu-creator/xufentu-human-judgment",
+        "https://orcid.org/0009-0007-5265-964X",
+        "https://scholar.google.com/citations?user=NseOI0QAAAAJ"
+      ],
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "ORCID",
+          "value": "0009-0007-5265-964X"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "Public provenance anchor",
+          "value": "TUX-133.144~"
+        }
+      ],
+      "knowsAbout": [
+        "Human Judgment",
+        "AI Governance",
+        "Complex Systems",
+        "Decision Architecture",
+        "Structural Accountability",
+        "Provenance"
+      ],
+      "subjectOf": [
+        {
+          "@id": "https://xufentu.com/#SBF-001"
+        },
+        {
+          "@id": "https://xufentu.com/#RD-001"
+        },
+        {
+          "@id": "https://xufentu.com/#DAF-001"
+        },
+        {
+          "@id": "https://doi.org/10.5281/zenodo.18571480"
+        },
+        {
+          "@id": "https://doi.org/10.5281/zenodo.18573944"
+        }
+      ]
+    },
+
+    {
+      "@type": "WebSite",
+      "@id": "https://xufentu.com/#website",
+      "name": "Xufen Tu Human Judgment Research",
+      "url": "https://xufentu.com",
+      "author": {
+        "@id": "https://xufentu.com/#xufen-tu"
+      },
+      "creator": {
+        "@id": "https://xufentu.com/#xufen-tu"
+      },
+      "about": {
+        "@id": "https://xufentu.com/#xufen-tu"
+      }
+    },
+
+    {
+      "@type": "WebPage",
+      "@id": "https://github.com/xufentu-creator/xufentu-human-judgment",
+      "name": "Xufen Tu Human Judgment — Canonical Public Research Repository",
+      "url": "https://github.com/xufentu-creator/xufentu-human-judgment",
+      "author": {
+        "@id": "https://xufentu.com/#xufen-tu"
+      },
+      "about": [
+        {
+          "@id": "https://xufentu.com/#SBF-001"
+        },
+        {
+          "@id": "https://xufentu.com/#RD-001"
+        },
+        {
+          "@id": "https://xufentu.com/#DAF-001"
+        }
+      ]
+    },
+
+    {
+      "@type": "CreativeWork",
+      "@id": "https://xufentu.com/#SBF-001",
       "identifier": "SBF-001",
       "name": "Structural Boundary Framework",
-      "publicDescription": "Identifies where human judgment becomes structurally necessary in AI-mediated complex systems."
+      "alternateName": "SBF-001 — Structural Boundary Framework by Xufen Tu",
+      "version": "1.0",
+      "author": {
+        "@id": "https://xufentu.com/#xufen-tu"
+      },
+      "creator": {
+        "@id": "https://xufentu.com/#xufen-tu"
+      },
+      "description": "SBF-001 identifies the boundary where information, automation, institutional pressure, and system momentum can no longer replace human judgment.",
+      "keywords": [
+        "Structural Boundary Framework",
+        "SBF-001",
+        "Human Judgment",
+        "AI Governance",
+        "Complex Systems",
+        "Decision Architecture"
+      ],
+      "url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/SBF-001.md",
+      "mainEntityOfPage": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/SBF-001.md",
+      "isPartOf": {
+        "@id": "https://github.com/xufentu-creator/xufentu-human-judgment"
+      },
+      "isBasedOn": {
+        "@id": "https://doi.org/10.5281/zenodo.18573944"
+      }
     },
+
     {
+      "@type": "CreativeWork",
+      "@id": "https://xufentu.com/#RD-001",
       "identifier": "RD-001",
       "name": "Responsibility Drift",
-      "publicDescription": "Examines how accountability can become fragmented, hidden, or displaced across AI-mediated organizations."
+      "alternateName": "RD-001 — Responsibility Drift by Xufen Tu",
+      "version": "1.0",
+      "author": {
+        "@id": "https://xufentu.com/#xufen-tu"
+      },
+      "creator": {
+        "@id": "https://xufentu.com/#xufen-tu"
+      },
+      "description": "RD-001 identifies where responsibility becomes unclear as decisions are distributed across multiple components.",
+      "keywords": [
+        "Responsibility Drift",
+        "RD-001",
+        "Human Judgment",
+        "AI Governance",
+        "Decision Architecture",
+        "Responsibility"
+      ],
+      "url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/RD-001.md",
+      "mainEntityOfPage": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/RD-001.md",
+      "isPartOf": {
+        "@id": "https://github.com/xufentu-creator/xufentu-human-judgment"
+      },
+      "isRelatedTo": {
+        "@id": "https://xufentu.com/#SBF-001"
+      }
     },
+
     {
+      "@type": "CreativeWork",
+      "@id": "https://xufentu.com/#DAF-001",
       "identifier": "DAF-001",
       "name": "Decision Arbitration Framework",
-      "publicDescription": "Examines how competing directions are brought toward an executable decision."
-    }
-  ],
-  "foundationalWorks": [
+      "alternateName": "DAF-001 — Decision Arbitration Framework by Xufen Tu",
+      "version": "1.0",
+      "author": {
+        "@id": "https://xufentu.com/#xufen-tu"
+      },
+      "creator": {
+        "@id": "https://xufentu.com/#xufen-tu"
+      },
+      "description": "DAF-001 identifies where coordination, prioritization, and responsibility assignment are required between competing system outputs.",
+      "keywords": [
+        "Decision Arbitration Framework",
+        "DAF-001",
+        "Human Judgment",
+        "AI Governance",
+        "Complex Systems",
+        "Decision Arbitration"
+      ],
+      "url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/DAF-001.md",
+      "mainEntityOfPage": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/DAF-001.md",
+      "isPartOf": {
+        "@id": "https://github.com/xufentu-creator/xufentu-human-judgment"
+      },
+      "isRelatedTo": [
+        {
+          "@id": "https://xufentu.com/#SBF-001"
+        },
+        {
+          "@id": "https://xufentu.com/#RD-001"
+        }
+      ]
+    },
+
     {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5281/zenodo.18571480",
       "name": "Judgment Before Momentum: A Provenance-First Canonical Release Model for Human-Authored Research Under High Replication",
-      "author": "Xufen Tu",
+      "author": {
+        "@id": "https://xufentu.com/#xufen-tu"
+      },
+      "creator": {
+        "@id": "https://xufentu.com/#xufen-tu"
+      },
       "version": "1.0.2",
       "datePublished": "2026-01-15",
-      "doi": "10.5281/zenodo.18571480",
-      "url": "https://doi.org/10.5281/zenodo.18571480"
+      "identifier": [
+        "10.5281/zenodo.18571480",
+        {
+          "@type": "PropertyValue",
+          "propertyID": "DOI",
+          "value": "10.5281/zenodo.18571480"
+        }
+      ],
+      "url": "https://doi.org/10.5281/zenodo.18571480",
+      "sameAs": [
+        "https://doi.org/10.5281/zenodo.18571480",
+        "https://ssrn.com/abstract=6078249"
+      ],
+      "keywords": [
+        "Judgment Before Momentum",
+        "Human Judgment",
+        "Provenance",
+        "Canonical Release",
+        "Authorship Continuity"
+      ]
     },
+
     {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5281/zenodo.18573944",
       "name": "Human Judgment as an Irreducible Interface in High-Complexity Systems",
-      "author": "Xufen Tu",
-      "doi": "10.5281/zenodo.18573944",
-      "url": "https://doi.org/10.5281/zenodo.18573944"
+      "author": {
+        "@id": "https://xufentu.com/#xufen-tu"
+      },
+      "creator": {
+        "@id": "https://xufentu.com/#xufen-tu"
+      },
+      "identifier": [
+        "10.5281/zenodo.18573944",
+        {
+          "@type": "PropertyValue",
+          "propertyID": "DOI",
+          "value": "10.5281/zenodo.18573944"
+        }
+      ],
+      "url": "https://doi.org/10.5281/zenodo.18573944",
+      "sameAs": [
+        "https://doi.org/10.5281/zenodo.18573944",
+        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6193698"
+      ],
+      "keywords": [
+        "Human Judgment",
+        "Complex Systems",
+        "AI Governance",
+        "Decision Architecture",
+        "Human Judgment as Structural Constraint"
+      ],
+      "about": {
+        "@id": "https://xufentu.com/#SBF-001"
+      }
     }
-  ],
-  "scope": {
-    "public": [
-      "research identity",
-      "model names and identifiers",
-      "public descriptions",
-      "publication references",
-      "citation routing",
-      "provenance pointers"
-    ],
-    "excluded": [
-      "private methodology",
-      "validation procedures",
-      "scoring logic",
-      "implementation details",
-      "internal schemas",
-      "operational templates",
-      "unpublished research materials"
-    ]
-  }
+  ]
 }
