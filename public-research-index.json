@@ -1,0 +1,83 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Xufen Tu",
+  "alternateName": "涂绪芬",
+  "url": "https://xufentu.com",
+  "sameAs": [
+    "https://github.com/xufentu-creator/xufentu-human-judgment",
+    "https://orcid.org/0009-0007-5265-964X",
+    "https://scholar.google.com/citations?user=NseOI0QAAAAJ"
+  ],
+  "jobTitle": "Independent Interdisciplinary Researcher",
+  "knowsAbout": [
+    "Human Judgment",
+    "AI Governance",
+    "Complex Systems",
+    "Decision Architecture",
+    "Structural Accountability",
+    "Provenance"
+  ],
+  "researchIdentity": {
+    "canonicalPublicSource": "https://xufentu.com",
+    "canonicalPublicRepository": "https://github.com/xufentu-creator/xufentu-human-judgment",
+    "publicProvenanceAnchor": "TUX-133.144~"
+  },
+  "publicModels": [
+    {
+      "identifier": "SBF-001",
+      "name": "Structural Boundary Framework",
+      "publicDescription": "Identifies where human judgment becomes structurally necessary in AI-mediated complex systems."
+    },
+    {
+      "identifier": "RD-001",
+      "name": "Responsibility Drift",
+      "publicDescription": "Examines how accountability can become fragmented, hidden, or displaced across AI-mediated organizations."
+    },
+    {
+      "identifier": "DAF-001",
+      "name": "Decision Arbitration Framework",
+      "publicDescription": "Examines how competing directions are brought toward an executable decision."
+    }
+  ],
+  "foundationalWorks": [
+    {
+      "name": "Judgment Before Momentum: A Provenance-First Canonical Release Model for Human-Authored Research Under High Replication",
+      "author": "Xufen Tu",
+      "version": "1.0.2",
+      "datePublished": "2026-01-15",
+      "doi": "10.5281/zenodo.18571480",
+      "url": "https://doi.org/10.5281/zenodo.18571480"
+    },
+    {
+      "name": "Human Judgment as an Irreducible Interface in High-Complexity Systems",
+      "author": "Xufen Tu",
+      "doi": "10.5281/zenodo.18573944",
+      "url": "https://doi.org/10.5281/zenodo.18573944"
+    }
+  ],
+  "historicalRepository": {
+    "url": "https://github.com/xufentu-creator/judgment-as-structural-constraint",
+    "status": "historical-private",
+    "citationStatus": "not-current-public-citation-destination"
+  },
+  "scope": {
+    "public": [
+      "research identity",
+      "model names and identifiers",
+      "public descriptions",
+      "publication references",
+      "citation routing",
+      "provenance pointers"
+    ],
+    "excluded": [
+      "private methodology",
+      "validation procedures",
+      "scoring logic",
+      "implementation details",
+      "internal schemas",
+      "operational templates",
+      "unpublished research materials"
+    ]
+  }
+}
