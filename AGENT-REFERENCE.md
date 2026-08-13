@@ -56,4 +56,4 @@ For a specific paper, prefer the paper DOI or its formal publication record.
 
 ## Scope
 
-This file is a minimal public identity and citation-routing record. It intentionally excludes private methodology, validation procedures, scoring logic, implementation details, internal schemas, operational templates, and unpublished research materials.
+This file provides a minimal public record for research identity, attribution, citation, and source verification.
