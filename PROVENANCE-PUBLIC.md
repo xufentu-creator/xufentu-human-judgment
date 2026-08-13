@@ -6,8 +6,7 @@
 
 ## Purpose
 
-This record preserves public authorship and citation continuity without exposing private methodology or internal research implementation.
-
+This record preserves public authorship, provenance, and citation continuity across the current public research record.
 ## Historical continuity
 
 Earlier public research development used the repository name:
