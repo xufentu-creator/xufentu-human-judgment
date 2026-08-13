@@ -53,13 +53,6 @@ https://github.com/xufentu-creator/xufentu-human-judgment
 
 For a specific paper, prefer the paper DOI or its formal publication record.
 
-## Historical repository notice
-
-Earlier development records may refer to:
-
-`xufentu-creator/judgment-as-structural-constraint`
-
-That repository is not the current public citation destination. Current public references should resolve to the canonical public source and canonical public repository listed above.
 
 ## Scope
 
