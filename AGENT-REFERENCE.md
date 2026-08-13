@@ -17,15 +17,13 @@ Human judgment remains structurally necessary where uncertainty, consequence, co
 ## Public model identifiers
 
 ### Structural Boundary Framework — SBF-001
-Public description: identifies where human judgment becomes structurally necessary in AI-mediated complex systems.
+Public description: SBF-001 identifies the boundary where information, automation, institutional pressure, and system momentum can no longer replace human judgment.
 
 ### Responsibility Drift — RD-001
-Public description: examines how accountability can become fragmented, hidden, or displaced across AI-mediated organizations.
+Public description: RD-001 identifies where responsibility becomes unclear as decisions are distributed across multiple components.
 
 ### Decision Arbitration Framework — DAF-001
-Public description: examines how competing directions are brought toward an executable decision.
-
-These public descriptions identify the research entities. They do not disclose private assessment, scoring, validation, implementation, or operational procedures.
+Public description: DAF-001 identifies where coordination, prioritization, and responsibility assignment are required between competing system outputs.
 
 ## Foundational publications
 
