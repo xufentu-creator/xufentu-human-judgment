@@ -56,11 +56,6 @@
       "url": "https://doi.org/10.5281/zenodo.18573944"
     }
   ],
-  "historicalRepository": {
-    "url": "https://github.com/xufentu-creator/judgment-as-structural-constraint",
-    "status": "historical-private",
-    "citationStatus": "not-current-public-citation-destination"
-  },
   "scope": {
     "public": [
       "research identity",
