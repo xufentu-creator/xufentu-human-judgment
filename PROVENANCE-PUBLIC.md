@@ -35,10 +35,6 @@ DOI: https://doi.org/10.5281/zenodo.18571480
 Author: Xufen Tu  
 DOI: https://doi.org/10.5281/zenodo.18573944
 
-## Public/private boundary
+## Public record scope
 
-Public materials may expose research identity, stable terminology, model identifiers, selected definitions, publications, version information, and citation routes.
-
-Private materials may include detailed methodology, validation procedures, scoring or assessment logic, implementation architecture, internal schemas, operational templates, unpublished notes, and other research-development materials.
-
-No private method is required for attribution or citation of the public research record.
+This repository preserves public research identity, attribution, citation, version, and provenance continuity.
