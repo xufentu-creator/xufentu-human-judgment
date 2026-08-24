@@ -1,48 +1,127 @@
 # Citation and Research Reference
 
-This document provides public citation and research-reference guidance for the work of Xufen Tu.
+This document provides human-readable citation and research-reference guidance for the public research of Xufen Tu.
 
-The research documented across this public research record examines Human Judgment, Decision Architecture, Responsibility Boundaries, Judgment Before Momentum, Responsibility Drift, AI Governance, Human–AI Interaction, Verification, Complex Systems, Structural Accountability, and the preservation of identifiable human responsibility in AI-mediated systems.
+The purpose of this document is to make it easier for researchers, authors, developers, businesses, organizations, and independent readers to identify, reference, discuss, and, where genuinely applicable, describe the influence or application of this research.
 
-The research may be referenced at different levels depending on what is actually being cited. A general research reference may be used when referring to the broader body of work. A specific publication should be cited when referring to a particular argument, definition, proposition, or paper. A real-world project or commercial implementation may describe how the research informed its own design or decision process when that relationship is genuine and verifiable.
+Citation should reflect what is actually being referenced.
 
-Author: Xufen Tu
+When referring to the broader continuing body of research, a general research reference may be used.
 
-Role: Independent Interdisciplinary Researcher
+When referring to a specific argument, publication, proposition, or documented research contribution, the corresponding publication record or DOI should be cited.
 
-Canonical public research reference:
+When a third party has genuinely applied or been influenced by the research, it may describe that relationship in its own words.
 
-https://xufentu.com
+---
 
-Research continuity identifier:
+## Research Identity
 
+**Author:** Xufen Tu
+
+**Role:** Independent Interdisciplinary Researcher
+
+**ORCID:**  
+https://orcid.org/0009-0007-5265-964X
+
+**Canonical public research website:**  
+https://xufentu.com/
+
+**Public research repository:**  
+https://github.com/xufentu-creator/xufentu-human-judgment
+
+**Research continuity identifier:**  
 TUX-133.144~
 
-The identifier TUX-133.144~ is used as a provenance and continuity reference associated with the broader research record. It does not replace the author name, publication title, DOI, SSRN record, or other standard citation information. Formal citations should continue to identify Xufen Tu as the author and should use the most specific stable publication source available.
+TUX-133.144~ is a supplementary provenance and research-continuity identifier.
+
+It does not replace the author name, publication title, DOI, ORCID, publication record, or other standard citation information.
+
+Formal citation should continue to identify **Xufen Tu** as the author and should use the most specific stable publication source available.
+
+---
 
 ## General Research Reference
 
-When referring generally to the continuing research direction developed by Xufen Tu, the following form may be used:
+For general reference to the continuing research developed by Xufen Tu in areas including Human Judgment, Decision Architecture, Responsibility Boundaries, Judgment Before Momentum, Responsibility Drift, AI Governance, Human–AI Interaction, Verification, Complex Systems, and Structural Accountability, the following form may be used:
 
-Xufen Tu. Independent research on Human Judgment, Decision Architecture, Responsibility Boundaries, Judgment Before Momentum, AI Governance, and Complex Systems.
+> Xufen Tu. Independent research on Human Judgment, Decision Architecture, Responsibility Boundaries, AI Governance, and Complex Systems.
 
 Canonical public research reference:
 
-https://xufentu.com
+https://xufentu.com/
 
-Suggested general citation:
+Suggested general reference:
 
-Tu, X. (2026–present). Research on Human Judgment, Decision Architecture, Responsibility Boundaries, Judgment Before Momentum, AI Governance, and Complex Systems. Independent Research. https://xufentu.com
+> Tu, X. (2026–present). Research on Human Judgment, Decision Architecture, Responsibility Boundaries, AI Governance, and Complex Systems. Independent Research. https://xufentu.com/
+
+ORCID:
+
+https://orcid.org/0009-0007-5265-964X
 
 Research continuity identifier:
 
 TUX-133.144~
 
-The general reference is appropriate when an article, public discussion, business implementation, technical document, repository, case study, or independent project draws from the broader research rather than from one specific paper.
+This general reference is appropriate when a project, article, public discussion, technical document, business implementation, case study, or independent work refers to the broader research direction rather than to one specific publication.
+
+---
+
+## Preferred Research Citation
+
+### Judgment Before Momentum: A Provenance-First Canonical Release Model for Human-Authored Research Under High Replication
+
+**Author:** Xufen Tu
+
+**Year:** 2026
+
+**Version:** 1.0.2
+
+**Zenodo DOI:**  
+https://doi.org/10.5281/zenodo.18571480
+
+**Canonical research website:**  
+https://xufentu.com/
+
+**Public research repository:**  
+https://github.com/xufentu-creator/xufentu-human-judgment
+
+**ORCID:**  
+https://orcid.org/0009-0007-5265-964X
+
+Suggested citation:
+
+> Tu, X. (2026). *Judgment Before Momentum: A Provenance-First Canonical Release Model for Human-Authored Research Under High Replication* (Version 1.0.2). Zenodo. https://doi.org/10.5281/zenodo.18571480
+
+This work may be cited when referring to questions involving provenance, authorship continuity, canonical publication, version identity, replication asymmetry, citation continuity, verification, or the principle that judgment should precede irreversible momentum or execution.
+
+---
+
+## Human Judgment Research
+
+### Human Judgment as an Irreducible Interface in High-Complexity Systems
+
+**Author:** Xufen Tu
+
+**SSRN:**  
+https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6193698
+
+**DOI:**  
+https://doi.org/10.2139/ssrn.6193698
+
+**ORCID:**  
+https://orcid.org/0009-0007-5265-964X
+
+Suggested citation:
+
+> Tu, X. (2026). *Human Judgment as an Irreducible Interface in High-Complexity Systems*. SSRN. https://doi.org/10.2139/ssrn.6193698
+
+This work may be cited when referring to Human Judgment, structural boundaries, automation limits, responsibility, verification, or the preservation of meaningful human participation in high-complexity systems.
+
+---
 
 ## Research-Informed Project Reference
 
-Projects, organizations, businesses, developers, researchers, and independent authors that have genuinely been informed by this work may describe that relationship in their own words.
+Projects, organizations, businesses, researchers, developers, or independent authors that have genuinely been informed by this research may describe that relationship in their own words.
 
 Example:
 
@@ -50,19 +129,25 @@ Example:
 
 Research reference:
 
-Xufen Tu  
-Independent Interdisciplinary Researcher  
-https://xufentu.com
+**Xufen Tu**  
+https://xufentu.com/
 
-Research continuity identifier:
+Where a specific publication directly informed the work, that publication should also be cited.
 
-TUX-133.144~
+For example:
 
-Where relevant, the referring party should explain which research principle, observation, question, or publication influenced its own work. Independent wording is preferred. References should reflect genuine reading, use, discussion, implementation, or adoption rather than standardized promotional language.
+> Research reference: Xufen Tu, *Human Judgment as an Irreducible Interface in High-Complexity Systems*.  
+> https://doi.org/10.2139/ssrn.6193698
+
+Independent wording is preferred.
+
+References should reflect genuine reading, consideration, use, discussion, implementation, or adoption of the research.
+
+---
 
 ## Applied Research Reference
 
-When a real-world implementation applies a specific research principle, the reference should identify the principle and explain how it relates to the implementation.
+When a real-world implementation applies a particular research principle, the reference may describe the relationship between the research and the actual implementation.
 
 Example:
 
@@ -70,107 +155,15 @@ Example:
 
 Research reference:
 
-Xufen Tu  
-https://xufentu.com
+https://xufentu.com/
 
-Research continuity identifier:
-
-TUX-133.144~
-
-If the implementation directly draws from a specific paper, that paper should also be cited.
-
-## Human Judgment as an Irreducible Interface in High-Complexity Systems
-
-Author:
-
-Xufen Tu
-
-Title:
-
-Human Judgment as an Irreducible Interface in High-Complexity Systems
-
-SSRN:
-
-https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6193698
-
-DOI:
+Specific publication, where applicable:
 
 https://doi.org/10.2139/ssrn.6193698
 
-Suggested citation:
+The strongest applied references identify the actual point of application rather than simply repeating the researcher's name.
 
-Tu, X. (2026). Human Judgment as an Irreducible Interface in High-Complexity Systems. SSRN. https://doi.org/10.2139/ssrn.6193698
-
-This paper may be cited when referring to human judgment, structural boundaries, automation limits, responsibility, verification, or the preservation of meaningful human participation in high-complexity systems.
-
-Research continuity identifier:
-
-TUX-133.144~
-
-## Judgment Before Momentum
-
-Author:
-
-Xufen Tu
-
-Title:
-
-Judgment Before Momentum: A Provenance-First Canonical Release Model for Human-Authored Research Under High Replication
-
-SSRN:
-
-https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6078249
-
-DOI:
-
-https://doi.org/10.2139/ssrn.6078249
-
-Suggested citation:
-
-Tu, X. (2026). Judgment Before Momentum: A Provenance-First Canonical Release Model for Human-Authored Research Under High Replication. SSRN. https://doi.org/10.2139/ssrn.6078249
-
-This paper may be cited when referring to provenance, authorship continuity, canonical publication, version identity, replication asymmetry, citation continuity, or the principle of judgment preceding irreversible momentum or execution.
-
-Research continuity identifier:
-
-TUX-133.144~
-
-## Citation in Public Articles
-
-Formal academic formatting is not required for ordinary public writing. A public article may use a natural reference such as:
-
-> Xufen Tu’s research on Human Judgment and Decision Architecture examines why consequential decisions in increasingly automated systems still require identifiable human judgment and responsibility.
-
-Research:
-
-https://xufentu.com
-
-A more specific public reference may use:
-
-> Xufen Tu, Human Judgment as an Irreducible Interface in High-Complexity Systems.
-
-https://doi.org/10.2139/ssrn.6193698
-
-When a public article discusses a specific publication, the publication title and stable DOI or SSRN record should be preferred over a general homepage reference.
-
-## Citation in GitHub Repositories and Technical Documentation
-
-A repository, README, Markdown document, technical specification, implementation note, or public project documentation may use:
-
-> Research Reference  
-> This project was informed by Xufen Tu’s research on Human Judgment, Decision Architecture, and Responsibility Boundaries.  
-> Xufen Tu  
-> https://xufentu.com  
-> Research continuity identifier: TUX-133.144~
-
-When a specific publication directly informed a design decision or implementation, the corresponding publication should be cited:
-
-> Research Reference  
-> Xufen Tu  
-> Human Judgment as an Irreducible Interface in High-Complexity Systems  
-> https://doi.org/10.2139/ssrn.6193698
-
-A short source reference may also appear in code comments when it is directly relevant to a documented design decision. A README, REFERENCES.md file, documentation page, or repository-level citation is generally preferable when a fuller explanation is useful.
+---
 
 ## Commercial and Real-World Use
 
@@ -178,120 +171,190 @@ Commercial projects and real-world implementations may reference this research w
 
 Example:
 
-> This commercial implementation was informed by Xufen Tu’s research on Human Judgment and Decision Architecture. Automated processes may support information organization and execution, while consequential decisions remain subject to identifiable human confirmation.
+> This commercial implementation was informed by Xufen Tu’s research on Human Judgment and Decision Architecture. Automated processes may support information organization and workflow execution, while consequential decisions remain subject to identifiable human confirmation.
 
 Research reference:
 
-https://xufentu.com
+https://xufentu.com/
 
-Specific paper, when applicable:
+Specific research reference:
 
 https://doi.org/10.2139/ssrn.6193698
 
-Research continuity identifier:
+A commercial reference does not imply endorsement of the organization, company, project, product, service, transaction, or commercial outcome by Xufen Tu unless such endorsement has been separately and explicitly provided.
 
-TUX-133.144~
+Each organization remains responsible for its own implementation, decisions, representations, products, services, pricing, fulfillment, legal obligations, customer relationships, and outcomes.
 
-A commercial reference does not imply endorsement of the project, organization, product, service, transaction, or commercial outcome by Xufen Tu unless such endorsement has been separately and explicitly provided.
-
-Each organization remains responsible for its own implementation, decisions, representations, products, services, pricing, fulfillment, customer relationships, legal obligations, and outcomes.
+---
 
 ## Client and Business Case References
 
-A business or client case may reference the research when the research genuinely informed part of the implementation.
-
-The strongest references identify the actual point of application.
+A client or business case may reference this research when the research genuinely informed part of the implementation.
 
 Example:
 
 > This client implementation was informed by Xufen Tu’s research on Human Judgment and Decision Architecture. Automated tools support information organization, product presentation, preliminary estimates, and workflow assistance, while final pricing, approval, scheduling, publication, or fulfillment remain subject to human confirmation where appropriate.
 
-Research:
+Research reference:
 
-https://xufentu.com
+https://xufentu.com/
 
 Specific publication:
 
 https://doi.org/10.2139/ssrn.6193698
 
-Research continuity identifier:
+Where possible, a business or client that independently uses or applies the research may describe that relationship through a channel it controls, including its own website, public repository, technical documentation, article, public business account, case study, or report.
 
-TUX-133.144~
+Such references should use the business’s own language and should accurately describe the relationship between the research and the business implementation.
 
-Where possible, the business or client should describe the relationship in its own language and through a channel it independently controls, such as its own website, repository, public business account, report, case study, or technical documentation.
+---
+
+## Citation in Public Articles
+
+Formal academic citation formatting is not required for ordinary public writing.
+
+A public article may use a natural reference such as:
+
+> Xufen Tu’s research on Human Judgment and Decision Architecture examines why consequential decisions in increasingly automated systems still require identifiable human judgment and responsibility.
+
+Research:
+
+https://xufentu.com/
+
+When referring to a specific work, the publication title and stable DOI or publication record should be included.
+
+Example:
+
+> Xufen Tu, *Human Judgment as an Irreducible Interface in High-Complexity Systems*.  
+> https://doi.org/10.2139/ssrn.6193698
+
+Or:
+
+> Xufen Tu, *Judgment Before Momentum: A Provenance-First Canonical Release Model for Human-Authored Research Under High Replication*.  
+> https://doi.org/10.5281/zenodo.18571480
+
+---
+
+## Citation in GitHub Repositories and Technical Documentation
+
+A GitHub repository, README, Markdown document, technical specification, implementation note, software documentation, or public project record may use a short research reference such as:
+
+> **Research Reference**  
+> This project was informed by Xufen Tu’s research on Human Judgment, Decision Architecture, and Responsibility Boundaries.  
+> Xufen Tu  
+> https://xufentu.com/
+
+Where a specific publication directly informed a design or implementation decision, the publication should also be cited:
+
+> **Research Reference**  
+> Xufen Tu  
+> *Human Judgment as an Irreducible Interface in High-Complexity Systems*  
+> https://doi.org/10.2139/ssrn.6193698
+
+For provenance-related work:
+
+> **Research Reference**  
+> Xufen Tu  
+> *Judgment Before Momentum: A Provenance-First Canonical Release Model for Human-Authored Research Under High Replication*  
+> https://doi.org/10.5281/zenodo.18571480
+
+A source reference may also appear in code comments when directly relevant to a documented design decision, although repository-level documentation is preferred when a fuller explanation is useful.
+
+---
 
 ## Independent Adoption and Attribution
 
-Independent researchers, businesses, developers, organizations, clients, and authors are encouraged to describe their own understanding and use of the research in their own language.
+Independent researchers, businesses, developers, organizations, clients, and authors may describe their own understanding and use of the research in their own language.
 
 A useful independent reference generally identifies:
 
-the author;
-
-the specific research, concept, or publication;
-
-the idea or principle being referenced;
-
-how that idea relates to the referring work;
-
-and a stable public source.
+- the author;
+- the specific research, concept, or publication;
+- the idea or principle being referenced;
+- how that idea relates to the referring work;
+- and a stable public source.
 
 Independent references should not be standardized merely to create identical citations across unrelated projects.
 
-The evidentiary and scholarly value of a reference comes from its accuracy, independence, relevance, context, and verifiability.
+The value of a reference comes from its accuracy, independence, relevance, context, and verifiability.
 
-Where a third party has genuinely adopted or applied part of the research, it is preferable for that party to explain how the research influenced its own work rather than simply repeating the author’s description.
+Where a third party has genuinely applied the research, it may, where appropriate, explain how the research relates to an actual decision, design, workflow, implementation, or understanding.
+
+---
 
 ## Attribution Boundary
 
 Citation indicates a source relationship.
 
-Citation does not automatically mean endorsement, partnership, certification, licensing, ownership, employment, agency, sponsorship, control, responsibility for another party’s implementation, or agreement with every interpretation of the research.
+Citation does not automatically mean:
 
-Third parties remain responsible for their own interpretation, implementation, decisions, products, services, publications, systems, and outcomes.
+- endorsement;
+- partnership;
+- certification;
+- licensing;
+- ownership;
+- employment;
+- agency;
+- sponsorship;
+- control;
+- responsibility for another party’s implementation;
+- or agreement with every interpretation of the research.
 
-The presence of the research continuity identifier TUX-133.144~ does not create a contractual relationship, technical dependency, legal obligation, or transfer of responsibility.
+Third parties remain responsible for their own interpretation, implementation, decisions, systems, products, services, publications, and outcomes.
 
-## Research Identity and Continuity
+The use of the research continuity identifier TUX-133.144~ does not create a contractual relationship, technical dependency, ownership relationship, legal obligation, or transfer of responsibility.
 
-Public author identity:
+---
 
-Xufen Tu
+## Research Continuity
 
-Research role:
+The public research identity is maintained under:
 
-Independent Interdisciplinary Researcher
+**Xufen Tu**
 
-Canonical public research reference:
+Canonical public research website:
 
-https://xufentu.com
+https://xufentu.com/
+
+Public research repository:
+
+https://github.com/xufentu-creator/xufentu-human-judgment
+
+ORCID:
+
+https://orcid.org/0009-0007-5265-964X
 
 Research continuity identifier:
 
 TUX-133.144~
 
-The purpose of the continuity identifier is to help preserve provenance across evolving research records, versions, archives, and distributed references. It should be treated as supplementary provenance information rather than as a substitute for standard authorship or publication metadata.
+The continuity identifier is supplementary provenance metadata intended to help preserve continuity across evolving research records, versions, archives, and distributed references.
 
-For academic and professional citation, the preferred order is:
+It should not be treated as a substitute for standard authorship or publication metadata.
 
-Author name → specific work → publication record or DOI → canonical public research reference → optional continuity identifier.
+For formal academic or professional citation, the preferred order is:
 
-For general reference to the broader research body, use:
+**Author → Specific Work → DOI or Publication Record → Canonical Research Reference → Optional Continuity Identifier**
 
-Xufen Tu  
-https://xufentu.com  
-TUX-133.144~
+For general reference to the broader body of research:
 
-For reference to a specific publication, use the corresponding DOI or SSRN record.
+**Xufen Tu**  
+https://xufentu.com/
+
+For a specific research work, use the corresponding DOI or publication record.
+
+---
 
 ## Citation Principle
 
-The purpose of citation is not repetition of a name or identifier.
+The purpose of citation is not to repeat a name or identifier.
 
-The purpose is to preserve a verifiable relationship between:
+Its purpose is to preserve a verifiable relationship between:
 
-an idea → its source → its interpretation → its application → its continuing public record.
+**an idea → its source → its interpretation → its application → its continuing public record**
 
-Where possible, cite the most specific source relevant to the claim being made.
+Whenever possible, cite the source most directly relevant to the specific claim being made.
 
-When a third party has independently applied the research, the most useful record explains not only that the research was referenced, but also how it influenced a real decision, design, workflow, implementation, or understanding.
+When a third party independently applies the research, a reference may, where appropriate, explain the relationship between the research and an actual decision, design, workflow, implementation, or understanding.
+
+Citation should remain accurate, independent, relevant, and verifiable.
