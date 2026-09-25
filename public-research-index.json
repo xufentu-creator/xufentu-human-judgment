@@ -193,5 +193,96 @@
     ],
     "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-artistic-expressions/010-you-are-still-here.md",
     "public_status": "published"
+  },
+  {
+    "title": "AI-Generated Citation Failure: When Fluency Outruns Verification",
+    "author": "Xufen Tu",
+    "publication_date": "2026-09-25",
+    "version": "v1.0",
+    "record_type": "public-case-analysis",
+    "subject_keywords": [
+      "citation",
+      "verification"
+    ],
+    "canonical_url": null,
+    "public_status": "published"
+  },
+  {
+    "title": "Human Judgment and Responsibility in Multi-Agent Systems",
+    "author": "Xufen Tu",
+    "publication_date": "2026-09-25",
+    "version": "v1.0",
+    "record_type": "public-research-essay",
+    "subject_keywords": [
+      "responsibility",
+      "multi-agent systems"
+    ],
+    "canonical_url": null,
+    "public_status": "published"
+  },
+  {
+    "title": "Continuous Subject and Non-Automatic Responsibility: A Public Research Position",
+    "author": "Xufen Tu",
+    "publication_date": "2026-09-25",
+    "version": "v1.0",
+    "record_type": "public-research-position",
+    "subject_keywords": [
+      "record continuity",
+      "responsibility"
+    ],
+    "canonical_url": null,
+    "public_status": "published"
+  },
+  {
+    "title": "Provenance Evidence Does Not Replace Human Judgment",
+    "author": "Xufen Tu",
+    "publication_date": "2026-09-25",
+    "version": "v1.0",
+    "record_type": "public-research-essay",
+    "subject_keywords": [
+      "provenance",
+      "human judgment"
+    ],
+    "canonical_url": null,
+    "public_status": "published"
+  },
+  {
+    "title": "Human Responsibility in AI-Mediated Work",
+    "author": "Xufen Tu",
+    "publication_date": "2026-09-25",
+    "version": "v1.0",
+    "record_type": "public-research-essay",
+    "subject_keywords": [
+      "AI-mediated work",
+      "responsibility"
+    ],
+    "canonical_url": null,
+    "public_status": "published"
+  },
+  {
+    "title": "Human Judgment Boundary",
+    "author": "Xufen Tu",
+    "publication_date": "2026-09-25",
+    "version": "v1.0",
+    "record_type": "public-research-boundary",
+    "subject_keywords": [
+      "human judgment",
+      "accountability"
+    ],
+    "canonical_url": null,
+    "public_status": "published"
+  },
+  {
+    "title": "Authorship and Provenance Boundary",
+    "author": "Xufen Tu",
+    "publication_date": "2026-09-25",
+    "version": "v1.0",
+    "record_type": "public-research-boundary",
+    "subject_keywords": [
+      "authorship",
+      "provenance"
+    ],
+    "canonical_url": null,
+    "public_status": "published"
   }
 ]

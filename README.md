@@ -13,6 +13,16 @@ This repository is a public reading and citation collection. It contains selecte
 - [Research observation, July 19, 2026](research-position/2026-07-19-human-judgment-before-consequential-execution.md) retains its original publication identity; read its current text alongside the version history.
 - [Foundational paper: Judgment Before Momentum, v1.0.2](https://doi.org/10.5281/zenodo.18571480) has its own formal publication record.
 
+## Public Citation Versions
+
+- [AI-Generated Citation Failure: When Fluency Outruns Verification](case-studies/ai-generated-citation-failure.md)
+- [Human Judgment and Responsibility in Multi-Agent Systems](research-essays/human-judgment-and-responsibility-in-multi-agent-systems.md)
+- [Continuous Subject and Non-Automatic Responsibility: A Public Research Position](research-position/continuous-subject-and-non-automatic-responsibility.md)
+- [Provenance Evidence Does Not Replace Human Judgment](research-essays/provenance-evidence-does-not-replace-human-judgment.md)
+- [Human Responsibility in AI-Mediated Work](research-essays/human-responsibility-in-ai-mediated-work.md)
+- [Human Judgment Boundary](research-boundaries/human-judgment-boundary.md)
+- [Authorship and Provenance Boundary](research-boundaries/authorship-and-provenance-boundary.md)
+
 Cite the specific public version you actually read. Include the author, title, version or dated record where verified, and its real public URL or DOI. Earlier Git versions remain historical public records.
 
 ## Public boundary
