@@ -8,7 +8,7 @@ public_version: v1.0
 record_type: public-research-boundary
 status: published
 canonical_repository: xufentu-creator/xufentu-human-judgment
-canonical_url: pending-main-merge
+canonical_url: https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-boundaries/human-judgment-boundary.md
 source_status: derived-from-private-research-record
 ---
 
@@ -33,4 +33,4 @@ Xufen Tu. "Human Judgment Boundary." Public Citation Version v1.0.
 Independent Interdisciplinary Research.  
 xufentu-creator/xufentu-human-judgment.
 
-Public release URL: pending-main-merge.
+Public release URL: https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-boundaries/human-judgment-boundary.md.

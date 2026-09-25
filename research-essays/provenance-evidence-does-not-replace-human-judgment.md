@@ -8,7 +8,7 @@ public_version: v1.0
 record_type: public-research-essay
 status: published
 canonical_repository: xufentu-creator/xufentu-human-judgment
-canonical_url: pending-main-merge
+canonical_url: https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-essays/provenance-evidence-does-not-replace-human-judgment.md
 source_status: derived-from-private-research-record
 ---
 
@@ -33,4 +33,4 @@ Xufen Tu. "Provenance Evidence Does Not Replace Human Judgment." Public Citation
 Independent Interdisciplinary Research.  
 xufentu-creator/xufentu-human-judgment.
 
-Public release URL: pending-main-merge.
+Public release URL: https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-essays/provenance-evidence-does-not-replace-human-judgment.md.

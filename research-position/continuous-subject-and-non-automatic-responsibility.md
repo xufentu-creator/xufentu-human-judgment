@@ -8,7 +8,7 @@ public_version: v1.0
 record_type: public-research-position
 status: published
 canonical_repository: xufentu-creator/xufentu-human-judgment
-canonical_url: pending-main-merge
+canonical_url: https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-position/continuous-subject-and-non-automatic-responsibility.md
 source_status: derived-from-private-research-record
 ---
 
@@ -35,4 +35,4 @@ Xufen Tu. "Continuous Subject and Non-Automatic Responsibility: A Public Researc
 Independent Interdisciplinary Research.  
 xufentu-creator/xufentu-human-judgment.
 
-Public release URL: pending-main-merge.
+Public release URL: https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-position/continuous-subject-and-non-automatic-responsibility.md.

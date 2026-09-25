@@ -8,7 +8,7 @@ public_version: v1.0
 record_type: public-case-analysis
 status: published
 canonical_repository: xufentu-creator/xufentu-human-judgment
-canonical_url: pending-main-merge
+canonical_url: https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/case-studies/ai-generated-citation-failure.md
 source_status: derived-from-private-research-record
 ---
 
@@ -35,4 +35,4 @@ Xufen Tu. "AI-Generated Citation Failure: When Fluency Outruns Verification." Pu
 Independent Interdisciplinary Research.  
 xufentu-creator/xufentu-human-judgment.
 
-Public release URL: pending-main-merge.
+Public release URL: https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/case-studies/ai-generated-citation-failure.md.
