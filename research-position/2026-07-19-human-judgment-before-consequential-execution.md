@@ -1,100 +1,33 @@
-# 2026年7月19日  
-# 人类判断应位于具有现实后果的系统执行之前
+# 人类判断与现实后果
 
-人工智能正在从提供建议，逐渐进入真实执行。
+**原公开研究立场日期：2026年7月19日**  
+**原公开版本：v1.0.0**  
+**作者：Xufen Tu · Independent Interdisciplinary Researcher**
 
-它开始参与审批、分配、筛选、推荐、控制、交易，以及越来越多会直接影响现实结果的过程。
+这一路径最初发表的研究立场题为《人类判断应位于具有现实后果的系统执行之前》。原文及其日期仍保留在 Git 历史中。本页是该路径的当前修订表达，不代表原文从未存在，也不把原有日期作为这次修订的发布日期。
 
-这带来一个比“AI是否足够聪明”更重要的问题：
+人工智能能够为人提供信息和建议。当一项决定可能给人带来现实影响时，值得追问：谁理解这一决定的局限，谁愿意回应受到影响的人，谁对结果承担责任？
 
-**当系统准备把判断转化为现实行动时，人类判断应该处于什么位置？**
+我的当前研究判断是，有现实后果的决定需要有意义的人类责任。仅仅有人出现过，或者有系统生成了建议，并不能回答责任是否真正被承担。
 
-我的研究立场是：
+这一立场不规定统一的批准关口、先后步骤或系统设计。不同情境中的责任和适当做法，需要结合具体事实判断。人类判断也不保证每次选择正确。
 
-> **人类判断应位于具有现实后果的系统执行之前。**
-
-当一个系统行为可能影响人的权利、安全、财产、责任、机会或现实状态时，人类判断不应只在结果发生以后出现。
-
-因为事后检查能够发现问题，却不一定能够撤回已经发生的后果。
-
-已经完成的付款、已经拒绝的申请、已经发送的指令、已经形成的责任记录，以及已经对现实产生的影响，都可能无法被真正恢复到执行之前。
-
-因此，真正重要的并不只是系统中“有没有人”。
-
-更重要的是：
-
-> **人类判断是否在现实后果形成之前，仍然保有真实的位置。**
-
-这并不意味着反对自动化。
-
-人工智能可以整理信息、发现模式、生成建议、辅助比较，并提高系统运行效率。
-
-但系统能力的增强，不应自动等同于系统执行权的无限扩大。
-
-当数字判断准备越过系统边界进入现实世界时，人类判断应成为其中必要的结构性约束。
-
-未来人工智能治理需要关注的，不仅是模型输出是否准确，也包括：
-
-> **谁允许一个结果进入执行，  
-> 以及这个允许是否发生在后果形成之前。**
-
-随着人工智能越来越深入现实系统，人类判断不应被保留为最后的补救措施。
-
-它应当位于具有现实后果的执行之前。
-
-本文旨在确立研究立场，而非公开具体实施框架。
+对原始 2026 年 7 月 19 日版本的引用，应使用其历史提交；对本页当前修订表达的引用，应使用本次修订提交及其实际日期。
 
 ---
 
-# July 19, 2026  
-# Human Judgment Before Consequential Execution
+# Human Judgment and Real-World Consequences
 
-Artificial intelligence is moving from recommendation toward real-world execution.
+**Original public research-position date: July 19, 2026**  
+**Original public version: v1.0.0**  
+**Author: Xufen Tu · Independent Interdisciplinary Researcher**
 
-It is increasingly involved in approval, allocation, screening, recommendation, control, transactions, and other processes that can directly affect real outcomes.
+This path first published a research position titled *Human Judgment Before Consequential Execution*. Its original text and date remain in Git history. This page is a current revision at the same path. It does not imply that the original text never existed or that its original date is the publication date of this revision.
 
-This raises a question more fundamental than whether AI is sufficiently capable:
+AI can provide information and recommendations. When a choice may affect people in the real world, it is worth asking who understands its limits, who can respond to affected people, and who remains responsible for the outcome.
 
-**Where should human judgment be located when a system is about to convert a decision into real-world action?**
+My current research position is that consequential choices need meaningful human responsibility. The presence of a person, or the availability of a system recommendation, does not itself establish that responsibility has been exercised.
 
-My research position is:
+This position does not prescribe a common approval gate, order of steps, or system design. What responsibility requires depends on the circumstances. Human judgment does not guarantee a correct outcome.
 
-> **Human judgment should precede consequential system execution.**
-
-When a system action may affect rights, safety, property, responsibility, opportunity, or real-world conditions, human judgment should not appear only after the result has already occurred.
-
-Post-execution review may identify a problem, but it cannot always reverse the consequence.
-
-A completed payment, a rejected application, an issued instruction, an attached responsibility record, or an action that has already changed real conditions may not be fully restored to its previous state.
-
-The central question is therefore not simply whether a human exists somewhere in the system.
-
-The more important question is:
-
-> **Does human judgment retain a real position before consequences are produced?**
-
-This position is not an argument against automation.
-
-Artificial intelligence can organize information, identify patterns, generate recommendations, support comparison, and improve operational efficiency.
-
-But greater system capability should not automatically produce unlimited authority to execute.
-
-When a digital judgment is about to cross the boundary between computation and the real world, human judgment should remain a necessary structural constraint.
-
-The future of AI governance must therefore consider more than whether a model output is accurate.
-
-It must also ask:
-
-> **Who permits an output to become an action,  
-> and whether that permission occurs before the consequence is created.**
-
-As artificial intelligence becomes more deeply embedded in real-world systems, human judgment should not remain merely as a final corrective safeguard.
-
-It should precede consequential execution.
-
-This article establishes a research position rather than disclosing an implementation framework.
-
----
-
-**Author:** Xufen Tu  
-**Research Area:** AI Governance · Human Judgment · Complex Systems · Decision Architecture
+Cite the historical commit for the original July 19, 2026 text. Cite the revision commit and its actual date when referring to this current expression.
