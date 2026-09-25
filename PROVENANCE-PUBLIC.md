@@ -1,39 +1,33 @@
 # Public Provenance and Continuity Record
 
 **Author:** Xufen Tu  
-**Current canonical public source:** https://xufentu.com  
-**Current canonical public repository:** https://github.com/xufentu-creator/xufentu-human-judgment
+**Role:** Independent Interdisciplinary Researcher  
+**Public research repository:** https://github.com/xufentu-creator/xufentu-human-judgment  
+**Public reading site:** https://xufentu.com/
 
 ## Purpose
 
-This record preserves public authorship, provenance, and citation continuity across the current public research record.
+This record helps readers identify the author, the public work actually consulted, and its verifiable publication or version record.
+
 ## Historical continuity
 
-Earlier public research development used the repository name:
+Historical private research records are retained by the author as part of the research archive. Private research archives are not part of the current public citation surface and are not identified here as public reference targets.
 
-`xufentu-creator/judgment-as-structural-constraint`
+Earlier public versions and prior citation statements remain part of this repository's Git history. A current revision does not erase a historical public version or change its original date. Cite each version according to the text and record actually consulted.
 
-That repository is retained privately as a historical development archive and is not the current public citation destination.
+## Public citation
 
-The current public research identity and citation path are:
+For a specific released work, use its title and author together with its verified DOI or formal publication record, when available. For a public repository text, use the specific public article version or Git commit actually consulted. The repository and reading site are general entry points; neither substitutes for an individual work's citation.
 
-1. Canonical public source: https://xufentu.com
-2. Canonical public repository: https://github.com/xufentu-creator/xufentu-human-judgment
-3. Formal paper records: DOI / SSRN / other dated scholarly records
+Private research records are not public citation targets.
 
-Historical references to the earlier repository should be interpreted as part of the research development record, not as a competing current authority.
+## Foundational publication records
 
-## Foundational release continuity
+- Xufen Tu. *Judgment Before Momentum: A Provenance-First Canonical Release Model for Human-Authored Research Under High Replication*, v1.0.2. Recorded release date: 2026-01-15. https://doi.org/10.5281/zenodo.18571480
+- Xufen Tu. *Human Judgment as an Irreducible Interface in High-Complexity Systems*. https://doi.org/10.2139/ssrn.6193698
 
-**Judgment Before Momentum**, v1.0.2  
-Author: Xufen Tu  
-Release date: 2026-01-15  
-DOI: https://doi.org/10.5281/zenodo.18571480
-
-**Human Judgment as an Irreducible Interface in High-Complexity Systems**  
-Author: Xufen Tu  
-DOI: https://doi.org/10.5281/zenodo.18573944
+These are references to formal public records. Cite the publication record actually consulted for its date, version, and identifier.
 
 ## Public record scope
 
-This repository preserves public research identity, attribution, citation, version, and provenance continuity.
+This page records public authorship and citation continuity. It does not identify private archive locations, describe internal methods, or establish an implementation or authority hierarchy.
