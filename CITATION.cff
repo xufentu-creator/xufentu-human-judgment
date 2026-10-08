@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 
-message: "Please cite individual research works through their official DOI or publication record."
+message: "This citation identifies the repository collection only. For a specific work, use its title, author, actual version and article URL or DOI; see CITATION.md."
 
 title: "Xufen Tu Public Research Identity Record"
 
@@ -36,14 +36,3 @@ identifiers:
   - type: url
     value: "https://xufentu.com/"
     description: "Public research website"
-
-preferred-citation:
-  type: generic
-  title: "Judgment Before Momentum: A Provenance-First Canonical Release Model for Human-Authored Research Under High Replication"
-  authors:
-    - family-names: "Tu"
-      given-names: "Xufen"
-  year: 2026
-  version: "1.0.2"
-  doi: "10.5281/zenodo.18571480"
-  url: "https://doi.org/10.5281/zenodo.18571480"
