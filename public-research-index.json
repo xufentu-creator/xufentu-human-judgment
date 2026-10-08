@@ -34,8 +34,8 @@
     "subject_keywords": [
       "human judgment"
     ],
-    "canonical_url": null,
-    "public_status": "branch-review"
+    "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/SBF-001.md",
+    "public_status": "public-revised-expression"
   },
   {
     "title": "When Responsibility Becomes Hard to Locate",
@@ -46,8 +46,8 @@
     "subject_keywords": [
       "responsibility"
     ],
-    "canonical_url": null,
-    "public_status": "branch-review"
+    "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/RD-001.md",
+    "public_status": "public-revised-expression"
   },
   {
     "title": "When Recommendations Conflict, Who Remains Responsible?",
@@ -58,8 +58,8 @@
     "subject_keywords": [
       "human responsibility"
     ],
-    "canonical_url": null,
-    "public_status": "branch-review"
+    "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/DAF-001.md",
+    "public_status": "public-revised-expression"
   },
   {
     "title": "Human Judgment and Real-World Consequences",
@@ -71,11 +71,11 @@
       "human judgment",
       "responsibility"
     ],
-    "canonical_url": null,
-    "public_status": "branch-review"
+    "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-position/2026-07-19-human-judgment-before-consequential-execution.md",
+    "public_status": "public-revised-expression"
   },
   {
-    "title": "I Did Try To Tell You",
+    "title": "I Did Try to Tell You",
     "author": "Xufen Tu",
     "publication_date": null,
     "version": null,
@@ -84,7 +84,7 @@
       "human experience"
     ],
     "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-artistic-expressions/001-i-did-try-to-tell-you.md",
-    "public_status": "published"
+    "public_status": "public-draft"
   },
   {
     "title": "That Is Not What I Meant",
@@ -96,7 +96,7 @@
       "human experience"
     ],
     "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-artistic-expressions/002-that-is-not-what-i-meant.md",
-    "public_status": "published"
+    "public_status": "public-draft"
   },
   {
     "title": "Still Waiting",
@@ -108,7 +108,7 @@
       "human experience"
     ],
     "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-artistic-expressions/003-still-waiting.md",
-    "public_status": "published"
+    "public_status": "public-draft"
   },
   {
     "title": "If I Had Known",
@@ -120,7 +120,7 @@
       "human experience"
     ],
     "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-artistic-expressions/004-if-i-had-known.md",
-    "public_status": "published"
+    "public_status": "public-draft"
   },
   {
     "title": "Who Decided",
@@ -132,7 +132,7 @@
       "human experience"
     ],
     "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-artistic-expressions/005-who-decided.md",
-    "public_status": "published"
+    "public_status": "public-draft"
   },
   {
     "title": "The Day You Left",
@@ -144,7 +144,7 @@
       "human experience"
     ],
     "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-artistic-expressions/006-the-day-you-left.md",
-    "public_status": "published"
+    "public_status": "public-draft"
   },
   {
     "title": "One More Time",
@@ -156,7 +156,7 @@
       "human experience"
     ],
     "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-artistic-expressions/007-one-more-time.md",
-    "public_status": "published"
+    "public_status": "public-draft"
   },
   {
     "title": "The Empty Chair",
@@ -168,7 +168,7 @@
       "human experience"
     ],
     "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-artistic-expressions/008-the-empty-chair.md",
-    "public_status": "published"
+    "public_status": "public-draft"
   },
   {
     "title": "When No One Was Looking",
@@ -180,7 +180,7 @@
       "human experience"
     ],
     "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-artistic-expressions/009-when-no-one-was-looking.md",
-    "public_status": "published"
+    "public_status": "public-draft"
   },
   {
     "title": "You Are Still Here",
@@ -192,7 +192,7 @@
       "human experience"
     ],
     "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-artistic-expressions/010-you-are-still-here.md",
-    "public_status": "published"
+    "public_status": "public-draft"
   },
   {
     "title": "AI-Generated Citation Failure: When Fluency Outruns Verification",
@@ -205,7 +205,8 @@
       "verification"
     ],
     "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/case-studies/ai-generated-citation-failure.md",
-    "public_status": "published"
+    "public_status": "published",
+    "version_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/case-studies/ai-generated-citation-failure.md"
   },
   {
     "title": "Human Judgment and Responsibility in Multi-Agent Systems",
@@ -218,7 +219,8 @@
       "multi-agent systems"
     ],
     "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-essays/human-judgment-and-responsibility-in-multi-agent-systems.md",
-    "public_status": "published"
+    "public_status": "published",
+    "version_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-essays/human-judgment-and-responsibility-in-multi-agent-systems.md"
   },
   {
     "title": "Continuous Subject and Non-Automatic Responsibility: A Public Research Position",
@@ -231,7 +233,8 @@
       "responsibility"
     ],
     "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-position/continuous-subject-and-non-automatic-responsibility.md",
-    "public_status": "published"
+    "public_status": "published",
+    "version_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-position/continuous-subject-and-non-automatic-responsibility.md"
   },
   {
     "title": "Provenance Evidence Does Not Replace Human Judgment",
@@ -244,7 +247,8 @@
       "human judgment"
     ],
     "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-essays/provenance-evidence-does-not-replace-human-judgment.md",
-    "public_status": "published"
+    "public_status": "published",
+    "version_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-essays/provenance-evidence-does-not-replace-human-judgment.md"
   },
   {
     "title": "Human Responsibility in AI-Mediated Work",
@@ -257,7 +261,8 @@
       "responsibility"
     ],
     "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-essays/human-responsibility-in-ai-mediated-work.md",
-    "public_status": "published"
+    "public_status": "published",
+    "version_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-essays/human-responsibility-in-ai-mediated-work.md"
   },
   {
     "title": "Human Judgment Boundary",
@@ -270,7 +275,8 @@
       "accountability"
     ],
     "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-boundaries/human-judgment-boundary.md",
-    "public_status": "published"
+    "public_status": "published",
+    "version_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-boundaries/human-judgment-boundary.md"
   },
   {
     "title": "Authorship and Provenance Boundary",
@@ -283,6 +289,7 @@
       "provenance"
     ],
     "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-boundaries/authorship-and-provenance-boundary.md",
-    "public_status": "published"
+    "public_status": "published",
+    "version_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-boundaries/authorship-and-provenance-boundary.md"
   }
 ]
