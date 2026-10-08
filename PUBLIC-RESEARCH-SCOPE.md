@@ -10,3 +10,9 @@ Cite the specific public work you read using its author, title, actual date and 
 The public reading collection does not contain private research notes, internal methods, implementation materials, client records, or unpublished development records. Its observations do not constitute instructions for a system, a legal conclusion, or a guarantee of results.
 
 A proposed article path is not a published citation URL. Use only a work that is actually available.
+
+## Historical versions and reuse
+
+Earlier commits and Releases remain accessible as historical public records. Their wording, named model relationships and scope may differ from the current reading collection; they are not current implementation guidance. Identify the historical version actually consulted rather than treating it as the current position.
+
+[Rights and permitted reference](LICENSE.md) distinguishes citation and brief quotation from broader reuse. Public availability and attribution alone do not grant general reuse permission.
