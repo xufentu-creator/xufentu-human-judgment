@@ -24,3 +24,19 @@ Earlier versions of files remain part of the Git history. A current revision doe
 ## Attribution boundary
 
 Attribution identifies the author and a specific source. It does not imply that Xufen Tu endorses a later summary, translation, interpretation, or application. This guide offers citation clarity only; it does not direct implementation or create obligations for third parties.
+
+## Fixed public citation versions
+
+The seven texts below were publicly released as v1.0 on 2026-09-25. These commit-specific links identify the text archived in Public Citation Collection v1.0, not an unverified original research date. Existing canonical article links remain the reading entry points.
+
+| Work | Fixed v1.0 text |
+|---|---|
+| AI-Generated Citation Failure: When Fluency Outruns Verification | [Read fixed version](https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/case-studies/ai-generated-citation-failure.md) |
+| Human Judgment and Responsibility in Multi-Agent Systems | [Read fixed version](https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-essays/human-judgment-and-responsibility-in-multi-agent-systems.md) |
+| Continuous Subject and Non-Automatic Responsibility: A Public Research Position | [Read fixed version](https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-position/continuous-subject-and-non-automatic-responsibility.md) |
+| Provenance Evidence Does Not Replace Human Judgment | [Read fixed version](https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-essays/provenance-evidence-does-not-replace-human-judgment.md) |
+| Human Responsibility in AI-Mediated Work | [Read fixed version](https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-essays/human-responsibility-in-ai-mediated-work.md) |
+| Human Judgment Boundary | [Read fixed version](https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-boundaries/human-judgment-boundary.md) |
+| Authorship and Provenance Boundary | [Read fixed version](https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-boundaries/authorship-and-provenance-boundary.md) |
+
+Collection archive: https://github.com/xufentu-creator/xufentu-human-judgment/releases/tag/public-citation-v1.0. Cite the individual article for its claims; cite the collection only when referring to the archive as a whole. The root CITATION.cff identifies the repository collection and does not replace article-level citation.

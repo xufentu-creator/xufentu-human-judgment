@@ -7,6 +7,7 @@ This repository is a public reading and citation collection. It contains selecte
 ## Reading and citation
 
 - [Public Research Scope](PUBLIC-RESEARCH-SCOPE.md) explains the scope and limits of this collection.
+- [Rights and permitted reference](LICENSE.md) explains quotation and reuse permissions.
 - [Citation guidance](CITATION.md) explains how to identify a specific public work and its version.
 - [Public provenance record](PROVENANCE-PUBLIC.md) records historical and current citation context.
 - [Public reading index](index.html) provides a topic-based entrance.
