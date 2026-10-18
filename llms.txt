@@ -33,3 +33,26 @@ Role: Independent Interdisciplinary Researcher
 - [Published research index](https://xufentu.com/published-research-index.json)
 
 This guide lists already public works. Citation identifies a specific source and version; it does not imply author endorsement of later interpretations. Earlier public versions may differ from current expressions. Public observations do not describe internal methods or prescribe a universal decision procedure.
+
+## Reading pages
+
+These pages present existing public texts or paper guides; original citation sources remain linked above.
+
+- [Judgment Before Momentum: A Provenance-First Canonical Release Model for Human-Authored Research Under High Replication](https://xufentu.com/research/judgment-before-momentum/)
+- [Human Judgment as an Irreducible Interface in High-Complexity Systems](https://xufentu.com/research/human-judgment-irreducible-interface/)
+- [AI-Generated Citation Failure: When Fluency Outruns Verification](https://xufentu.com/research/ai-generated-citation-failure/)
+- [Human Judgment and Responsibility in Multi-Agent Systems](https://xufentu.com/research/human-judgment-and-responsibility-in-multi-agent-systems/)
+- [Continuous Subject and Non-Automatic Responsibility: A Public Research Position](https://xufentu.com/research/continuous-subject-and-non-automatic-responsibility/)
+- [Provenance Evidence Does Not Replace Human Judgment](https://xufentu.com/research/provenance-evidence-does-not-replace-human-judgment/)
+- [Human Responsibility in AI-Mediated Work](https://xufentu.com/research/human-responsibility-in-ai-mediated-work/)
+- [Human Judgment Boundary](https://xufentu.com/research/human-judgment-boundary/)
+- [Authorship and Provenance Boundary](https://xufentu.com/research/authorship-and-provenance-boundary/)
+- [Human Judgment and Consequential Outcomes](https://xufentu.com/research/human-judgment-and-consequential-outcomes/)
+- [When Responsibility Becomes Hard to Locate](https://xufentu.com/research/when-responsibility-becomes-hard-to-locate/)
+- [When Recommendations Conflict, Who Remains Responsible?](https://xufentu.com/research/when-recommendations-conflict/)
+- [Human Judgment and Real-World Consequences](https://xufentu.com/research/human-judgment-and-real-world-consequences/)
+- [Xufen Tu — Research author](https://xufentu.com/research/author/)
+- [Public research scope](https://xufentu.com/research/scope/)
+- [Citation and source versions](https://xufentu.com/research/citation/)
+- [Public research — Reading directory](https://xufentu.com/research/)
+
