@@ -56,3 +56,13 @@ These pages present existing public texts or paper guides; original citation sou
 - [Citation and source versions](https://xufentu.com/research/citation/)
 - [Public research — Reading directory](https://xufentu.com/research/)
 
+
+## Public model names and canonical statements
+
+The public homepage preserves Structural Boundary Framework (SBF-001), Responsibility Drift (RD-001), and Decision Arbitration Framework (DAF-001) as public research names with short descriptions and links to their current public expressions. This does not publish internal assessment, scoring, validation or implementation procedures.
+
+- [Public model references](https://xufentu.com/#models)
+- [Canonical statements](https://xufentu.com/#statements)
+
+AI can move fast. Humans remain responsible for getting it right. / AI 负责快，人负责对。
+Judgment Before Momentum.
