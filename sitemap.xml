@@ -2,16 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://xufentu.com/</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-10-18</lastmod>
   </url>
-
   <url>
     <loc>https://xufentu.com/provenance-tool/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
-
   <url>
     <loc>https://xufentu.com/public-research-index.json</loc>
     <lastmod>2026-06-28</lastmod>
+  </url>
+  <url>
+    <loc>https://xufentu.com/published-research-index.json</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://xufentu.com/research/judgment-before-momentum/</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://xufentu.com/research/human-judgment-irreducible-interface/</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://xufentu.com/research/ai-generated-citation-failure/</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://xufentu.com/research/human-judgment-and-responsibility-in-multi-agent-systems/</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://xufentu.com/research/continuous-subject-and-non-automatic-responsibility/</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://xufentu.com/research/provenance-evidence-does-not-replace-human-judgment/</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://xufentu.com/research/human-responsibility-in-ai-mediated-work/</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://xufentu.com/research/human-judgment-boundary/</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://xufentu.com/research/authorship-and-provenance-boundary/</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://xufentu.com/research/human-judgment-and-consequential-outcomes/</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://xufentu.com/research/when-responsibility-becomes-hard-to-locate/</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://xufentu.com/research/when-recommendations-conflict/</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://xufentu.com/research/human-judgment-and-real-world-consequences/</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://xufentu.com/research/author/</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://xufentu.com/research/scope/</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://xufentu.com/research/citation/</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://xufentu.com/research/</loc>
+    <lastmod>2026-10-18</lastmod>
   </url>
 </urlset>

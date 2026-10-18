@@ -1,0 +1,135 @@
+[
+  {
+    "title": "Judgment Before Momentum: A Provenance-First Canonical Release Model for Human-Authored Research Under High Replication",
+    "author": "Xufen Tu",
+    "publication_date": null,
+    "version": "1.0.2",
+    "record_type": "formal-paper",
+    "subject_keywords": [
+      "provenance",
+      "authorship"
+    ],
+    "canonical_url": "https://doi.org/10.5281/zenodo.18571480",
+    "public_status": "published",
+    "reading_url": "https://xufentu.com/research/judgment-before-momentum/"
+  },
+  {
+    "title": "Human Judgment as an Irreducible Interface in High-Complexity Systems",
+    "author": "Xufen Tu",
+    "publication_date": null,
+    "version": null,
+    "record_type": "formal-paper",
+    "subject_keywords": [
+      "human judgment",
+      "complex systems"
+    ],
+    "canonical_url": "https://doi.org/10.2139/ssrn.6193698",
+    "public_status": "published",
+    "reading_url": "https://xufentu.com/research/human-judgment-irreducible-interface/"
+  },
+  {
+    "title": "AI-Generated Citation Failure: When Fluency Outruns Verification",
+    "author": "Xufen Tu",
+    "publication_date": "2026-09-25",
+    "version": "v1.0",
+    "record_type": "public-case-analysis",
+    "subject_keywords": [
+      "citation",
+      "verification"
+    ],
+    "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/case-studies/ai-generated-citation-failure.md",
+    "public_status": "published",
+    "version_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/case-studies/ai-generated-citation-failure.md",
+    "reading_url": "https://xufentu.com/research/ai-generated-citation-failure/"
+  },
+  {
+    "title": "Human Judgment and Responsibility in Multi-Agent Systems",
+    "author": "Xufen Tu",
+    "publication_date": "2026-09-25",
+    "version": "v1.0",
+    "record_type": "public-research-essay",
+    "subject_keywords": [
+      "responsibility",
+      "multi-agent systems"
+    ],
+    "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-essays/human-judgment-and-responsibility-in-multi-agent-systems.md",
+    "public_status": "published",
+    "version_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-essays/human-judgment-and-responsibility-in-multi-agent-systems.md",
+    "reading_url": "https://xufentu.com/research/human-judgment-and-responsibility-in-multi-agent-systems/"
+  },
+  {
+    "title": "Continuous Subject and Non-Automatic Responsibility: A Public Research Position",
+    "author": "Xufen Tu",
+    "publication_date": "2026-09-25",
+    "version": "v1.0",
+    "record_type": "public-research-position",
+    "subject_keywords": [
+      "record continuity",
+      "responsibility"
+    ],
+    "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-position/continuous-subject-and-non-automatic-responsibility.md",
+    "public_status": "published",
+    "version_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-position/continuous-subject-and-non-automatic-responsibility.md",
+    "reading_url": "https://xufentu.com/research/continuous-subject-and-non-automatic-responsibility/"
+  },
+  {
+    "title": "Provenance Evidence Does Not Replace Human Judgment",
+    "author": "Xufen Tu",
+    "publication_date": "2026-09-25",
+    "version": "v1.0",
+    "record_type": "public-research-essay",
+    "subject_keywords": [
+      "provenance",
+      "human judgment"
+    ],
+    "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-essays/provenance-evidence-does-not-replace-human-judgment.md",
+    "public_status": "published",
+    "version_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-essays/provenance-evidence-does-not-replace-human-judgment.md",
+    "reading_url": "https://xufentu.com/research/provenance-evidence-does-not-replace-human-judgment/"
+  },
+  {
+    "title": "Human Responsibility in AI-Mediated Work",
+    "author": "Xufen Tu",
+    "publication_date": "2026-09-25",
+    "version": "v1.0",
+    "record_type": "public-research-essay",
+    "subject_keywords": [
+      "AI-mediated work",
+      "responsibility"
+    ],
+    "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-essays/human-responsibility-in-ai-mediated-work.md",
+    "public_status": "published",
+    "version_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-essays/human-responsibility-in-ai-mediated-work.md",
+    "reading_url": "https://xufentu.com/research/human-responsibility-in-ai-mediated-work/"
+  },
+  {
+    "title": "Human Judgment Boundary",
+    "author": "Xufen Tu",
+    "publication_date": "2026-09-25",
+    "version": "v1.0",
+    "record_type": "public-research-boundary",
+    "subject_keywords": [
+      "human judgment",
+      "accountability"
+    ],
+    "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-boundaries/human-judgment-boundary.md",
+    "public_status": "published",
+    "version_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-boundaries/human-judgment-boundary.md",
+    "reading_url": "https://xufentu.com/research/human-judgment-boundary/"
+  },
+  {
+    "title": "Authorship and Provenance Boundary",
+    "author": "Xufen Tu",
+    "publication_date": "2026-09-25",
+    "version": "v1.0",
+    "record_type": "public-research-boundary",
+    "subject_keywords": [
+      "authorship",
+      "provenance"
+    ],
+    "canonical_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-boundaries/authorship-and-provenance-boundary.md",
+    "public_status": "published",
+    "version_url": "https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-boundaries/authorship-and-provenance-boundary.md",
+    "reading_url": "https://xufentu.com/research/authorship-and-provenance-boundary/"
+  }
+]

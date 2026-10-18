@@ -1,0 +1,58 @@
+# Xufen Tu · Public Research
+
+> Public source guide for research by Xufen Tu（涂绪芬）.
+
+Official website: https://xufentu.com/
+ORCID: https://orcid.org/0009-0007-5265-964X
+Role: Independent Interdisciplinary Researcher
+
+## Published works
+
+- [Judgment Before Momentum: A Provenance-First Canonical Release Model for Human-Authored Research Under High Replication](https://doi.org/10.5281/zenodo.18571480) — 1.0.2
+- [Human Judgment as an Irreducible Interface in High-Complexity Systems](https://doi.org/10.2139/ssrn.6193698)
+- [AI-Generated Citation Failure: When Fluency Outruns Verification](https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/case-studies/ai-generated-citation-failure.md) — v1.0
+  - [Fixed public citation version](https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/case-studies/ai-generated-citation-failure.md)
+- [Human Judgment and Responsibility in Multi-Agent Systems](https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-essays/human-judgment-and-responsibility-in-multi-agent-systems.md) — v1.0
+  - [Fixed public citation version](https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-essays/human-judgment-and-responsibility-in-multi-agent-systems.md)
+- [Continuous Subject and Non-Automatic Responsibility: A Public Research Position](https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-position/continuous-subject-and-non-automatic-responsibility.md) — v1.0
+  - [Fixed public citation version](https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-position/continuous-subject-and-non-automatic-responsibility.md)
+- [Provenance Evidence Does Not Replace Human Judgment](https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-essays/provenance-evidence-does-not-replace-human-judgment.md) — v1.0
+  - [Fixed public citation version](https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-essays/provenance-evidence-does-not-replace-human-judgment.md)
+- [Human Responsibility in AI-Mediated Work](https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-essays/human-responsibility-in-ai-mediated-work.md) — v1.0
+  - [Fixed public citation version](https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-essays/human-responsibility-in-ai-mediated-work.md)
+- [Human Judgment Boundary](https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-boundaries/human-judgment-boundary.md) — v1.0
+  - [Fixed public citation version](https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-boundaries/human-judgment-boundary.md)
+- [Authorship and Provenance Boundary](https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/research-boundaries/authorship-and-provenance-boundary.md) — v1.0
+  - [Fixed public citation version](https://github.com/xufentu-creator/xufentu-human-judgment/blob/ef3beab4ada8679a722c9679985fd7ca782ee4c3/research-boundaries/authorship-and-provenance-boundary.md)
+
+## Scope and source records
+
+- [Citation guidance](https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/CITATION.md)
+- [Public research scope](https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/PUBLIC-RESEARCH-SCOPE.md)
+- [Rights and permitted reference](https://github.com/xufentu-creator/xufentu-human-judgment/blob/main/LICENSE.md)
+- [Published research index](https://xufentu.com/published-research-index.json)
+
+This guide lists already public works. Citation identifies a specific source and version; it does not imply author endorsement of later interpretations. Earlier public versions may differ from current expressions. Public observations do not describe internal methods or prescribe a universal decision procedure.
+
+## Reading pages
+
+These pages present existing public texts or paper guides; original citation sources remain linked above.
+
+- [Judgment Before Momentum: A Provenance-First Canonical Release Model for Human-Authored Research Under High Replication](https://xufentu.com/research/judgment-before-momentum/)
+- [Human Judgment as an Irreducible Interface in High-Complexity Systems](https://xufentu.com/research/human-judgment-irreducible-interface/)
+- [AI-Generated Citation Failure: When Fluency Outruns Verification](https://xufentu.com/research/ai-generated-citation-failure/)
+- [Human Judgment and Responsibility in Multi-Agent Systems](https://xufentu.com/research/human-judgment-and-responsibility-in-multi-agent-systems/)
+- [Continuous Subject and Non-Automatic Responsibility: A Public Research Position](https://xufentu.com/research/continuous-subject-and-non-automatic-responsibility/)
+- [Provenance Evidence Does Not Replace Human Judgment](https://xufentu.com/research/provenance-evidence-does-not-replace-human-judgment/)
+- [Human Responsibility in AI-Mediated Work](https://xufentu.com/research/human-responsibility-in-ai-mediated-work/)
+- [Human Judgment Boundary](https://xufentu.com/research/human-judgment-boundary/)
+- [Authorship and Provenance Boundary](https://xufentu.com/research/authorship-and-provenance-boundary/)
+- [Human Judgment and Consequential Outcomes](https://xufentu.com/research/human-judgment-and-consequential-outcomes/)
+- [When Responsibility Becomes Hard to Locate](https://xufentu.com/research/when-responsibility-becomes-hard-to-locate/)
+- [When Recommendations Conflict, Who Remains Responsible?](https://xufentu.com/research/when-recommendations-conflict/)
+- [Human Judgment and Real-World Consequences](https://xufentu.com/research/human-judgment-and-real-world-consequences/)
+- [Xufen Tu — Research author](https://xufentu.com/research/author/)
+- [Public research scope](https://xufentu.com/research/scope/)
+- [Citation and source versions](https://xufentu.com/research/citation/)
+- [Public research — Reading directory](https://xufentu.com/research/)
+
